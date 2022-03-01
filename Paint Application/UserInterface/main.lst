@@ -1,0 +1,3519 @@
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   5              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   6              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   7              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   8              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   9              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+  10              		.eabi_attribute 30, 6	@ Tag_ABI_optimization_goals
+  11              		.eabi_attribute 34, 1	@ Tag_CPU_unaligned_access
+  12              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  13              		.file	"main.c"
+  14              	@ GNU C99 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eab
+  15              	@	compiled by GNU C version 7.3-win32 20180312, GMP version 6.1.0, MPFR version 3.1.4, MPC version 
+  16              	
+  17              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  18              	@ options passed:  -I . -I ../../Include -I ../../Include/PrimeFramework
+  19              	@ -I ../../Include/AppHelper -I ../../Include/GameEngine
+  20              	@ -I ../../Include/GameEngine/Graphics -I ../../Include/GameEngine/Object
+  21              	@ -I ../../Include/GameEngine/Renderer -I ../../Include/GameEngine/Resource
+  22              	@ -imultilib thumb/v7-m/nofp
+  23              	@ -iprefix c:\program files (x86)\gnu arm embedded toolchain\10 2021.10\bin\../lib/gcc/arm-none-eab
+  24              	@ -isysroot c:\program files (x86)\gnu arm embedded toolchain\10 2021.10\bin\../arm-none-eabi
+  25              	@ -MD Build/Obj/Debug/main.d -MF .dep/main.o.d -MP
+  26              	@ -MQ Build/Obj/Debug/main.o -D__USES_INITFINI__ -D MCU_CHIP_lpc1768
+  27              	@ -D PRIME_DEBUG main.c -mcpu=cortex-m3 -mthumb -mfloat-abi=soft
+  28              	@ -mlibarch=armv7-m -march=armv7-m -auxbase-strip Build/Obj/Debug/main.o
+  29              	@ -gdwarf-2 -O0 -Wall -Wno-cpp -std=gnu99 -fomit-frame-pointer
+  30              	@ -fverbose-asm
+  31              	@ options enabled:  -faggressive-loop-optimizations -fallocation-dce
+  32              	@ -fauto-inc-dec -fdelete-null-pointer-checks -fdwarf2-cfi-asm
+  33              	@ -fearly-inlining -feliminate-unused-debug-symbols
+  34              	@ -feliminate-unused-debug-types -ffp-int-builtin-inexact -ffunction-cse
+  35              	@ -fgcse-lm -fgnu-unique -fident -finline-atomics -fipa-stack-alignment
+  36              	@ -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
+  37              	@ -fivopts -fkeep-static-consts -fleading-underscore -flifetime-dse
+  38              	@ -fmath-errno -fmerge-debug-strings -fomit-frame-pointer -fpeephole -fplt
+  39              	@ -fprefetch-loop-arrays -freg-struct-return
+  40              	@ -fsched-critical-path-heuristic -fsched-dep-count-heuristic
+  41              	@ -fsched-group-heuristic -fsched-interblock -fsched-last-insn-heuristic
+  42              	@ -fsched-rank-heuristic -fsched-spec -fsched-spec-insn-heuristic
+  43              	@ -fsched-stalled-insns-dep -fsemantic-interposition -fshow-column
+  44              	@ -fshrink-wrap-separate -fsigned-zeros -fsplit-ivs-in-unroller
+  45              	@ -fssa-backprop -fstdarg-opt -fstrict-volatile-bitfields -fsync-libcalls
+  46              	@ -ftrapping-math -ftree-cselim -ftree-forwprop -ftree-loop-if-convert
+  47              	@ -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
+  48              	@ -ftree-parallelize-loops= -ftree-phiprop -ftree-reassoc -ftree-scev-cprop
+  49              	@ -funit-at-a-time -fverbose-asm -fzero-initialized-in-bss
+  50              	@ -masm-syntax-unified -mbe32 -mfix-cortex-m3-ldrd -mlittle-endian
+  51              	@ -mpic-data-is-text-relative -msched-prolog -mthumb -munaligned-access
+  52              	@ -mvectorize-with-neon-quad
+  53              	
+  54              		.text
+  55              	.Ltext0:
+  56              		.cfi_sections	.debug_frame
+  57              		.global	windowID
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 2
+
+
+  58              		.bss
+  59              		.type	windowID, %object
+  60              		.size	windowID, 1
+  61              	windowID:
+  62 0000 00       		.space	1
+  63              		.global	canvasID
+  64              		.type	canvasID, %object
+  65              		.size	canvasID, 1
+  66              	canvasID:
+  67 0001 00       		.space	1
+  68              		.global	widget1ID
+  69              		.type	widget1ID, %object
+  70              		.size	widget1ID, 1
+  71              	widget1ID:
+  72 0002 00       		.space	1
+  73              		.global	widget2ID
+  74              		.type	widget2ID, %object
+  75              		.size	widget2ID, 1
+  76              	widget2ID:
+  77 0003 00       		.space	1
+  78              		.global	widget3ID
+  79              		.type	widget3ID, %object
+  80              		.size	widget3ID, 1
+  81              	widget3ID:
+  82 0004 00       		.space	1
+  83              		.global	widget4ID
+  84              		.type	widget4ID, %object
+  85              		.size	widget4ID, 1
+  86              	widget4ID:
+  87 0005 00       		.space	1
+  88              		.global	widget5ID
+  89              		.type	widget5ID, %object
+  90              		.size	widget5ID, 1
+  91              	widget5ID:
+  92 0006 00       		.space	1
+  93              		.global	widget6ID
+  94              		.type	widget6ID, %object
+  95              		.size	widget6ID, 1
+  96              	widget6ID:
+  97 0007 00       		.space	1
+  98              		.global	x
+  99              		.align	2
+ 100              		.type	x, %object
+ 101              		.size	x, 4
+ 102              	x:
+ 103 0008 00000000 		.space	4
+ 104              		.global	y
+ 105              		.align	2
+ 106              		.type	y, %object
+ 107              		.size	y, 4
+ 108              	y:
+ 109 000c 00000000 		.space	4
+ 110              		.global	a
+ 111              		.align	2
+ 112              		.type	a, %object
+ 113              		.size	a, 4
+ 114              	a:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 3
+
+
+ 115 0010 00000000 		.space	4
+ 116              		.global	b
+ 117              		.align	2
+ 118              		.type	b, %object
+ 119              		.size	b, 4
+ 120              	b:
+ 121 0014 00000000 		.space	4
+ 122              		.global	val
+ 123              		.data
+ 124              		.align	2
+ 125              		.type	val, %object
+ 126              		.size	val, 4
+ 127              	val:
+ 128 0000 0A000000 		.word	10
+ 129              		.global	idx
+ 130              		.bss
+ 131              		.align	2
+ 132              		.type	idx, %object
+ 133              		.size	idx, 4
+ 134              	idx:
+ 135 0018 00000000 		.space	4
+ 136              		.text
+ 137              		.align	1
+ 138              		.global	sqroot
+ 139              		.syntax unified
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.type	sqroot, %function
+ 143              	sqroot:
+ 144              	.LFB60:
+ 145              		.file 1 "main.c"
+   1:main.c        **** 
+   2:main.c        **** #include "app.h"
+   3:main.c        **** #include "gameEngine.h"
+   4:main.c        **** 
+   5:main.c        **** 
+   6:main.c        **** 
+   7:main.c        **** PFbyte windowID, canvasID, widget1ID, widget2ID, widget3ID, widget4ID, widget5ID, widget6ID;
+   8:main.c        **** PFdword x,y,a,b,val=10;
+   9:main.c        **** int idx=0;
+  10:main.c        **** 
+  11:main.c        **** // Function to find square root of a PFdword type variable
+  12:main.c        **** PFdword sqroot(PFdword r) {
+ 146              		.loc 1 12 27
+ 147              		.cfi_startproc
+ 148              		@ args = 0, pretend = 0, frame = 32
+ 149              		@ frame_needed = 0, uses_anonymous_args = 0
+ 150              		@ link register save eliminated.
+ 151 0000 88B0     		sub	sp, sp, #32	@,,
+ 152              	.LCFI0:
+ 153              		.cfi_def_cfa_offset 32
+ 154 0002 0190     		str	r0, [sp, #4]	@ r, r
+ 155              	@ main.c:14:     if (r==0 || r==1) return r;
+  13:main.c        **** 
+  14:main.c        ****     if (r==0 || r==1) return r;
+ 156              		.loc 1 14 8
+ 157 0004 019B     		ldr	r3, [sp, #4]	@ tmp116, r
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 4
+
+
+ 158 0006 002B     		cmp	r3, #0	@ tmp116,
+ 159 0008 02D0     		beq	.L2		@,
+ 160              	@ main.c:14:     if (r==0 || r==1) return r;
+ 161              		.loc 1 14 14 discriminator 2
+ 162 000a 019B     		ldr	r3, [sp, #4]	@ tmp117, r
+ 163 000c 012B     		cmp	r3, #1	@ tmp117,
+ 164 000e 01D1     		bne	.L3		@,
+ 165              	.L2:
+ 166              	@ main.c:14:     if (r==0 || r==1) return r;
+ 167              		.loc 1 14 30 discriminator 3
+ 168 0010 019B     		ldr	r3, [sp, #4]	@ _5, r
+ 169 0012 26E0     		b	.L4		@
+ 170              	.L3:
+ 171              	@ main.c:16:     PFdword start=1, end=r/2 , mid, res, sqr;
+  15:main.c        ****  
+  16:main.c        ****     PFdword start=1, end=r/2 , mid, res, sqr;
+ 172              		.loc 1 16 13
+ 173 0014 0123     		movs	r3, #1	@ tmp118,
+ 174 0016 0793     		str	r3, [sp, #28]	@ tmp118, start
+ 175              	@ main.c:16:     PFdword start=1, end=r/2 , mid, res, sqr;
+ 176              		.loc 1 16 22
+ 177 0018 019B     		ldr	r3, [sp, #4]	@ tmp120, r
+ 178 001a 5B08     		lsrs	r3, r3, #1	@ tmp119, tmp120,
+ 179 001c 0693     		str	r3, [sp, #24]	@ tmp119, end
+ 180              	@ main.c:18:     while (start<=end) {
+  17:main.c        **** 
+  18:main.c        ****     while (start<=end) {
+ 181              		.loc 1 18 11
+ 182 001e 1BE0     		b	.L5		@
+ 183              	.L8:
+ 184              	@ main.c:19:         mid=(start + end)/2;
+  19:main.c        ****         mid=(start + end)/2;
+ 185              		.loc 1 19 20
+ 186 0020 079A     		ldr	r2, [sp, #28]	@ tmp121, start
+ 187 0022 069B     		ldr	r3, [sp, #24]	@ tmp122, end
+ 188 0024 1344     		add	r3, r3, r2	@ _1, tmp121
+ 189              	@ main.c:19:         mid=(start + end)/2;
+ 190              		.loc 1 19 12
+ 191 0026 5B08     		lsrs	r3, r3, #1	@ tmp123, _1,
+ 192 0028 0493     		str	r3, [sp, #16]	@ tmp123, mid
+ 193              	@ main.c:20:         sqr=mid*mid;
+  20:main.c        ****         sqr=mid*mid;
+ 194              		.loc 1 20 12
+ 195 002a 049B     		ldr	r3, [sp, #16]	@ tmp125, mid
+ 196 002c 03FB03F3 		mul	r3, r3, r3	@ tmp124, tmp125, tmp125
+ 197 0030 0393     		str	r3, [sp, #12]	@ tmp124, sqr
+ 198              	@ main.c:22:         if (sqr==r) return mid;
+  21:main.c        **** 
+  22:main.c        ****         if (sqr==r) return mid;
+ 199              		.loc 1 22 12
+ 200 0032 039A     		ldr	r2, [sp, #12]	@ tmp126, sqr
+ 201 0034 019B     		ldr	r3, [sp, #4]	@ tmp127, r
+ 202 0036 9A42     		cmp	r2, r3	@ tmp126, tmp127
+ 203 0038 01D1     		bne	.L6		@,
+ 204              	@ main.c:22:         if (sqr==r) return mid;
+ 205              		.loc 1 22 28 discriminator 1
+ 206 003a 049B     		ldr	r3, [sp, #16]	@ _5, mid
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 5
+
+
+ 207 003c 11E0     		b	.L4		@
+ 208              	.L6:
+ 209              	@ main.c:24:         if (sqr<r) {
+  23:main.c        **** 
+  24:main.c        ****         if (sqr<r) {
+ 210              		.loc 1 24 12
+ 211 003e 039A     		ldr	r2, [sp, #12]	@ tmp128, sqr
+ 212 0040 019B     		ldr	r3, [sp, #4]	@ tmp129, r
+ 213 0042 9A42     		cmp	r2, r3	@ tmp128, tmp129
+ 214 0044 05D2     		bcs	.L7		@,
+ 215              	@ main.c:25:             start=mid + 1;
+  25:main.c        ****             start=mid + 1;
+ 216              		.loc 1 25 18
+ 217 0046 049B     		ldr	r3, [sp, #16]	@ tmp131, mid
+ 218 0048 0133     		adds	r3, r3, #1	@ tmp130, tmp131,
+ 219 004a 0793     		str	r3, [sp, #28]	@ tmp130, start
+ 220              	@ main.c:26:             res=mid;
+  26:main.c        ****             res=mid;
+ 221              		.loc 1 26 16
+ 222 004c 049B     		ldr	r3, [sp, #16]	@ tmp132, mid
+ 223 004e 0593     		str	r3, [sp, #20]	@ tmp132, res
+ 224 0050 02E0     		b	.L5		@
+ 225              	.L7:
+ 226              	@ main.c:29:         else end=mid - 1;
+  27:main.c        ****         }
+  28:main.c        **** 
+  29:main.c        ****         else end=mid - 1;
+ 227              		.loc 1 29 17
+ 228 0052 049B     		ldr	r3, [sp, #16]	@ tmp134, mid
+ 229 0054 013B     		subs	r3, r3, #1	@ tmp133, tmp134,
+ 230 0056 0693     		str	r3, [sp, #24]	@ tmp133, end
+ 231              	.L5:
+ 232              	@ main.c:18:     while (start<=end) {
+  18:main.c        ****         mid=(start + end)/2;
+ 233              		.loc 1 18 11
+ 234 0058 079A     		ldr	r2, [sp, #28]	@ tmp135, start
+ 235 005a 069B     		ldr	r3, [sp, #24]	@ tmp136, end
+ 236 005c 9A42     		cmp	r2, r3	@ tmp135, tmp136
+ 237 005e DFD9     		bls	.L8		@,
+ 238              	@ main.c:31:     return res;
+  30:main.c        ****     }
+  31:main.c        ****     return res;
+ 239              		.loc 1 31 12
+ 240 0060 059B     		ldr	r3, [sp, #20]	@ _5, res
+ 241              	.L4:
+ 242              	@ main.c:32: }
+  32:main.c        **** }
+ 243              		.loc 1 32 1
+ 244 0062 1846     		mov	r0, r3	@, <retval>
+ 245 0064 08B0     		add	sp, sp, #32	@,,
+ 246              	.LCFI1:
+ 247              		.cfi_def_cfa_offset 0
+ 248              		@ sp needed	@
+ 249 0066 7047     		bx	lr	@
+ 250              		.cfi_endproc
+ 251              	.LFE60:
+ 252              		.size	sqroot, .-sqroot
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 6
+
+
+ 253              		.align	1
+ 254              		.global	freeHandBtnEventHandler
+ 255              		.syntax unified
+ 256              		.thumb
+ 257              		.thumb_func
+ 258              		.type	freeHandBtnEventHandler, %function
+ 259              	freeHandBtnEventHandler:
+ 260              	.LFB61:
+  33:main.c        **** 
+  34:main.c        **** void freeHandBtnEventHandler(void) {
+ 261              		.loc 1 34 36
+ 262              		.cfi_startproc
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265              		@ link register save eliminated.
+ 266              	@ main.c:35:     idx=1;
+  35:main.c        ****     idx=1;
+ 267              		.loc 1 35 8
+ 268 0068 024B     		ldr	r3, .L10	@ tmp113,
+ 269 006a 0122     		movs	r2, #1	@ tmp114,
+ 270 006c 1A60     		str	r2, [r3]	@ tmp114, idx
+ 271              	@ main.c:36: }
+  36:main.c        **** }
+ 272              		.loc 1 36 1
+ 273 006e 00BF     		nop	
+ 274 0070 7047     		bx	lr	@
+ 275              	.L11:
+ 276 0072 00BF     		.align	2
+ 277              	.L10:
+ 278 0074 00000000 		.word	idx
+ 279              		.cfi_endproc
+ 280              	.LFE61:
+ 281              		.size	freeHandBtnEventHandler, .-freeHandBtnEventHandler
+ 282              		.align	1
+ 283              		.global	lineBtnEventHandler
+ 284              		.syntax unified
+ 285              		.thumb
+ 286              		.thumb_func
+ 287              		.type	lineBtnEventHandler, %function
+ 288              	lineBtnEventHandler:
+ 289              	.LFB62:
+  37:main.c        ****     
+  38:main.c        **** void lineBtnEventHandler(void) {
+ 290              		.loc 1 38 32
+ 291              		.cfi_startproc
+ 292              		@ args = 0, pretend = 0, frame = 0
+ 293              		@ frame_needed = 0, uses_anonymous_args = 0
+ 294              		@ link register save eliminated.
+ 295              	@ main.c:39:     idx=2;
+  39:main.c        ****     idx=2;
+ 296              		.loc 1 39 8
+ 297 0078 024B     		ldr	r3, .L13	@ tmp113,
+ 298 007a 0222     		movs	r2, #2	@ tmp114,
+ 299 007c 1A60     		str	r2, [r3]	@ tmp114, idx
+ 300              	@ main.c:40: }
+  40:main.c        **** }
+ 301              		.loc 1 40 1
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 7
+
+
+ 302 007e 00BF     		nop	
+ 303 0080 7047     		bx	lr	@
+ 304              	.L14:
+ 305 0082 00BF     		.align	2
+ 306              	.L13:
+ 307 0084 00000000 		.word	idx
+ 308              		.cfi_endproc
+ 309              	.LFE62:
+ 310              		.size	lineBtnEventHandler, .-lineBtnEventHandler
+ 311              		.align	1
+ 312              		.global	circleBtnEventHandler
+ 313              		.syntax unified
+ 314              		.thumb
+ 315              		.thumb_func
+ 316              		.type	circleBtnEventHandler, %function
+ 317              	circleBtnEventHandler:
+ 318              	.LFB63:
+  41:main.c        **** 
+  42:main.c        **** void circleBtnEventHandler(void) {
+ 319              		.loc 1 42 34
+ 320              		.cfi_startproc
+ 321              		@ args = 0, pretend = 0, frame = 0
+ 322              		@ frame_needed = 0, uses_anonymous_args = 0
+ 323              		@ link register save eliminated.
+ 324              	@ main.c:43:     idx=3;
+  43:main.c        ****     idx=3;
+ 325              		.loc 1 43 8
+ 326 0088 024B     		ldr	r3, .L16	@ tmp113,
+ 327 008a 0322     		movs	r2, #3	@ tmp114,
+ 328 008c 1A60     		str	r2, [r3]	@ tmp114, idx
+ 329              	@ main.c:44: }
+  44:main.c        **** }
+ 330              		.loc 1 44 1
+ 331 008e 00BF     		nop	
+ 332 0090 7047     		bx	lr	@
+ 333              	.L17:
+ 334 0092 00BF     		.align	2
+ 335              	.L16:
+ 336 0094 00000000 		.word	idx
+ 337              		.cfi_endproc
+ 338              	.LFE63:
+ 339              		.size	circleBtnEventHandler, .-circleBtnEventHandler
+ 340              		.align	1
+ 341              		.global	rectangleBtnEventHandler
+ 342              		.syntax unified
+ 343              		.thumb
+ 344              		.thumb_func
+ 345              		.type	rectangleBtnEventHandler, %function
+ 346              	rectangleBtnEventHandler:
+ 347              	.LFB64:
+  45:main.c        ****     
+  46:main.c        **** void rectangleBtnEventHandler(void) {
+ 348              		.loc 1 46 37
+ 349              		.cfi_startproc
+ 350              		@ args = 0, pretend = 0, frame = 0
+ 351              		@ frame_needed = 0, uses_anonymous_args = 0
+ 352              		@ link register save eliminated.
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 8
+
+
+ 353              	@ main.c:47:     idx=4;
+  47:main.c        ****     idx=4;
+ 354              		.loc 1 47 8
+ 355 0098 024B     		ldr	r3, .L19	@ tmp113,
+ 356 009a 0422     		movs	r2, #4	@ tmp114,
+ 357 009c 1A60     		str	r2, [r3]	@ tmp114, idx
+ 358              	@ main.c:48: }
+  48:main.c        **** }
+ 359              		.loc 1 48 1
+ 360 009e 00BF     		nop	
+ 361 00a0 7047     		bx	lr	@
+ 362              	.L20:
+ 363 00a2 00BF     		.align	2
+ 364              	.L19:
+ 365 00a4 00000000 		.word	idx
+ 366              		.cfi_endproc
+ 367              	.LFE64:
+ 368              		.size	rectangleBtnEventHandler, .-rectangleBtnEventHandler
+ 369              		.section	.rodata
+ 370              		.align	2
+ 371              	.LC0:
+ 372 0000 53415645 		.ascii	"SAVED\000"
+ 372      4400
+ 373              		.text
+ 374              		.align	1
+ 375              		.global	saveBtnEventHandler
+ 376              		.syntax unified
+ 377              		.thumb
+ 378              		.thumb_func
+ 379              		.type	saveBtnEventHandler, %function
+ 380              	saveBtnEventHandler:
+ 381              	.LFB65:
+  49:main.c        **** 
+  50:main.c        **** void saveBtnEventHandler(void) {
+ 382              		.loc 1 50 32
+ 383              		.cfi_startproc
+ 384              		@ args = 0, pretend = 0, frame = 0
+ 385              		@ frame_needed = 0, uses_anonymous_args = 0
+ 386 00a8 00B5     		push	{lr}	@
+ 387              	.LCFI2:
+ 388              		.cfi_def_cfa_offset 4
+ 389              		.cfi_offset 14, -4
+ 390 00aa 83B0     		sub	sp, sp, #12	@,,
+ 391              	.LCFI3:
+ 392              		.cfi_def_cfa_offset 16
+ 393              	@ main.c:51:     gfxDrawString(val,50,"SAVED",enGfxFont_8X16,BLACK,WHITE);
+  51:main.c        ****     gfxDrawString(val,50,"SAVED",enGfxFont_8X16,BLACK,WHITE);
+ 394              		.loc 1 51 5
+ 395 00ac 074B     		ldr	r3, .L22	@ tmp114,
+ 396 00ae 1868     		ldr	r0, [r3]	@ val.0_1, val
+ 397 00b0 4FF6FF73 		movw	r3, #65535	@ tmp115,
+ 398 00b4 0193     		str	r3, [sp, #4]	@ tmp115,
+ 399 00b6 0023     		movs	r3, #0	@ tmp116,
+ 400 00b8 0093     		str	r3, [sp]	@ tmp116,
+ 401 00ba 0123     		movs	r3, #1	@,
+ 402 00bc 044A     		ldr	r2, .L22+4	@,
+ 403 00be 3221     		movs	r1, #50	@,
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 9
+
+
+ 404 00c0 FFF7FEFF 		bl	gfxDrawString		@
+ 405              	@ main.c:53: }
+  52:main.c        ****     // val+=50;
+  53:main.c        **** }
+ 406              		.loc 1 53 1
+ 407 00c4 00BF     		nop	
+ 408 00c6 03B0     		add	sp, sp, #12	@,,
+ 409              	.LCFI4:
+ 410              		.cfi_def_cfa_offset 4
+ 411              		@ sp needed	@
+ 412 00c8 5DF804FB 		ldr	pc, [sp], #4	@
+ 413              	.L23:
+ 414              		.align	2
+ 415              	.L22:
+ 416 00cc 00000000 		.word	val
+ 417 00d0 00000000 		.word	.LC0
+ 418              		.cfi_endproc
+ 419              	.LFE65:
+ 420              		.size	saveBtnEventHandler, .-saveBtnEventHandler
+ 421              		.section	.rodata
+ 422 0006 0000     		.align	2
+ 423              	.LC1:
+ 424 0008 53415645 		.ascii	"SAVE\000"
+ 424      00
+ 425              		.text
+ 426              		.align	1
+ 427              		.global	homeScreen
+ 428              		.syntax unified
+ 429              		.thumb
+ 430              		.thumb_func
+ 431              		.type	homeScreen, %function
+ 432              	homeScreen:
+ 433              	.LFB66:
+  54:main.c        ****     
+  55:main.c        **** void homeScreen(void) {
+ 434              		.loc 1 55 23
+ 435              		.cfi_startproc
+ 436              		@ args = 0, pretend = 0, frame = 0
+ 437              		@ frame_needed = 0, uses_anonymous_args = 0
+ 438 00d4 00B5     		push	{lr}	@
+ 439              	.LCFI5:
+ 440              		.cfi_def_cfa_offset 4
+ 441              		.cfi_offset 14, -4
+ 442 00d6 83B0     		sub	sp, sp, #12	@,,
+ 443              	.LCFI6:
+ 444              		.cfi_def_cfa_offset 16
+ 445              	@ main.c:56:     setWindow(windowID);
+  56:main.c        ****     setWindow(windowID);
+ 446              		.loc 1 56 5
+ 447 00d8 124B     		ldr	r3, .L25	@ tmp114,
+ 448 00da 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.1_1, windowID
+ 449 00dc 1846     		mov	r0, r3	@, windowID.1_1
+ 450 00de FFF7FEFF 		bl	setWindow		@
+ 451              	@ main.c:57:     gfxDrawLine(42,36,72,4);
+  57:main.c        ****     gfxDrawLine(42,36,72,4);
+ 452              		.loc 1 57 5
+ 453 00e2 0423     		movs	r3, #4	@,
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 10
+
+
+ 454 00e4 4822     		movs	r2, #72	@,
+ 455 00e6 2421     		movs	r1, #36	@,
+ 456 00e8 2A20     		movs	r0, #42	@,
+ 457 00ea FFF7FEFF 		bl	gfxDrawLine		@
+ 458              	@ main.c:58:     gfxDrawCircle(95,20,16);
+  58:main.c        ****     gfxDrawCircle(95,20,16);
+ 459              		.loc 1 58 5
+ 460 00ee 1022     		movs	r2, #16	@,
+ 461 00f0 1421     		movs	r1, #20	@,
+ 462 00f2 5F20     		movs	r0, #95	@,
+ 463 00f4 FFF7FEFF 		bl	gfxDrawCircle		@
+ 464              	@ main.c:59:     gfxDrawRectangle(118,4,148,36);	
+  59:main.c        ****     gfxDrawRectangle(118,4,148,36);	
+ 465              		.loc 1 59 5
+ 466 00f8 2423     		movs	r3, #36	@,
+ 467 00fa 9422     		movs	r2, #148	@,
+ 468 00fc 0421     		movs	r1, #4	@,
+ 469 00fe 7620     		movs	r0, #118	@,
+ 470 0100 FFF7FEFF 		bl	gfxDrawRectangle		@
+ 471              	@ main.c:60:     gfxDrawString(197,12,"SAVE",enGfxFont_8X16,BLACK,WHITE);
+  60:main.c        ****     gfxDrawString(197,12,"SAVE",enGfxFont_8X16,BLACK,WHITE);
+ 472              		.loc 1 60 5
+ 473 0104 4FF6FF73 		movw	r3, #65535	@ tmp115,
+ 474 0108 0193     		str	r3, [sp, #4]	@ tmp115,
+ 475 010a 0023     		movs	r3, #0	@ tmp116,
+ 476 010c 0093     		str	r3, [sp]	@ tmp116,
+ 477 010e 0123     		movs	r3, #1	@,
+ 478 0110 054A     		ldr	r2, .L25+4	@,
+ 479 0112 0C21     		movs	r1, #12	@,
+ 480 0114 C520     		movs	r0, #197	@,
+ 481 0116 FFF7FEFF 		bl	gfxDrawString		@
+ 482              	@ main.c:61: } 
+  61:main.c        **** } 
+ 483              		.loc 1 61 1
+ 484 011a 00BF     		nop	
+ 485 011c 03B0     		add	sp, sp, #12	@,,
+ 486              	.LCFI7:
+ 487              		.cfi_def_cfa_offset 4
+ 488              		@ sp needed	@
+ 489 011e 5DF804FB 		ldr	pc, [sp], #4	@
+ 490              	.L26:
+ 491 0122 00BF     		.align	2
+ 492              	.L25:
+ 493 0124 00000000 		.word	windowID
+ 494 0128 08000000 		.word	.LC1
+ 495              		.cfi_endproc
+ 496              	.LFE66:
+ 497              		.size	homeScreen, .-homeScreen
+ 498              		.align	1
+ 499              		.global	clearscreenBtnEventHandler
+ 500              		.syntax unified
+ 501              		.thumb
+ 502              		.thumb_func
+ 503              		.type	clearscreenBtnEventHandler, %function
+ 504              	clearscreenBtnEventHandler:
+ 505              	.LFB67:
+  62:main.c        **** 
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 11
+
+
+  63:main.c        **** void clearscreenBtnEventHandler(void) {
+ 506              		.loc 1 63 39
+ 507              		.cfi_startproc
+ 508              		@ args = 0, pretend = 0, frame = 0
+ 509              		@ frame_needed = 0, uses_anonymous_args = 0
+ 510 012c 08B5     		push	{r3, lr}	@
+ 511              	.LCFI8:
+ 512              		.cfi_def_cfa_offset 8
+ 513              		.cfi_offset 3, -8
+ 514              		.cfi_offset 14, -4
+ 515              	@ main.c:64: 	homeScreen();
+  64:main.c        **** 	homeScreen();
+ 516              		.loc 1 64 2
+ 517 012e FFF7FEFF 		bl	homeScreen		@
+ 518              	.L29:
+ 519              	@ main.c:67: 		if(touchAvailable(&x,&y)==enBooleanTrue) windowEventHandler(windowID,x,y);
+  65:main.c        ****     // val=10;
+  66:main.c        **** 	while(1) {
+  67:main.c        **** 		if(touchAvailable(&x,&y)==enBooleanTrue) windowEventHandler(windowID,x,y);
+ 520              		.loc 1 67 6
+ 521 0132 0949     		ldr	r1, .L30	@,
+ 522 0134 0948     		ldr	r0, .L30+4	@,
+ 523 0136 FFF7FEFF 		bl	touchAvailable		@
+ 524 013a 0346     		mov	r3, r0	@ tmp119,
+ 525              	@ main.c:67: 		if(touchAvailable(&x,&y)==enBooleanTrue) windowEventHandler(windowID,x,y);
+ 526              		.loc 1 67 5
+ 527 013c 012B     		cmp	r3, #1	@ _1,
+ 528 013e F8D1     		bne	.L29		@,
+ 529              	@ main.c:67: 		if(touchAvailable(&x,&y)==enBooleanTrue) windowEventHandler(windowID,x,y);
+ 530              		.loc 1 67 44 discriminator 1
+ 531 0140 074B     		ldr	r3, .L30+8	@ tmp120,
+ 532 0142 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.2_2, windowID
+ 533 0144 054A     		ldr	r2, .L30+4	@ tmp121,
+ 534 0146 1268     		ldr	r2, [r2]	@ x.3_3, x
+ 535 0148 91B2     		uxth	r1, r2	@ _4, x.3_3
+ 536 014a 034A     		ldr	r2, .L30	@ tmp122,
+ 537 014c 1268     		ldr	r2, [r2]	@ y.4_5, y
+ 538 014e 92B2     		uxth	r2, r2	@ _6, y.4_5
+ 539 0150 1846     		mov	r0, r3	@, windowID.2_2
+ 540 0152 FFF7FEFF 		bl	windowEventHandler		@
+ 541              	@ main.c:67: 		if(touchAvailable(&x,&y)==enBooleanTrue) windowEventHandler(windowID,x,y);
+ 542              		.loc 1 67 5 discriminator 1
+ 543 0156 ECE7     		b	.L29		@
+ 544              	.L31:
+ 545              		.align	2
+ 546              	.L30:
+ 547 0158 00000000 		.word	y
+ 548 015c 00000000 		.word	x
+ 549 0160 00000000 		.word	windowID
+ 550              		.cfi_endproc
+ 551              	.LFE67:
+ 552              		.size	clearscreenBtnEventHandler, .-clearscreenBtnEventHandler
+ 553              		.align	1
+ 554              		.global	canvasEventHandler
+ 555              		.syntax unified
+ 556              		.thumb
+ 557              		.thumb_func
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 12
+
+
+ 558              		.type	canvasEventHandler, %function
+ 559              	canvasEventHandler:
+ 560              	.LFB68:
+  68:main.c        **** 	}
+  69:main.c        **** }
+  70:main.c        **** 
+  71:main.c        **** void canvasEventHandler(void) {
+ 561              		.loc 1 71 31
+ 562              		.cfi_startproc
+ 563              		@ args = 0, pretend = 0, frame = 8
+ 564              		@ frame_needed = 0, uses_anonymous_args = 0
+ 565 0164 00B5     		push	{lr}	@
+ 566              	.LCFI9:
+ 567              		.cfi_def_cfa_offset 4
+ 568              		.cfi_offset 14, -4
+ 569 0166 83B0     		sub	sp, sp, #12	@,,
+ 570              	.LCFI10:
+ 571              		.cfi_def_cfa_offset 16
+ 572              	@ main.c:76:     switch(idx) 
+  72:main.c        **** /* the edge cases such as handling of shapes and pixels are not drawn on the buttons are commented 
+  73:main.c        ****    see about the problems but we will use them in the final build and please have the look at the e
+  74:main.c        ****    if they are correct.
+  75:main.c        **** */
+  76:main.c        ****     switch(idx) 
+ 573              		.loc 1 76 5
+ 574 0168 434B     		ldr	r3, .L49	@ tmp153,
+ 575 016a 1B68     		ldr	r3, [r3]	@ idx.5_1, idx
+ 576 016c 013B     		subs	r3, r3, #1	@ tmp154, idx.5_1,
+ 577 016e 032B     		cmp	r3, #3	@ tmp154,
+ 578 0170 7DD8     		bhi	.L45		@
+ 579 0172 01A2     		adr	r2, .L35	@ tmp183,
+ 580 0174 52F823F0 		ldr	pc, [r2, r3, lsl #2]	@ tmp183, tmp154
+ 581              		.p2align 2
+ 582              	.L35:
+ 583 0178 89010000 		.word	.L38+1
+ 584 017c BB010000 		.word	.L46+1
+ 585 0180 E7010000 		.word	.L47+1
+ 586 0184 49020000 		.word	.L48+1
+ 587              		.p2align 1
+ 588              	.L38:
+ 589              	.LBB2:
+ 590              	@ main.c:79:             gfxDrawPixels(x,y);
+  77:main.c        ****     {
+  78:main.c        ****         case 1:
+  79:main.c        ****             gfxDrawPixels(x,y);
+ 591              		.loc 1 79 13
+ 592 0188 3C4B     		ldr	r3, .L49+4	@ tmp155,
+ 593 018a 1B68     		ldr	r3, [r3]	@ x.6_2, x
+ 594 018c 3C4A     		ldr	r2, .L49+8	@ tmp156,
+ 595 018e 1268     		ldr	r2, [r2]	@ y.7_3, y
+ 596 0190 1146     		mov	r1, r2	@, y.7_3
+ 597 0192 1846     		mov	r0, r3	@, x.6_2
+ 598 0194 FFF7FEFF 		bl	gfxDrawPixels		@
+ 599              	@ main.c:80: 	    	while(touchAvailable(&a,&b)==enBooleanTrue) {
+  80:main.c        **** 	    	while(touchAvailable(&a,&b)==enBooleanTrue) {
+ 600              		.loc 1 80 12
+ 601 0198 07E0     		b	.L39		@
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 13
+
+
+ 602              	.L40:
+ 603              	@ main.c:82:                 gfxDrawPixels(a,b);
+  81:main.c        ****                 // if(b>=42) {}
+  82:main.c        ****                 gfxDrawPixels(a,b);
+ 604              		.loc 1 82 17
+ 605 019a 3A4B     		ldr	r3, .L49+12	@ tmp157,
+ 606 019c 1B68     		ldr	r3, [r3]	@ a.8_4, a
+ 607 019e 3A4A     		ldr	r2, .L49+16	@ tmp158,
+ 608 01a0 1268     		ldr	r2, [r2]	@ b.9_5, b
+ 609 01a2 1146     		mov	r1, r2	@, b.9_5
+ 610 01a4 1846     		mov	r0, r3	@, a.8_4
+ 611 01a6 FFF7FEFF 		bl	gfxDrawPixels		@
+ 612              	.L39:
+ 613              	@ main.c:80: 	    	while(touchAvailable(&a,&b)==enBooleanTrue) {
+  80:main.c        **** 	    	while(touchAvailable(&a,&b)==enBooleanTrue) {
+ 614              		.loc 1 80 13
+ 615 01aa 3749     		ldr	r1, .L49+16	@,
+ 616 01ac 3548     		ldr	r0, .L49+12	@,
+ 617 01ae FFF7FEFF 		bl	touchAvailable		@
+ 618 01b2 0346     		mov	r3, r0	@ tmp159,
+ 619              	@ main.c:80: 	    	while(touchAvailable(&a,&b)==enBooleanTrue) {
+  80:main.c        **** 	    	while(touchAvailable(&a,&b)==enBooleanTrue) {
+ 620              		.loc 1 80 12
+ 621 01b4 012B     		cmp	r3, #1	@ _6,
+ 622 01b6 F0D0     		beq	.L40		@,
+ 623              	@ main.c:84:             break;
+  83:main.c        ****             }
+  84:main.c        ****             break;
+ 624              		.loc 1 84 13
+ 625 01b8 5AE0     		b	.L41		@
+ 626              	.L46:
+ 627              	@ main.c:86:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+  85:main.c        ****         case 2:
+  86:main.c        ****             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 628              		.loc 1 86 18
+ 629 01ba 00BF     		nop	
+ 630              	.L42:
+ 631              	@ main.c:86:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 632              		.loc 1 86 19 discriminator 1
+ 633 01bc 3249     		ldr	r1, .L49+16	@,
+ 634 01be 3148     		ldr	r0, .L49+12	@,
+ 635 01c0 FFF7FEFF 		bl	touchAvailable		@
+ 636 01c4 0346     		mov	r3, r0	@ tmp160,
+ 637              	@ main.c:86:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 638              		.loc 1 86 18 discriminator 1
+ 639 01c6 012B     		cmp	r3, #1	@ _7,
+ 640 01c8 F8D0     		beq	.L42		@,
+ 641              	@ main.c:88: 			gfxDrawLine(x,y,a,b);
+  87:main.c        ****             // if((x!=a || y!=b) && b>=42) {}
+  88:main.c        **** 			gfxDrawLine(x,y,a,b);
+ 642              		.loc 1 88 4
+ 643 01ca 2C4B     		ldr	r3, .L49+4	@ tmp161,
+ 644 01cc 1B68     		ldr	r3, [r3]	@ x.10_8, x
+ 645 01ce 1846     		mov	r0, r3	@ x.11_9, x.10_8
+ 646 01d0 2B4B     		ldr	r3, .L49+8	@ tmp162,
+ 647 01d2 1B68     		ldr	r3, [r3]	@ y.12_10, y
+ 648 01d4 1946     		mov	r1, r3	@ y.13_11, y.12_10
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 14
+
+
+ 649 01d6 2B4B     		ldr	r3, .L49+12	@ tmp163,
+ 650 01d8 1B68     		ldr	r3, [r3]	@ a.14_12, a
+ 651 01da 1A46     		mov	r2, r3	@ a.15_13, a.14_12
+ 652 01dc 2A4B     		ldr	r3, .L49+16	@ tmp164,
+ 653 01de 1B68     		ldr	r3, [r3]	@ b.16_14, b
+ 654 01e0 FFF7FEFF 		bl	gfxDrawLine		@
+ 655              	@ main.c:89:             break;
+  89:main.c        ****             break;
+ 656              		.loc 1 89 13
+ 657 01e4 44E0     		b	.L41		@
+ 658              	.L47:
+ 659              	@ main.c:91:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+  90:main.c        ****         case 3:
+  91:main.c        ****             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 660              		.loc 1 91 18
+ 661 01e6 00BF     		nop	
+ 662              	.L43:
+ 663              	@ main.c:91:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 664              		.loc 1 91 19 discriminator 1
+ 665 01e8 2749     		ldr	r1, .L49+16	@,
+ 666 01ea 2648     		ldr	r0, .L49+12	@,
+ 667 01ec FFF7FEFF 		bl	touchAvailable		@
+ 668 01f0 0346     		mov	r3, r0	@ tmp165,
+ 669              	@ main.c:91:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 670              		.loc 1 91 18 discriminator 1
+ 671 01f2 012B     		cmp	r3, #1	@ _16,
+ 672 01f4 F8D0     		beq	.L43		@,
+ 673              	@ main.c:93:             PFdword radius,tmp=((a-x)*(a-x))+((b-y)*(b-y));
+  92:main.c        ****             // if((x!=a || y!=b) && b>=42) {}
+  93:main.c        ****             PFdword radius,tmp=((a-x)*(a-x))+((b-y)*(b-y));
+ 674              		.loc 1 93 35
+ 675 01f6 234B     		ldr	r3, .L49+12	@ tmp166,
+ 676 01f8 1A68     		ldr	r2, [r3]	@ a.18_17, a
+ 677 01fa 204B     		ldr	r3, .L49+4	@ tmp167,
+ 678 01fc 1B68     		ldr	r3, [r3]	@ x.19_18, x
+ 679 01fe D31A     		subs	r3, r2, r3	@ _19, a.18_17, x.19_18
+ 680              	@ main.c:93:             PFdword radius,tmp=((a-x)*(a-x))+((b-y)*(b-y));
+ 681              		.loc 1 93 41
+ 682 0200 204A     		ldr	r2, .L49+12	@ tmp168,
+ 683 0202 1168     		ldr	r1, [r2]	@ a.20_20, a
+ 684 0204 1D4A     		ldr	r2, .L49+4	@ tmp169,
+ 685 0206 1268     		ldr	r2, [r2]	@ x.21_21, x
+ 686 0208 8A1A     		subs	r2, r1, r2	@ _22, a.20_20, x.21_21
+ 687              	@ main.c:93:             PFdword radius,tmp=((a-x)*(a-x))+((b-y)*(b-y));
+ 688              		.loc 1 93 38
+ 689 020a 03FB02F2 		mul	r2, r3, r2	@ _23, _19, _22
+ 690              	@ main.c:93:             PFdword radius,tmp=((a-x)*(a-x))+((b-y)*(b-y));
+ 691              		.loc 1 93 49
+ 692 020e 1E4B     		ldr	r3, .L49+16	@ tmp170,
+ 693 0210 1968     		ldr	r1, [r3]	@ b.22_24, b
+ 694 0212 1B4B     		ldr	r3, .L49+8	@ tmp171,
+ 695 0214 1B68     		ldr	r3, [r3]	@ y.23_25, y
+ 696 0216 CB1A     		subs	r3, r1, r3	@ _26, b.22_24, y.23_25
+ 697              	@ main.c:93:             PFdword radius,tmp=((a-x)*(a-x))+((b-y)*(b-y));
+ 698              		.loc 1 93 55
+ 699 0218 1B49     		ldr	r1, .L49+16	@ tmp172,
+ 700 021a 0868     		ldr	r0, [r1]	@ b.24_27, b
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 15
+
+
+ 701 021c 1849     		ldr	r1, .L49+8	@ tmp173,
+ 702 021e 0968     		ldr	r1, [r1]	@ y.25_28, y
+ 703 0220 411A     		subs	r1, r0, r1	@ _29, b.24_27, y.25_28
+ 704              	@ main.c:93:             PFdword radius,tmp=((a-x)*(a-x))+((b-y)*(b-y));
+ 705              		.loc 1 93 52
+ 706 0222 01FB03F3 		mul	r3, r1, r3	@ _30, _29, _26
+ 707              	@ main.c:93:             PFdword radius,tmp=((a-x)*(a-x))+((b-y)*(b-y));
+ 708              		.loc 1 93 28
+ 709 0226 1344     		add	r3, r3, r2	@ tmp174, _23
+ 710 0228 0193     		str	r3, [sp, #4]	@ tmp174, tmp
+ 711              	@ main.c:94: 	    	radius=sqroot(tmp);
+  94:main.c        **** 	    	radius=sqroot(tmp);
+ 712              		.loc 1 94 14
+ 713 022a 0198     		ldr	r0, [sp, #4]	@, tmp
+ 714 022c FFF7FEFF 		bl	sqroot		@
+ 715 0230 0090     		str	r0, [sp]	@, radius
+ 716              	@ main.c:96: 		    gfxDrawCircle(x,y,radius);
+  95:main.c        ****             // if(y-radius>=42 && y+radius<=319 && x-radius>=0 && x+radius>=239) {}
+  96:main.c        **** 		    gfxDrawCircle(x,y,radius);
+ 717              		.loc 1 96 7
+ 718 0232 124B     		ldr	r3, .L49+4	@ tmp175,
+ 719 0234 1B68     		ldr	r3, [r3]	@ x.26_31, x
+ 720 0236 1846     		mov	r0, r3	@ x.27_32, x.26_31
+ 721 0238 114B     		ldr	r3, .L49+8	@ tmp176,
+ 722 023a 1B68     		ldr	r3, [r3]	@ y.28_33, y
+ 723 023c 1946     		mov	r1, r3	@ y.29_34, y.28_33
+ 724 023e 009B     		ldr	r3, [sp]	@ radius.30_35, radius
+ 725 0240 1A46     		mov	r2, r3	@, radius.30_35
+ 726 0242 FFF7FEFF 		bl	gfxDrawCircle		@
+ 727              	@ main.c:97:             break;
+  97:main.c        ****             break;
+ 728              		.loc 1 97 13
+ 729 0246 13E0     		b	.L41		@
+ 730              	.L48:
+ 731              	@ main.c:99:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+  98:main.c        ****         case 4:
+  99:main.c        ****             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 732              		.loc 1 99 18
+ 733 0248 00BF     		nop	
+ 734              	.L44:
+ 735              	@ main.c:99:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 736              		.loc 1 99 19 discriminator 1
+ 737 024a 0F49     		ldr	r1, .L49+16	@,
+ 738 024c 0D48     		ldr	r0, .L49+12	@,
+ 739 024e FFF7FEFF 		bl	touchAvailable		@
+ 740 0252 0346     		mov	r3, r0	@ tmp177,
+ 741              	@ main.c:99:             while(touchAvailable(&a,&b)==enBooleanTrue) {}
+ 742              		.loc 1 99 18 discriminator 1
+ 743 0254 012B     		cmp	r3, #1	@ _36,
+ 744 0256 F8D0     		beq	.L44		@,
+ 745              	@ main.c:101: 			gfxDrawRectangle(x,y,a,b);
+ 100:main.c        ****             // if((x!=a && y!=b) && b>=42) {}
+ 101:main.c        **** 			gfxDrawRectangle(x,y,a,b);
+ 746              		.loc 1 101 4
+ 747 0258 084B     		ldr	r3, .L49+4	@ tmp178,
+ 748 025a 1868     		ldr	r0, [r3]	@ x.31_37, x
+ 749 025c 084B     		ldr	r3, .L49+8	@ tmp179,
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 16
+
+
+ 750 025e 1968     		ldr	r1, [r3]	@ y.32_38, y
+ 751 0260 084B     		ldr	r3, .L49+12	@ tmp180,
+ 752 0262 1A68     		ldr	r2, [r3]	@ a.33_39, a
+ 753 0264 084B     		ldr	r3, .L49+16	@ tmp181,
+ 754 0266 1B68     		ldr	r3, [r3]	@ b.34_40, b
+ 755 0268 FFF7FEFF 		bl	gfxDrawRectangle		@
+ 756              	@ main.c:102:             break;
+ 102:main.c        ****             break;
+ 757              		.loc 1 102 13
+ 758 026c 00E0     		b	.L41		@
+ 759              	.L45:
+ 760              	@ main.c:104:             break;
+ 103:main.c        ****         default :
+ 104:main.c        ****             break;
+ 761              		.loc 1 104 13
+ 762 026e 00BF     		nop	
+ 763              	.L41:
+ 764              	.LBE2:
+ 765              	@ main.c:106: }
+ 105:main.c        ****     }
+ 106:main.c        **** }
+ 766              		.loc 1 106 1
+ 767 0270 00BF     		nop	
+ 768 0272 03B0     		add	sp, sp, #12	@,,
+ 769              	.LCFI11:
+ 770              		.cfi_def_cfa_offset 4
+ 771              		@ sp needed	@
+ 772 0274 5DF804FB 		ldr	pc, [sp], #4	@
+ 773              	.L50:
+ 774              		.align	2
+ 775              	.L49:
+ 776 0278 00000000 		.word	idx
+ 777 027c 00000000 		.word	x
+ 778 0280 00000000 		.word	y
+ 779 0284 00000000 		.word	a
+ 780 0288 00000000 		.word	b
+ 781              		.cfi_endproc
+ 782              	.LFE68:
+ 783              		.size	canvasEventHandler, .-canvasEventHandler
+ 784              		.section	.rodata
+ 785 000d 000000   		.align	2
+ 786              	.LC2:
+ 787 0010 57696E64 		.ascii	"Window 1\000"
+ 787      6F772031 
+ 787      00
+ 788              		.data
+ 789              		.align	2
+ 790              		.type	window1, %object
+ 791              		.size	window1, 20
+ 792              	window1:
+ 793              	@ windowAttr:
+ 794              	@ name:
+ 795 0004 10000000 		.word	.LC2
+ 796              	@ topLeft:
+ 797              	@ xValue:
+ 798 0008 0000     		.short	0
+ 799              	@ yValue:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 17
+
+
+ 800 000a 0000     		.short	0
+ 801              	@ size:
+ 802              	@ width:
+ 803 000c F000     		.short	240
+ 804              	@ height:
+ 805 000e 4001     		.short	320
+ 806              	@ backgroundColor:
+ 807 0010 FFFF     		.short	-1
+ 808              	@ border:
+ 809 0012 00       		.byte	0
+ 810 0013 00       		.space	1
+ 811              	@ oneShotHandler:
+ 812 0014 00000000 		.word	0
+ 813              		.section	.rodata
+ 814 0019 000000   		.align	2
+ 815              	.LC3:
+ 816 001c 43616E76 		.ascii	"Canvas\000"
+ 816      617300
+ 817 0023 00       		.align	2
+ 818              	.LC4:
+ 819 0024 00       		.ascii	"\000"
+ 820              		.data
+ 821              		.align	2
+ 822              		.type	Canvas, %object
+ 823              		.size	Canvas, 32
+ 824              	Canvas:
+ 825              	@ canvasAttr:
+ 826              	@ name:
+ 827 0018 1C000000 		.word	.LC3
+ 828              	@ topLeft:
+ 829              	@ xValue:
+ 830 001c 0000     		.short	0
+ 831              	@ yValue:
+ 832 001e 2800     		.short	40
+ 833              	@ size:
+ 834              	@ width:
+ 835 0020 F000     		.short	240
+ 836              	@ height:
+ 837 0022 1801     		.short	280
+ 838              	@ backgroundColor:
+ 839 0024 FFFF     		.short	-1
+ 840              	@ border:
+ 841 0026 01       		.byte	1
+ 842 0027 00       		.space	1
+ 843              	@ eventHandler:
+ 844 0028 00000000 		.word	canvasEventHandler
+ 845              	@ displayString:
+ 846 002c 24000000 		.word	.LC4
+ 847              	@ font:
+ 848 0030 01       		.byte	1
+ 849              	@ fontColor:
+ 850 0031 00       		.space	1
+ 851 0032 FFFF     		.short	-1
+ 852              	@ image1:
+ 853 0034 00000000 		.word	0
+ 854              		.section	.rodata
+ 855 0025 000000   		.align	2
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 18
+
+
+ 856              	.LC5:
+ 857 0028 46726565 		.ascii	"Freehand button widget\000"
+ 857      68616E64 
+ 857      20627574 
+ 857      746F6E20 
+ 857      77696467 
+ 858 003f 00       		.align	2
+ 859              	.LC6:
+ 860 0040 20204648 		.ascii	"  FH\000"
+ 860      00
+ 861              		.data
+ 862              		.align	2
+ 863              		.type	freeHandBtnWidget, %object
+ 864              		.size	freeHandBtnWidget, 32
+ 865              	freeHandBtnWidget:
+ 866              	@ widgetAttr:
+ 867              	@ name:
+ 868 0038 28000000 		.word	.LC5
+ 869              	@ topLeft:
+ 870              	@ xValue:
+ 871 003c 0000     		.short	0
+ 872              	@ yValue:
+ 873 003e 0000     		.short	0
+ 874              	@ size:
+ 875              	@ width:
+ 876 0040 2600     		.short	38
+ 877              	@ height:
+ 878 0042 2800     		.short	40
+ 879              	@ backgroundColor:
+ 880 0044 FFFF     		.short	-1
+ 881              	@ border:
+ 882 0046 01       		.byte	1
+ 883 0047 00       		.space	1
+ 884              	@ eventHandler:
+ 885 0048 00000000 		.word	freeHandBtnEventHandler
+ 886              	@ displayString:
+ 887 004c 40000000 		.word	.LC6
+ 888              	@ font:
+ 889 0050 01       		.byte	1
+ 890              	@ fontColor:
+ 891 0051 00       		.space	1
+ 892 0052 0000     		.short	0
+ 893              	@ image1:
+ 894 0054 00000000 		.word	0
+ 895              		.section	.rodata
+ 896 0045 000000   		.align	2
+ 897              	.LC7:
+ 898 0048 4C696E65 		.ascii	"Line button widget\000"
+ 898      20627574 
+ 898      746F6E20 
+ 898      77696467 
+ 898      657400
+ 899              		.data
+ 900              		.align	2
+ 901              		.type	lineBtnWidget, %object
+ 902              		.size	lineBtnWidget, 32
+ 903              	lineBtnWidget:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 19
+
+
+ 904              	@ widgetAttr:
+ 905              	@ name:
+ 906 0058 48000000 		.word	.LC7
+ 907              	@ topLeft:
+ 908              	@ xValue:
+ 909 005c 2600     		.short	38
+ 910              	@ yValue:
+ 911 005e 0000     		.short	0
+ 912              	@ size:
+ 913              	@ width:
+ 914 0060 2600     		.short	38
+ 915              	@ height:
+ 916 0062 2800     		.short	40
+ 917              	@ backgroundColor:
+ 918 0064 FFFF     		.short	-1
+ 919              	@ border:
+ 920 0066 01       		.byte	1
+ 921 0067 00       		.space	1
+ 922              	@ eventHandler:
+ 923 0068 00000000 		.word	lineBtnEventHandler
+ 924              	@ displayString:
+ 925 006c 24000000 		.word	.LC4
+ 926              	@ font:
+ 927 0070 01       		.byte	1
+ 928              	@ fontColor:
+ 929 0071 00       		.space	1
+ 930 0072 0000     		.short	0
+ 931              	@ image1:
+ 932 0074 00000000 		.word	0
+ 933              		.section	.rodata
+ 934 005b 00       		.align	2
+ 935              	.LC8:
+ 936 005c 43697263 		.ascii	"Circle button widget\000"
+ 936      6C652062 
+ 936      7574746F 
+ 936      6E207769 
+ 936      64676574 
+ 937              		.data
+ 938              		.align	2
+ 939              		.type	circleBtnWidget, %object
+ 940              		.size	circleBtnWidget, 32
+ 941              	circleBtnWidget:
+ 942              	@ widgetAttr:
+ 943              	@ name:
+ 944 0078 5C000000 		.word	.LC8
+ 945              	@ topLeft:
+ 946              	@ xValue:
+ 947 007c 4C00     		.short	76
+ 948              	@ yValue:
+ 949 007e 0000     		.short	0
+ 950              	@ size:
+ 951              	@ width:
+ 952 0080 2600     		.short	38
+ 953              	@ height:
+ 954 0082 2800     		.short	40
+ 955              	@ backgroundColor:
+ 956 0084 FFFF     		.short	-1
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 20
+
+
+ 957              	@ border:
+ 958 0086 01       		.byte	1
+ 959 0087 00       		.space	1
+ 960              	@ eventHandler:
+ 961 0088 00000000 		.word	circleBtnEventHandler
+ 962              	@ displayString:
+ 963 008c 24000000 		.word	.LC4
+ 964              	@ font:
+ 965 0090 01       		.byte	1
+ 966              	@ fontColor:
+ 967 0091 00       		.space	1
+ 968 0092 0000     		.short	0
+ 969              	@ image1:
+ 970 0094 00000000 		.word	0
+ 971              		.section	.rodata
+ 972 0071 000000   		.align	2
+ 973              	.LC9:
+ 974 0074 52656374 		.ascii	"Rectangle button widget\000"
+ 974      616E676C 
+ 974      65206275 
+ 974      74746F6E 
+ 974      20776964 
+ 975              		.data
+ 976              		.align	2
+ 977              		.type	rectangleBtnWidget, %object
+ 978              		.size	rectangleBtnWidget, 32
+ 979              	rectangleBtnWidget:
+ 980              	@ widgetAttr:
+ 981              	@ name:
+ 982 0098 74000000 		.word	.LC9
+ 983              	@ topLeft:
+ 984              	@ xValue:
+ 985 009c 7200     		.short	114
+ 986              	@ yValue:
+ 987 009e 0000     		.short	0
+ 988              	@ size:
+ 989              	@ width:
+ 990 00a0 2600     		.short	38
+ 991              	@ height:
+ 992 00a2 2800     		.short	40
+ 993              	@ backgroundColor:
+ 994 00a4 FFFF     		.short	-1
+ 995              	@ border:
+ 996 00a6 01       		.byte	1
+ 997 00a7 00       		.space	1
+ 998              	@ eventHandler:
+ 999 00a8 00000000 		.word	rectangleBtnEventHandler
+ 1000              	@ displayString:
+ 1001 00ac 24000000 		.word	.LC4
+ 1002              	@ font:
+ 1003 00b0 01       		.byte	1
+ 1004              	@ fontColor:
+ 1005 00b1 00       		.space	1
+ 1006 00b2 0000     		.short	0
+ 1007              	@ image1:
+ 1008 00b4 00000000 		.word	0
+ 1009              		.section	.rodata
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 21
+
+
+ 1010              		.align	2
+ 1011              	.LC10:
+ 1012 008c 436C6561 		.ascii	"Clearscreen button widget\000"
+ 1012      72736372 
+ 1012      65656E20 
+ 1012      62757474 
+ 1012      6F6E2077 
+ 1013 00a6 0000     		.align	2
+ 1014              	.LC11:
+ 1015 00a8 20434C53 		.ascii	" CLS\000"
+ 1015      00
+ 1016              		.data
+ 1017              		.align	2
+ 1018              		.type	clearscreenBtnWidget, %object
+ 1019              		.size	clearscreenBtnWidget, 32
+ 1020              	clearscreenBtnWidget:
+ 1021              	@ widgetAttr:
+ 1022              	@ name:
+ 1023 00b8 8C000000 		.word	.LC10
+ 1024              	@ topLeft:
+ 1025              	@ xValue:
+ 1026 00bc 9800     		.short	152
+ 1027              	@ yValue:
+ 1028 00be 0000     		.short	0
+ 1029              	@ size:
+ 1030              	@ width:
+ 1031 00c0 2600     		.short	38
+ 1032              	@ height:
+ 1033 00c2 2800     		.short	40
+ 1034              	@ backgroundColor:
+ 1035 00c4 FFFF     		.short	-1
+ 1036              	@ border:
+ 1037 00c6 01       		.byte	1
+ 1038 00c7 00       		.space	1
+ 1039              	@ eventHandler:
+ 1040 00c8 00000000 		.word	clearscreenBtnEventHandler
+ 1041              	@ displayString:
+ 1042 00cc A8000000 		.word	.LC11
+ 1043              	@ font:
+ 1044 00d0 01       		.byte	1
+ 1045              	@ fontColor:
+ 1046 00d1 00       		.space	1
+ 1047 00d2 0000     		.short	0
+ 1048              	@ image1:
+ 1049 00d4 00000000 		.word	0
+ 1050              		.section	.rodata
+ 1051 00ad 000000   		.align	2
+ 1052              	.LC12:
+ 1053 00b0 53617665 		.ascii	"Save button widget\000"
+ 1053      20627574 
+ 1053      746F6E20 
+ 1053      77696467 
+ 1053      657400
+ 1054              		.data
+ 1055              		.align	2
+ 1056              		.type	saveBtnWidget, %object
+ 1057              		.size	saveBtnWidget, 32
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 22
+
+
+ 1058              	saveBtnWidget:
+ 1059              	@ widgetAttr:
+ 1060              	@ name:
+ 1061 00d8 B0000000 		.word	.LC12
+ 1062              	@ topLeft:
+ 1063              	@ xValue:
+ 1064 00dc C000     		.short	192
+ 1065              	@ yValue:
+ 1066 00de 0000     		.short	0
+ 1067              	@ size:
+ 1068              	@ width:
+ 1069 00e0 3000     		.short	48
+ 1070              	@ height:
+ 1071 00e2 2800     		.short	40
+ 1072              	@ backgroundColor:
+ 1073 00e4 FFFF     		.short	-1
+ 1074              	@ border:
+ 1075 00e6 01       		.byte	1
+ 1076 00e7 00       		.space	1
+ 1077              	@ eventHandler:
+ 1078 00e8 00000000 		.word	saveBtnEventHandler
+ 1079              	@ displayString:
+ 1080 00ec 24000000 		.word	.LC4
+ 1081              	@ font:
+ 1082 00f0 01       		.byte	1
+ 1083              	@ fontColor:
+ 1084 00f1 00       		.space	1
+ 1085 00f2 0000     		.short	0
+ 1086              	@ image1:
+ 1087 00f4 00000000 		.word	0
+ 1088              		.text
+ 1089              		.align	1
+ 1090              		.global	main
+ 1091              		.syntax unified
+ 1092              		.thumb
+ 1093              		.thumb_func
+ 1094              		.type	main, %function
+ 1095              	main:
+ 1096              	.LFB69:
+ 107:main.c        **** 
+ 108:main.c        **** 
+ 109:main.c        **** static WindowCfg window1= 
+ 110:main.c        **** {
+ 111:main.c        ****     {
+ 112:main.c        ****         "Window 1",
+ 113:main.c        ****         {0,0},
+ 114:main.c        ****         {240,320},
+ 115:main.c        ****         WHITE,
+ 116:main.c        ****         enBooleanFalse
+ 117:main.c        ****     },
+ 118:main.c        ****     NULL
+ 119:main.c        **** };
+ 120:main.c        **** 
+ 121:main.c        **** static CanvasCfg Canvas=
+ 122:main.c        **** {
+ 123:main.c        ****     {
+ 124:main.c        ****         "Canvas",
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 23
+
+
+ 125:main.c        ****         {0,40},
+ 126:main.c        ****         {240,280},
+ 127:main.c        ****         WHITE,
+ 128:main.c        ****         enBooleanTrue
+ 129:main.c        ****     },
+ 130:main.c        ****     canvasEventHandler,
+ 131:main.c        ****     "",
+ 132:main.c        ****     enGfxFont_8X16,
+ 133:main.c        ****     WHITE,
+ 134:main.c        ****     0
+ 135:main.c        **** };
+ 136:main.c        **** 
+ 137:main.c        **** static WidgetCfg freeHandBtnWidget=
+ 138:main.c        **** {
+ 139:main.c        ****     {
+ 140:main.c        ****         "Freehand button widget",
+ 141:main.c        ****         {0,0},
+ 142:main.c        ****         {38,40},
+ 143:main.c        ****         WHITE,
+ 144:main.c        ****         enBooleanTrue
+ 145:main.c        ****     },
+ 146:main.c        ****     freeHandBtnEventHandler,
+ 147:main.c        ****     "  FH",
+ 148:main.c        ****     enGfxFont_8X16,
+ 149:main.c        ****     BLACK,
+ 150:main.c        ****     0
+ 151:main.c        **** };
+ 152:main.c        **** 
+ 153:main.c        **** static WidgetCfg lineBtnWidget=
+ 154:main.c        **** {
+ 155:main.c        ****     {
+ 156:main.c        ****         "Line button widget",
+ 157:main.c        ****         {38,0},
+ 158:main.c        ****         {38,40},
+ 159:main.c        ****         WHITE,
+ 160:main.c        ****         enBooleanTrue
+ 161:main.c        ****     },
+ 162:main.c        ****     lineBtnEventHandler,
+ 163:main.c        ****     "",
+ 164:main.c        ****     enGfxFont_8X16,
+ 165:main.c        ****     BLACK,
+ 166:main.c        ****     0
+ 167:main.c        **** };
+ 168:main.c        **** 
+ 169:main.c        **** static WidgetCfg circleBtnWidget=
+ 170:main.c        **** {
+ 171:main.c        ****     {
+ 172:main.c        ****         "Circle button widget",
+ 173:main.c        ****         {76,0},
+ 174:main.c        ****         {38,40},
+ 175:main.c        ****         WHITE,
+ 176:main.c        ****         enBooleanTrue
+ 177:main.c        ****     },
+ 178:main.c        ****     circleBtnEventHandler,
+ 179:main.c        ****     "",
+ 180:main.c        ****     enGfxFont_8X16,
+ 181:main.c        ****     BLACK,
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 24
+
+
+ 182:main.c        ****     0
+ 183:main.c        **** };
+ 184:main.c        **** 
+ 185:main.c        **** static WidgetCfg rectangleBtnWidget=
+ 186:main.c        **** {
+ 187:main.c        ****     {
+ 188:main.c        ****         "Rectangle button widget",
+ 189:main.c        ****         {114,0},
+ 190:main.c        ****         {38,40},
+ 191:main.c        ****         WHITE,
+ 192:main.c        ****         enBooleanTrue
+ 193:main.c        ****     },
+ 194:main.c        ****     rectangleBtnEventHandler,
+ 195:main.c        ****     "",
+ 196:main.c        ****     enGfxFont_8X16,
+ 197:main.c        ****     BLACK,
+ 198:main.c        ****     0
+ 199:main.c        **** };
+ 200:main.c        **** 
+ 201:main.c        **** 
+ 202:main.c        **** static WidgetCfg clearscreenBtnWidget=
+ 203:main.c        **** {
+ 204:main.c        ****     {
+ 205:main.c        ****         "Clearscreen button widget",
+ 206:main.c        ****         {152,0},
+ 207:main.c        ****         {38,40},
+ 208:main.c        ****         WHITE,
+ 209:main.c        ****         enBooleanTrue
+ 210:main.c        ****     },
+ 211:main.c        ****     clearscreenBtnEventHandler,
+ 212:main.c        ****     " CLS",
+ 213:main.c        ****     enGfxFont_8X16,
+ 214:main.c        ****     BLACK,
+ 215:main.c        ****     0
+ 216:main.c        **** };
+ 217:main.c        **** 
+ 218:main.c        **** static WidgetCfg saveBtnWidget=
+ 219:main.c        **** {
+ 220:main.c        ****     {
+ 221:main.c        ****         "Save button widget",
+ 222:main.c        ****         {192,0},
+ 223:main.c        ****         {48,40},
+ 224:main.c        ****         WHITE,
+ 225:main.c        ****         enBooleanTrue
+ 226:main.c        ****     },
+ 227:main.c        ****     saveBtnEventHandler,
+ 228:main.c        ****     "",
+ 229:main.c        ****     enGfxFont_8X16,
+ 230:main.c        ****     BLACK,
+ 231:main.c        ****     0
+ 232:main.c        **** };
+ 233:main.c        **** 
+ 234:main.c        **** 
+ 235:main.c        **** int main()
+ 236:main.c        **** {
+ 1097              		.loc 1 236 1
+ 1098              		.cfi_startproc
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 25
+
+
+ 1099              		@ args = 0, pretend = 0, frame = 0
+ 1100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1101 028c 08B5     		push	{r3, lr}	@
+ 1102              	.LCFI12:
+ 1103              		.cfi_def_cfa_offset 8
+ 1104              		.cfi_offset 3, -8
+ 1105              		.cfi_offset 14, -4
+ 1106              	@ main.c:238: 	appInit();						
+ 237:main.c        **** 
+ 238:main.c        **** 	appInit();						
+ 1107              		.loc 1 238 2
+ 1108 028e FFF7FEFF 		bl	appInit		@
+ 1109              	@ main.c:239: 	gameEngineInit();	
+ 239:main.c        **** 	gameEngineInit();	
+ 1110              		.loc 1 239 2
+ 1111 0292 FFF7FEFF 		bl	gameEngineInit		@
+ 1112              	@ main.c:240:     gfxSetColor(BLACK);	
+ 240:main.c        ****     gfxSetColor(BLACK);	
+ 1113              		.loc 1 240 5
+ 1114 0296 0020     		movs	r0, #0	@,
+ 1115 0298 FFF7FEFF 		bl	gfxSetColor		@
+ 1116              	@ main.c:243: 	createWindow(&windowID,&window1);
+ 241:main.c        **** 	
+ 242:main.c        ****     // creating widgets
+ 243:main.c        **** 	createWindow(&windowID,&window1);
+ 1117              		.loc 1 243 2
+ 1118 029c 2449     		ldr	r1, .L54	@,
+ 1119 029e 2548     		ldr	r0, .L54+4	@,
+ 1120 02a0 FFF7FEFF 		bl	createWindow		@
+ 1121              	@ main.c:244: 	createCanvas(windowID,&canvasID,&Canvas);
+ 244:main.c        **** 	createCanvas(windowID,&canvasID,&Canvas);
+ 1122              		.loc 1 244 2
+ 1123 02a4 234B     		ldr	r3, .L54+4	@ tmp127,
+ 1124 02a6 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.35_1, windowID
+ 1125 02a8 234A     		ldr	r2, .L54+8	@,
+ 1126 02aa 2449     		ldr	r1, .L54+12	@,
+ 1127 02ac 1846     		mov	r0, r3	@, windowID.35_1
+ 1128 02ae FFF7FEFF 		bl	createCanvas		@
+ 1129              	@ main.c:245: 	createWidget(windowID,&widget1ID,&freeHandBtnWidget);
+ 245:main.c        **** 	createWidget(windowID,&widget1ID,&freeHandBtnWidget);
+ 1130              		.loc 1 245 2
+ 1131 02b2 204B     		ldr	r3, .L54+4	@ tmp128,
+ 1132 02b4 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.36_2, windowID
+ 1133 02b6 224A     		ldr	r2, .L54+16	@,
+ 1134 02b8 2249     		ldr	r1, .L54+20	@,
+ 1135 02ba 1846     		mov	r0, r3	@, windowID.36_2
+ 1136 02bc FFF7FEFF 		bl	createWidget		@
+ 1137              	@ main.c:246: 	createWidget(windowID,&widget2ID,&lineBtnWidget);
+ 246:main.c        **** 	createWidget(windowID,&widget2ID,&lineBtnWidget);
+ 1138              		.loc 1 246 2
+ 1139 02c0 1C4B     		ldr	r3, .L54+4	@ tmp129,
+ 1140 02c2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.37_3, windowID
+ 1141 02c4 204A     		ldr	r2, .L54+24	@,
+ 1142 02c6 2149     		ldr	r1, .L54+28	@,
+ 1143 02c8 1846     		mov	r0, r3	@, windowID.37_3
+ 1144 02ca FFF7FEFF 		bl	createWidget		@
+ 1145              	@ main.c:247:     createWidget(windowID,&widget3ID,&circleBtnWidget);
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 26
+
+
+ 247:main.c        ****     createWidget(windowID,&widget3ID,&circleBtnWidget);
+ 1146              		.loc 1 247 5
+ 1147 02ce 194B     		ldr	r3, .L54+4	@ tmp130,
+ 1148 02d0 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.38_4, windowID
+ 1149 02d2 1F4A     		ldr	r2, .L54+32	@,
+ 1150 02d4 1F49     		ldr	r1, .L54+36	@,
+ 1151 02d6 1846     		mov	r0, r3	@, windowID.38_4
+ 1152 02d8 FFF7FEFF 		bl	createWidget		@
+ 1153              	@ main.c:248:     createWidget(windowID,&widget4ID,&rectangleBtnWidget);
+ 248:main.c        ****     createWidget(windowID,&widget4ID,&rectangleBtnWidget);
+ 1154              		.loc 1 248 5
+ 1155 02dc 154B     		ldr	r3, .L54+4	@ tmp131,
+ 1156 02de 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.39_5, windowID
+ 1157 02e0 1D4A     		ldr	r2, .L54+40	@,
+ 1158 02e2 1E49     		ldr	r1, .L54+44	@,
+ 1159 02e4 1846     		mov	r0, r3	@, windowID.39_5
+ 1160 02e6 FFF7FEFF 		bl	createWidget		@
+ 1161              	@ main.c:249: 	createWidget(windowID,&widget5ID,&clearscreenBtnWidget);
+ 249:main.c        **** 	createWidget(windowID,&widget5ID,&clearscreenBtnWidget);
+ 1162              		.loc 1 249 2
+ 1163 02ea 124B     		ldr	r3, .L54+4	@ tmp132,
+ 1164 02ec 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.40_6, windowID
+ 1165 02ee 1C4A     		ldr	r2, .L54+48	@,
+ 1166 02f0 1C49     		ldr	r1, .L54+52	@,
+ 1167 02f2 1846     		mov	r0, r3	@, windowID.40_6
+ 1168 02f4 FFF7FEFF 		bl	createWidget		@
+ 1169              	@ main.c:250:     createWidget(windowID,&widget6ID,&saveBtnWidget);
+ 250:main.c        ****     createWidget(windowID,&widget6ID,&saveBtnWidget);
+ 1170              		.loc 1 250 5
+ 1171 02f8 0E4B     		ldr	r3, .L54+4	@ tmp133,
+ 1172 02fa 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.41_7, windowID
+ 1173 02fc 1A4A     		ldr	r2, .L54+56	@,
+ 1174 02fe 1B49     		ldr	r1, .L54+60	@,
+ 1175 0300 1846     		mov	r0, r3	@, windowID.41_7
+ 1176 0302 FFF7FEFF 		bl	createWidget		@
+ 1177              	@ main.c:253: 	homeScreen();							
+ 251:main.c        **** 
+ 252:main.c        **** 
+ 253:main.c        **** 	homeScreen();							
+ 1178              		.loc 1 253 2
+ 1179 0306 FFF7FEFF 		bl	homeScreen		@
+ 1180              	.L53:
+ 1181              	@ main.c:256: 		if(touchAvailable(&x,&y) == enBooleanTrue) {
+ 254:main.c        **** 
+ 255:main.c        **** 	while(1) {
+ 256:main.c        **** 		if(touchAvailable(&x,&y) == enBooleanTrue) {
+ 1182              		.loc 1 256 6
+ 1183 030a 1949     		ldr	r1, .L54+64	@,
+ 1184 030c 1948     		ldr	r0, .L54+68	@,
+ 1185 030e FFF7FEFF 		bl	touchAvailable		@
+ 1186 0312 0346     		mov	r3, r0	@ tmp134,
+ 1187              	@ main.c:256: 		if(touchAvailable(&x,&y) == enBooleanTrue) {
+ 1188              		.loc 1 256 5
+ 1189 0314 012B     		cmp	r3, #1	@ _8,
+ 1190 0316 F8D1     		bne	.L53		@,
+ 1191              	@ main.c:257: 			windowEventHandler(windowID, x, y);	
+ 257:main.c        **** 			windowEventHandler(windowID, x, y);	
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 27
+
+
+ 1192              		.loc 1 257 4
+ 1193 0318 064B     		ldr	r3, .L54+4	@ tmp135,
+ 1194 031a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2	@ windowID.42_9, windowID
+ 1195 031c 154A     		ldr	r2, .L54+68	@ tmp136,
+ 1196 031e 1268     		ldr	r2, [r2]	@ x.43_10, x
+ 1197 0320 91B2     		uxth	r1, r2	@ _11, x.43_10
+ 1198 0322 134A     		ldr	r2, .L54+64	@ tmp137,
+ 1199 0324 1268     		ldr	r2, [r2]	@ y.44_12, y
+ 1200 0326 92B2     		uxth	r2, r2	@ _13, y.44_12
+ 1201 0328 1846     		mov	r0, r3	@, windowID.42_9
+ 1202 032a FFF7FEFF 		bl	windowEventHandler		@
+ 1203              	@ main.c:256: 		if(touchAvailable(&x,&y) == enBooleanTrue) {
+ 256:main.c        **** 			windowEventHandler(windowID, x, y);	
+ 1204              		.loc 1 256 5
+ 1205 032e ECE7     		b	.L53		@
+ 1206              	.L55:
+ 1207              		.align	2
+ 1208              	.L54:
+ 1209 0330 04000000 		.word	window1
+ 1210 0334 00000000 		.word	windowID
+ 1211 0338 18000000 		.word	Canvas
+ 1212 033c 00000000 		.word	canvasID
+ 1213 0340 38000000 		.word	freeHandBtnWidget
+ 1214 0344 00000000 		.word	widget1ID
+ 1215 0348 58000000 		.word	lineBtnWidget
+ 1216 034c 00000000 		.word	widget2ID
+ 1217 0350 78000000 		.word	circleBtnWidget
+ 1218 0354 00000000 		.word	widget3ID
+ 1219 0358 98000000 		.word	rectangleBtnWidget
+ 1220 035c 00000000 		.word	widget4ID
+ 1221 0360 B8000000 		.word	clearscreenBtnWidget
+ 1222 0364 00000000 		.word	widget5ID
+ 1223 0368 D8000000 		.word	saveBtnWidget
+ 1224 036c 00000000 		.word	widget6ID
+ 1225 0370 00000000 		.word	y
+ 1226 0374 00000000 		.word	x
+ 1227              		.cfi_endproc
+ 1228              	.LFE69:
+ 1229              		.size	main, .-main
+ 1230              	.Letext0:
+ 1231              		.file 2 "../../Include/PrimeFramework/prime_types.h"
+ 1232              		.file 3 "../../Include/AppHelper/graphics.h"
+ 1233              		.file 4 "../../Include/GameEngine/Graphics/gui.h"
+ 1234              		.section	.debug_info,"",%progbits
+ 1235              	.Ldebug_info0:
+ 1236 0000 06060000 		.4byte	0x606
+ 1237 0004 0200     		.2byte	0x2
+ 1238 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1239 000a 04       		.byte	0x4
+ 1240 000b 01       		.uleb128 0x1
+ 1241 000c EF020000 		.4byte	.LASF75
+ 1242 0010 0C       		.byte	0xc
+ 1243 0011 BD020000 		.4byte	.LASF76
+ 1244 0015 D9010000 		.4byte	.LASF77
+ 1245 0019 00000000 		.4byte	.Ltext0
+ 1246 001d 78030000 		.4byte	.Letext0
+ 1247 0021 00000000 		.4byte	.Ldebug_line0
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 28
+
+
+ 1248 0025 02       		.uleb128 0x2
+ 1249 0026 04       		.byte	0x4
+ 1250 0027 05       		.byte	0x5
+ 1251 0028 696E7400 		.ascii	"int\000"
+ 1252 002c 03       		.uleb128 0x3
+ 1253 002d 04       		.byte	0x4
+ 1254 002e 07       		.byte	0x7
+ 1255 002f 16020000 		.4byte	.LASF0
+ 1256 0033 03       		.uleb128 0x3
+ 1257 0034 01       		.byte	0x1
+ 1258 0035 06       		.byte	0x6
+ 1259 0036 A9010000 		.4byte	.LASF1
+ 1260 003a 03       		.uleb128 0x3
+ 1261 003b 01       		.byte	0x1
+ 1262 003c 08       		.byte	0x8
+ 1263 003d 82010000 		.4byte	.LASF2
+ 1264 0041 03       		.uleb128 0x3
+ 1265 0042 02       		.byte	0x2
+ 1266 0043 05       		.byte	0x5
+ 1267 0044 A9000000 		.4byte	.LASF3
+ 1268 0048 03       		.uleb128 0x3
+ 1269 0049 02       		.byte	0x2
+ 1270 004a 07       		.byte	0x7
+ 1271 004b 42020000 		.4byte	.LASF4
+ 1272 004f 03       		.uleb128 0x3
+ 1273 0050 04       		.byte	0x4
+ 1274 0051 05       		.byte	0x5
+ 1275 0052 03010000 		.4byte	.LASF5
+ 1276 0056 03       		.uleb128 0x3
+ 1277 0057 04       		.byte	0x4
+ 1278 0058 07       		.byte	0x7
+ 1279 0059 C4020000 		.4byte	.LASF6
+ 1280 005d 03       		.uleb128 0x3
+ 1281 005e 08       		.byte	0x8
+ 1282 005f 05       		.byte	0x5
+ 1283 0060 3A040000 		.4byte	.LASF7
+ 1284 0064 03       		.uleb128 0x3
+ 1285 0065 08       		.byte	0x8
+ 1286 0066 07       		.byte	0x7
+ 1287 0067 B5010000 		.4byte	.LASF8
+ 1288 006b 04       		.uleb128 0x4
+ 1289 006c 4E000000 		.4byte	.LASF9
+ 1290 0070 02       		.byte	0x2
+ 1291 0071 3B       		.byte	0x3b
+ 1292 0072 1D       		.byte	0x1d
+ 1293 0073 3A000000 		.4byte	0x3a
+ 1294 0077 04       		.uleb128 0x4
+ 1295 0078 7F000000 		.4byte	.LASF10
+ 1296 007c 02       		.byte	0x2
+ 1297 007d 3F       		.byte	0x3f
+ 1298 007e 1D       		.byte	0x1d
+ 1299 007f 48000000 		.4byte	0x48
+ 1300 0083 04       		.uleb128 0x4
+ 1301 0084 FB000000 		.4byte	.LASF11
+ 1302 0088 02       		.byte	0x2
+ 1303 0089 43       		.byte	0x43
+ 1304 008a 1D       		.byte	0x1d
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 29
+
+
+ 1305 008b 56000000 		.4byte	0x56
+ 1306 008f 03       		.uleb128 0x3
+ 1307 0090 04       		.byte	0x4
+ 1308 0091 04       		.byte	0x4
+ 1309 0092 DC000000 		.4byte	.LASF12
+ 1310 0096 03       		.uleb128 0x3
+ 1311 0097 08       		.byte	0x8
+ 1312 0098 04       		.byte	0x4
+ 1313 0099 DC030000 		.4byte	.LASF13
+ 1314 009d 05       		.uleb128 0x5
+ 1315 009e 07       		.byte	0x7
+ 1316 009f 01       		.byte	0x1
+ 1317 00a0 3A000000 		.4byte	0x3a
+ 1318 00a4 02       		.byte	0x2
+ 1319 00a5 1C01     		.2byte	0x11c
+ 1320 00a7 01       		.byte	0x1
+ 1321 00a8 B9000000 		.4byte	0xb9
+ 1322 00ac 06       		.uleb128 0x6
+ 1323 00ad 70000000 		.4byte	.LASF14
+ 1324 00b1 00       		.byte	0
+ 1325 00b2 06       		.uleb128 0x6
+ 1326 00b3 3B000000 		.4byte	.LASF15
+ 1327 00b7 01       		.byte	0x1
+ 1328 00b8 00       		.byte	0
+ 1329 00b9 07       		.uleb128 0x7
+ 1330 00ba 39010000 		.4byte	.LASF16
+ 1331 00be 02       		.byte	0x2
+ 1332 00bf 1F01     		.2byte	0x11f
+ 1333 00c1 03       		.byte	0x3
+ 1334 00c2 9D000000 		.4byte	0x9d
+ 1335 00c6 07       		.uleb128 0x7
+ 1336 00c7 8C020000 		.4byte	.LASF17
+ 1337 00cb 02       		.byte	0x2
+ 1338 00cc 3001     		.2byte	0x130
+ 1339 00ce 10       		.byte	0x10
+ 1340 00cf D3000000 		.4byte	0xd3
+ 1341 00d3 08       		.uleb128 0x8
+ 1342 00d4 04       		.byte	0x4
+ 1343 00d5 D9000000 		.4byte	0xd9
+ 1344 00d9 09       		.uleb128 0x9
+ 1345 00da 01       		.byte	0x1
+ 1346 00db 08       		.uleb128 0x8
+ 1347 00dc 04       		.byte	0x4
+ 1348 00dd E1000000 		.4byte	0xe1
+ 1349 00e1 03       		.uleb128 0x3
+ 1350 00e2 01       		.byte	0x1
+ 1351 00e3 08       		.byte	0x8
+ 1352 00e4 6F020000 		.4byte	.LASF18
+ 1353 00e8 0A       		.uleb128 0xa
+ 1354 00e9 07       		.byte	0x7
+ 1355 00ea 01       		.byte	0x1
+ 1356 00eb 3A000000 		.4byte	0x3a
+ 1357 00ef 03       		.byte	0x3
+ 1358 00f0 39       		.byte	0x39
+ 1359 00f1 0D       		.byte	0xd
+ 1360 00f2 09010000 		.4byte	0x109
+ 1361 00f6 06       		.uleb128 0x6
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 30
+
+
+ 1362 00f7 E2000000 		.4byte	.LASF19
+ 1363 00fb 00       		.byte	0
+ 1364 00fc 06       		.uleb128 0x6
+ 1365 00fd 9A010000 		.4byte	.LASF20
+ 1366 0101 01       		.byte	0x1
+ 1367 0102 06       		.uleb128 0x6
+ 1368 0103 55020000 		.4byte	.LASF21
+ 1369 0107 02       		.byte	0x2
+ 1370 0108 00       		.byte	0
+ 1371 0109 04       		.uleb128 0x4
+ 1372 010a 8A030000 		.4byte	.LASF22
+ 1373 010e 03       		.byte	0x3
+ 1374 010f 3D       		.byte	0x3d
+ 1375 0110 02       		.byte	0x2
+ 1376 0111 E8000000 		.4byte	0xe8
+ 1377 0115 0B       		.uleb128 0xb
+ 1378 0116 04       		.byte	0x4
+ 1379 0117 04       		.byte	0x4
+ 1380 0118 22       		.byte	0x22
+ 1381 0119 09       		.byte	0x9
+ 1382 011a 3D010000 		.4byte	0x13d
+ 1383 011e 0C       		.uleb128 0xc
+ 1384 011f 45010000 		.4byte	.LASF23
+ 1385 0123 04       		.byte	0x4
+ 1386 0124 24       		.byte	0x24
+ 1387 0125 0C       		.byte	0xc
+ 1388 0126 77000000 		.4byte	0x77
+ 1389 012a 02       		.byte	0x2
+ 1390 012b 23       		.byte	0x23
+ 1391 012c 00       		.uleb128 0
+ 1392 012d 0C       		.uleb128 0xc
+ 1393 012e F8030000 		.4byte	.LASF24
+ 1394 0132 04       		.byte	0x4
+ 1395 0133 25       		.byte	0x25
+ 1396 0134 0C       		.byte	0xc
+ 1397 0135 77000000 		.4byte	0x77
+ 1398 0139 02       		.byte	0x2
+ 1399 013a 23       		.byte	0x23
+ 1400 013b 02       		.uleb128 0x2
+ 1401 013c 00       		.byte	0
+ 1402 013d 04       		.uleb128 0x4
+ 1403 013e 2E010000 		.4byte	.LASF25
+ 1404 0142 04       		.byte	0x4
+ 1405 0143 26       		.byte	0x26
+ 1406 0144 02       		.byte	0x2
+ 1407 0145 15010000 		.4byte	0x115
+ 1408 0149 0B       		.uleb128 0xb
+ 1409 014a 04       		.byte	0x4
+ 1410 014b 04       		.byte	0x4
+ 1411 014c 29       		.byte	0x29
+ 1412 014d 09       		.byte	0x9
+ 1413 014e 71010000 		.4byte	0x171
+ 1414 0152 0C       		.uleb128 0xc
+ 1415 0153 CF000000 		.4byte	.LASF26
+ 1416 0157 04       		.byte	0x4
+ 1417 0158 2B       		.byte	0x2b
+ 1418 0159 0C       		.byte	0xc
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 31
+
+
+ 1419 015a 77000000 		.4byte	0x77
+ 1420 015e 02       		.byte	0x2
+ 1421 015f 23       		.byte	0x23
+ 1422 0160 00       		.uleb128 0
+ 1423 0161 0C       		.uleb128 0xc
+ 1424 0162 0F020000 		.4byte	.LASF27
+ 1425 0166 04       		.byte	0x4
+ 1426 0167 2C       		.byte	0x2c
+ 1427 0168 0C       		.byte	0xc
+ 1428 0169 77000000 		.4byte	0x77
+ 1429 016d 02       		.byte	0x2
+ 1430 016e 23       		.byte	0x23
+ 1431 016f 02       		.uleb128 0x2
+ 1432 0170 00       		.byte	0
+ 1433 0171 04       		.uleb128 0x4
+ 1434 0172 D2030000 		.4byte	.LASF28
+ 1435 0176 04       		.byte	0x4
+ 1436 0177 2D       		.byte	0x2d
+ 1437 0178 02       		.byte	0x2
+ 1438 0179 49010000 		.4byte	0x149
+ 1439 017d 04       		.uleb128 0x4
+ 1440 017e 11040000 		.4byte	.LASF29
+ 1441 0182 04       		.byte	0x4
+ 1442 0183 37       		.byte	0x37
+ 1443 0184 1F       		.byte	0x1f
+ 1444 0185 89010000 		.4byte	0x189
+ 1445 0189 0D       		.uleb128 0xd
+ 1446 018a 11040000 		.4byte	.LASF29
+ 1447 018e 10       		.byte	0x10
+ 1448 018f 04       		.byte	0x4
+ 1449 0190 41       		.byte	0x41
+ 1450 0191 08       		.byte	0x8
+ 1451 0192 E2010000 		.4byte	0x1e2
+ 1452 0196 0C       		.uleb128 0xc
+ 1453 0197 4C010000 		.4byte	.LASF30
+ 1454 019b 04       		.byte	0x4
+ 1455 019c 43       		.byte	0x43
+ 1456 019d 0B       		.byte	0xb
+ 1457 019e DB000000 		.4byte	0xdb
+ 1458 01a2 02       		.byte	0x2
+ 1459 01a3 23       		.byte	0x23
+ 1460 01a4 00       		.uleb128 0
+ 1461 01a5 0C       		.uleb128 0xc
+ 1462 01a6 79020000 		.4byte	.LASF31
+ 1463 01aa 04       		.byte	0x4
+ 1464 01ab 44       		.byte	0x44
+ 1465 01ac 10       		.byte	0x10
+ 1466 01ad 3D010000 		.4byte	0x13d
+ 1467 01b1 02       		.byte	0x2
+ 1468 01b2 23       		.byte	0x23
+ 1469 01b3 04       		.uleb128 0x4
+ 1470 01b4 0C       		.uleb128 0xc
+ 1471 01b5 9E020000 		.4byte	.LASF32
+ 1472 01b9 04       		.byte	0x4
+ 1473 01ba 45       		.byte	0x45
+ 1474 01bb 0F       		.byte	0xf
+ 1475 01bc 71010000 		.4byte	0x171
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 32
+
+
+ 1476 01c0 02       		.byte	0x2
+ 1477 01c1 23       		.byte	0x23
+ 1478 01c2 08       		.uleb128 0x8
+ 1479 01c3 0C       		.uleb128 0xc
+ 1480 01c4 60000000 		.4byte	.LASF33
+ 1481 01c8 04       		.byte	0x4
+ 1482 01c9 46       		.byte	0x46
+ 1483 01ca 0C       		.byte	0xc
+ 1484 01cb 77000000 		.4byte	0x77
+ 1485 01cf 02       		.byte	0x2
+ 1486 01d0 23       		.byte	0x23
+ 1487 01d1 0C       		.uleb128 0xc
+ 1488 01d2 0C       		.uleb128 0xc
+ 1489 01d3 D5000000 		.4byte	.LASF34
+ 1490 01d7 04       		.byte	0x4
+ 1491 01d8 47       		.byte	0x47
+ 1492 01d9 11       		.byte	0x11
+ 1493 01da B9000000 		.4byte	0xb9
+ 1494 01de 02       		.byte	0x2
+ 1495 01df 23       		.byte	0x23
+ 1496 01e0 0E       		.uleb128 0xe
+ 1497 01e1 00       		.byte	0
+ 1498 01e2 04       		.uleb128 0x4
+ 1499 01e3 86000000 		.4byte	.LASF35
+ 1500 01e7 04       		.byte	0x4
+ 1501 01e8 38       		.byte	0x38
+ 1502 01e9 1A       		.byte	0x1a
+ 1503 01ea EE010000 		.4byte	0x1ee
+ 1504 01ee 0D       		.uleb128 0xd
+ 1505 01ef 86000000 		.4byte	.LASF35
+ 1506 01f3 14       		.byte	0x14
+ 1507 01f4 04       		.byte	0x4
+ 1508 01f5 4D       		.byte	0x4d
+ 1509 01f6 08       		.byte	0x8
+ 1510 01f7 1A020000 		.4byte	0x21a
+ 1511 01fb 0C       		.uleb128 0xc
+ 1512 01fc 81020000 		.4byte	.LASF36
+ 1513 0200 04       		.byte	0x4
+ 1514 0201 4F       		.byte	0x4f
+ 1515 0202 14       		.byte	0x14
+ 1516 0203 7D010000 		.4byte	0x17d
+ 1517 0207 02       		.byte	0x2
+ 1518 0208 23       		.byte	0x23
+ 1519 0209 00       		.uleb128 0
+ 1520 020a 0C       		.uleb128 0xc
+ 1521 020b 90000000 		.4byte	.LASF37
+ 1522 020f 04       		.byte	0x4
+ 1523 0210 50       		.byte	0x50
+ 1524 0211 10       		.byte	0x10
+ 1525 0212 C6000000 		.4byte	0xc6
+ 1526 0216 02       		.byte	0x2
+ 1527 0217 23       		.byte	0x23
+ 1528 0218 10       		.uleb128 0x10
+ 1529 0219 00       		.byte	0
+ 1530 021a 04       		.uleb128 0x4
+ 1531 021b B3000000 		.4byte	.LASF38
+ 1532 021f 04       		.byte	0x4
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 33
+
+
+ 1533 0220 39       		.byte	0x39
+ 1534 0221 1A       		.byte	0x1a
+ 1535 0222 26020000 		.4byte	0x226
+ 1536 0226 0D       		.uleb128 0xd
+ 1537 0227 B3000000 		.4byte	.LASF38
+ 1538 022b 20       		.byte	0x20
+ 1539 022c 04       		.byte	0x4
+ 1540 022d 56       		.byte	0x56
+ 1541 022e 08       		.byte	0x8
+ 1542 022f 8E020000 		.4byte	0x28e
+ 1543 0233 0C       		.uleb128 0xc
+ 1544 0234 F0000000 		.4byte	.LASF39
+ 1545 0238 04       		.byte	0x4
+ 1546 0239 58       		.byte	0x58
+ 1547 023a 14       		.byte	0x14
+ 1548 023b 7D010000 		.4byte	0x17d
+ 1549 023f 02       		.byte	0x2
+ 1550 0240 23       		.byte	0x23
+ 1551 0241 00       		.uleb128 0
+ 1552 0242 0C       		.uleb128 0xc
+ 1553 0243 CC010000 		.4byte	.LASF40
+ 1554 0247 04       		.byte	0x4
+ 1555 0248 59       		.byte	0x59
+ 1556 0249 10       		.byte	0x10
+ 1557 024a C6000000 		.4byte	0xc6
+ 1558 024e 02       		.byte	0x2
+ 1559 024f 23       		.byte	0x23
+ 1560 0250 10       		.uleb128 0x10
+ 1561 0251 0C       		.uleb128 0xc
+ 1562 0252 E3030000 		.4byte	.LASF41
+ 1563 0256 04       		.byte	0x4
+ 1564 0257 5B       		.byte	0x5b
+ 1565 0258 0B       		.byte	0xb
+ 1566 0259 DB000000 		.4byte	0xdb
+ 1567 025d 02       		.byte	0x2
+ 1568 025e 23       		.byte	0x23
+ 1569 025f 14       		.uleb128 0x14
+ 1570 0260 0C       		.uleb128 0xc
+ 1571 0261 49000000 		.4byte	.LASF42
+ 1572 0265 04       		.byte	0x4
+ 1573 0266 5C       		.byte	0x5c
+ 1574 0267 10       		.byte	0x10
+ 1575 0268 09010000 		.4byte	0x109
+ 1576 026c 02       		.byte	0x2
+ 1577 026d 23       		.byte	0x23
+ 1578 026e 18       		.uleb128 0x18
+ 1579 026f 0C       		.uleb128 0xc
+ 1580 0270 9F000000 		.4byte	.LASF43
+ 1581 0274 04       		.byte	0x4
+ 1582 0275 5D       		.byte	0x5d
+ 1583 0276 0C       		.byte	0xc
+ 1584 0277 77000000 		.4byte	0x77
+ 1585 027b 02       		.byte	0x2
+ 1586 027c 23       		.byte	0x23
+ 1587 027d 1A       		.uleb128 0x1a
+ 1588 027e 0C       		.uleb128 0xc
+ 1589 027f 97020000 		.4byte	.LASF44
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 34
+
+
+ 1590 0283 04       		.byte	0x4
+ 1591 0284 5E       		.byte	0x5e
+ 1592 0285 0D       		.byte	0xd
+ 1593 0286 02030000 		.4byte	0x302
+ 1594 028a 02       		.byte	0x2
+ 1595 028b 23       		.byte	0x23
+ 1596 028c 1C       		.uleb128 0x1c
+ 1597 028d 00       		.byte	0
+ 1598 028e 04       		.uleb128 0x4
+ 1599 028f C8030000 		.4byte	.LASF45
+ 1600 0293 04       		.byte	0x4
+ 1601 0294 3A       		.byte	0x3a
+ 1602 0295 1A       		.byte	0x1a
+ 1603 0296 9A020000 		.4byte	0x29a
+ 1604 029a 0D       		.uleb128 0xd
+ 1605 029b C8030000 		.4byte	.LASF45
+ 1606 029f 20       		.byte	0x20
+ 1607 02a0 04       		.byte	0x4
+ 1608 02a1 64       		.byte	0x64
+ 1609 02a2 08       		.byte	0x8
+ 1610 02a3 02030000 		.4byte	0x302
+ 1611 02a7 0C       		.uleb128 0xc
+ 1612 02a8 BD030000 		.4byte	.LASF46
+ 1613 02ac 04       		.byte	0x4
+ 1614 02ad 66       		.byte	0x66
+ 1615 02ae 14       		.byte	0x14
+ 1616 02af 7D010000 		.4byte	0x17d
+ 1617 02b3 02       		.byte	0x2
+ 1618 02b4 23       		.byte	0x23
+ 1619 02b5 00       		.uleb128 0
+ 1620 02b6 0C       		.uleb128 0xc
+ 1621 02b7 CC010000 		.4byte	.LASF40
+ 1622 02bb 04       		.byte	0x4
+ 1623 02bc 67       		.byte	0x67
+ 1624 02bd 10       		.byte	0x10
+ 1625 02be C6000000 		.4byte	0xc6
+ 1626 02c2 02       		.byte	0x2
+ 1627 02c3 23       		.byte	0x23
+ 1628 02c4 10       		.uleb128 0x10
+ 1629 02c5 0C       		.uleb128 0xc
+ 1630 02c6 E3030000 		.4byte	.LASF41
+ 1631 02ca 04       		.byte	0x4
+ 1632 02cb 69       		.byte	0x69
+ 1633 02cc 0B       		.byte	0xb
+ 1634 02cd DB000000 		.4byte	0xdb
+ 1635 02d1 02       		.byte	0x2
+ 1636 02d2 23       		.byte	0x23
+ 1637 02d3 14       		.uleb128 0x14
+ 1638 02d4 0C       		.uleb128 0xc
+ 1639 02d5 49000000 		.4byte	.LASF42
+ 1640 02d9 04       		.byte	0x4
+ 1641 02da 6A       		.byte	0x6a
+ 1642 02db 10       		.byte	0x10
+ 1643 02dc 09010000 		.4byte	0x109
+ 1644 02e0 02       		.byte	0x2
+ 1645 02e1 23       		.byte	0x23
+ 1646 02e2 18       		.uleb128 0x18
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 35
+
+
+ 1647 02e3 0C       		.uleb128 0xc
+ 1648 02e4 9F000000 		.4byte	.LASF43
+ 1649 02e8 04       		.byte	0x4
+ 1650 02e9 6B       		.byte	0x6b
+ 1651 02ea 0C       		.byte	0xc
+ 1652 02eb 77000000 		.4byte	0x77
+ 1653 02ef 02       		.byte	0x2
+ 1654 02f0 23       		.byte	0x23
+ 1655 02f1 1A       		.uleb128 0x1a
+ 1656 02f2 0C       		.uleb128 0xc
+ 1657 02f3 97020000 		.4byte	.LASF44
+ 1658 02f7 04       		.byte	0x4
+ 1659 02f8 6C       		.byte	0x6c
+ 1660 02f9 0D       		.byte	0xd
+ 1661 02fa 02030000 		.4byte	0x302
+ 1662 02fe 02       		.byte	0x2
+ 1663 02ff 23       		.byte	0x23
+ 1664 0300 1C       		.uleb128 0x1c
+ 1665 0301 00       		.byte	0
+ 1666 0302 08       		.uleb128 0x8
+ 1667 0303 04       		.byte	0x4
+ 1668 0304 77000000 		.4byte	0x77
+ 1669 0308 0E       		.uleb128 0xe
+ 1670 0309 E6020000 		.4byte	.LASF47
+ 1671 030d 01       		.byte	0x1
+ 1672 030e 07       		.byte	0x7
+ 1673 030f 08       		.byte	0x8
+ 1674 0310 6B000000 		.4byte	0x6b
+ 1675 0314 01       		.byte	0x1
+ 1676 0315 05       		.byte	0x5
+ 1677 0316 03       		.byte	0x3
+ 1678 0317 00000000 		.4byte	windowID
+ 1679 031b 0E       		.uleb128 0xe
+ 1680 031c D6020000 		.4byte	.LASF48
+ 1681 0320 01       		.byte	0x1
+ 1682 0321 07       		.byte	0x7
+ 1683 0322 12       		.byte	0x12
+ 1684 0323 6B000000 		.4byte	0x6b
+ 1685 0327 01       		.byte	0x1
+ 1686 0328 05       		.byte	0x5
+ 1687 0329 03       		.byte	0x3
+ 1688 032a 00000000 		.4byte	canvasID
+ 1689 032e 0E       		.uleb128 0xe
+ 1690 032f 07040000 		.4byte	.LASF49
+ 1691 0333 01       		.byte	0x1
+ 1692 0334 07       		.byte	0x7
+ 1693 0335 1C       		.byte	0x1c
+ 1694 0336 6B000000 		.4byte	0x6b
+ 1695 033a 01       		.byte	0x1
+ 1696 033b 05       		.byte	0x5
+ 1697 033c 03       		.byte	0x3
+ 1698 033d 00000000 		.4byte	widget1ID
+ 1699 0341 0E       		.uleb128 0xe
+ 1700 0342 B3030000 		.4byte	.LASF50
+ 1701 0346 01       		.byte	0x1
+ 1702 0347 07       		.byte	0x7
+ 1703 0348 27       		.byte	0x27
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 36
+
+
+ 1704 0349 6B000000 		.4byte	0x6b
+ 1705 034d 01       		.byte	0x1
+ 1706 034e 05       		.byte	0x5
+ 1707 034f 03       		.byte	0x3
+ 1708 0350 00000000 		.4byte	widget2ID
+ 1709 0354 0E       		.uleb128 0xe
+ 1710 0355 95030000 		.4byte	.LASF51
+ 1711 0359 01       		.byte	0x1
+ 1712 035a 07       		.byte	0x7
+ 1713 035b 32       		.byte	0x32
+ 1714 035c 6B000000 		.4byte	0x6b
+ 1715 0360 01       		.byte	0x1
+ 1716 0361 05       		.byte	0x5
+ 1717 0362 03       		.byte	0x3
+ 1718 0363 00000000 		.4byte	widget3ID
+ 1719 0367 0E       		.uleb128 0xe
+ 1720 0368 B3020000 		.4byte	.LASF52
+ 1721 036c 01       		.byte	0x1
+ 1722 036d 07       		.byte	0x7
+ 1723 036e 3D       		.byte	0x3d
+ 1724 036f 6B000000 		.4byte	0x6b
+ 1725 0373 01       		.byte	0x1
+ 1726 0374 05       		.byte	0x5
+ 1727 0375 03       		.byte	0x3
+ 1728 0376 00000000 		.4byte	widget4ID
+ 1729 037a 0E       		.uleb128 0xe
+ 1730 037b 65020000 		.4byte	.LASF53
+ 1731 037f 01       		.byte	0x1
+ 1732 0380 07       		.byte	0x7
+ 1733 0381 48       		.byte	0x48
+ 1734 0382 6B000000 		.4byte	0x6b
+ 1735 0386 01       		.byte	0x1
+ 1736 0387 05       		.byte	0x5
+ 1737 0388 03       		.byte	0x3
+ 1738 0389 00000000 		.4byte	widget5ID
+ 1739 038d 0E       		.uleb128 0xe
+ 1740 038e 90010000 		.4byte	.LASF54
+ 1741 0392 01       		.byte	0x1
+ 1742 0393 07       		.byte	0x7
+ 1743 0394 53       		.byte	0x53
+ 1744 0395 6B000000 		.4byte	0x6b
+ 1745 0399 01       		.byte	0x1
+ 1746 039a 05       		.byte	0x5
+ 1747 039b 03       		.byte	0x3
+ 1748 039c 00000000 		.4byte	widget6ID
+ 1749 03a0 0F       		.uleb128 0xf
+ 1750 03a1 7800     		.ascii	"x\000"
+ 1751 03a3 01       		.byte	0x1
+ 1752 03a4 08       		.byte	0x8
+ 1753 03a5 09       		.byte	0x9
+ 1754 03a6 83000000 		.4byte	0x83
+ 1755 03aa 01       		.byte	0x1
+ 1756 03ab 05       		.byte	0x5
+ 1757 03ac 03       		.byte	0x3
+ 1758 03ad 00000000 		.4byte	x
+ 1759 03b1 0F       		.uleb128 0xf
+ 1760 03b2 7900     		.ascii	"y\000"
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 37
+
+
+ 1761 03b4 01       		.byte	0x1
+ 1762 03b5 08       		.byte	0x8
+ 1763 03b6 0B       		.byte	0xb
+ 1764 03b7 83000000 		.4byte	0x83
+ 1765 03bb 01       		.byte	0x1
+ 1766 03bc 05       		.byte	0x5
+ 1767 03bd 03       		.byte	0x3
+ 1768 03be 00000000 		.4byte	y
+ 1769 03c2 0F       		.uleb128 0xf
+ 1770 03c3 6100     		.ascii	"a\000"
+ 1771 03c5 01       		.byte	0x1
+ 1772 03c6 08       		.byte	0x8
+ 1773 03c7 0D       		.byte	0xd
+ 1774 03c8 83000000 		.4byte	0x83
+ 1775 03cc 01       		.byte	0x1
+ 1776 03cd 05       		.byte	0x5
+ 1777 03ce 03       		.byte	0x3
+ 1778 03cf 00000000 		.4byte	a
+ 1779 03d3 0F       		.uleb128 0xf
+ 1780 03d4 6200     		.ascii	"b\000"
+ 1781 03d6 01       		.byte	0x1
+ 1782 03d7 08       		.byte	0x8
+ 1783 03d8 0F       		.byte	0xf
+ 1784 03d9 83000000 		.4byte	0x83
+ 1785 03dd 01       		.byte	0x1
+ 1786 03de 05       		.byte	0x5
+ 1787 03df 03       		.byte	0x3
+ 1788 03e0 00000000 		.4byte	b
+ 1789 03e4 0F       		.uleb128 0xf
+ 1790 03e5 76616C00 		.ascii	"val\000"
+ 1791 03e9 01       		.byte	0x1
+ 1792 03ea 08       		.byte	0x8
+ 1793 03eb 11       		.byte	0x11
+ 1794 03ec 83000000 		.4byte	0x83
+ 1795 03f0 01       		.byte	0x1
+ 1796 03f1 05       		.byte	0x5
+ 1797 03f2 03       		.byte	0x3
+ 1798 03f3 00000000 		.4byte	val
+ 1799 03f7 0F       		.uleb128 0xf
+ 1800 03f8 69647800 		.ascii	"idx\000"
+ 1801 03fc 01       		.byte	0x1
+ 1802 03fd 09       		.byte	0x9
+ 1803 03fe 05       		.byte	0x5
+ 1804 03ff 25000000 		.4byte	0x25
+ 1805 0403 01       		.byte	0x1
+ 1806 0404 05       		.byte	0x5
+ 1807 0405 03       		.byte	0x3
+ 1808 0406 00000000 		.4byte	idx
+ 1809 040a 10       		.uleb128 0x10
+ 1810 040b FF030000 		.4byte	.LASF55
+ 1811 040f 01       		.byte	0x1
+ 1812 0410 6D       		.byte	0x6d
+ 1813 0411 12       		.byte	0x12
+ 1814 0412 E2010000 		.4byte	0x1e2
+ 1815 0416 05       		.byte	0x5
+ 1816 0417 03       		.byte	0x3
+ 1817 0418 04000000 		.4byte	window1
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 38
+
+
+ 1818 041c 10       		.uleb128 0x10
+ 1819 041d DF020000 		.4byte	.LASF56
+ 1820 0421 01       		.byte	0x1
+ 1821 0422 79       		.byte	0x79
+ 1822 0423 12       		.byte	0x12
+ 1823 0424 1A020000 		.4byte	0x21a
+ 1824 0428 05       		.byte	0x5
+ 1825 0429 03       		.byte	0x3
+ 1826 042a 18000000 		.4byte	Canvas
+ 1827 042e 10       		.uleb128 0x10
+ 1828 042f BD000000 		.4byte	.LASF57
+ 1829 0433 01       		.byte	0x1
+ 1830 0434 89       		.byte	0x89
+ 1831 0435 12       		.byte	0x12
+ 1832 0436 8E020000 		.4byte	0x28e
+ 1833 043a 05       		.byte	0x5
+ 1834 043b 03       		.byte	0x3
+ 1835 043c 38000000 		.4byte	freeHandBtnWidget
+ 1836 0440 10       		.uleb128 0x10
+ 1837 0441 18000000 		.4byte	.LASF58
+ 1838 0445 01       		.byte	0x1
+ 1839 0446 99       		.byte	0x99
+ 1840 0447 12       		.byte	0x12
+ 1841 0448 8E020000 		.4byte	0x28e
+ 1842 044c 05       		.byte	0x5
+ 1843 044d 03       		.byte	0x3
+ 1844 044e 58000000 		.4byte	lineBtnWidget
+ 1845 0452 10       		.uleb128 0x10
+ 1846 0453 A3020000 		.4byte	.LASF59
+ 1847 0457 01       		.byte	0x1
+ 1848 0458 A9       		.byte	0xa9
+ 1849 0459 12       		.byte	0x12
+ 1850 045a 8E020000 		.4byte	0x28e
+ 1851 045e 05       		.byte	0x5
+ 1852 045f 03       		.byte	0x3
+ 1853 0460 78000000 		.4byte	circleBtnWidget
+ 1854 0464 10       		.uleb128 0x10
+ 1855 0465 27040000 		.4byte	.LASF60
+ 1856 0469 01       		.byte	0x1
+ 1857 046a B9       		.byte	0xb9
+ 1858 046b 12       		.byte	0x12
+ 1859 046c 8E020000 		.4byte	0x28e
+ 1860 0470 05       		.byte	0x5
+ 1861 0471 03       		.byte	0x3
+ 1862 0472 98000000 		.4byte	rectangleBtnWidget
+ 1863 0476 10       		.uleb128 0x10
+ 1864 0477 26000000 		.4byte	.LASF61
+ 1865 047b 01       		.byte	0x1
+ 1866 047c CA       		.byte	0xca
+ 1867 047d 12       		.byte	0x12
+ 1868 047e 8E020000 		.4byte	0x28e
+ 1869 0482 05       		.byte	0x5
+ 1870 0483 03       		.byte	0x3
+ 1871 0484 B8000000 		.4byte	clearscreenBtnWidget
+ 1872 0488 10       		.uleb128 0x10
+ 1873 0489 0C010000 		.4byte	.LASF62
+ 1874 048d 01       		.byte	0x1
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 39
+
+
+ 1875 048e DA       		.byte	0xda
+ 1876 048f 12       		.byte	0x12
+ 1877 0490 8E020000 		.4byte	0x28e
+ 1878 0494 05       		.byte	0x5
+ 1879 0495 03       		.byte	0x3
+ 1880 0496 D8000000 		.4byte	saveBtnWidget
+ 1881 049a 11       		.uleb128 0x11
+ 1882 049b 01       		.byte	0x1
+ 1883 049c 74020000 		.4byte	.LASF64
+ 1884 04a0 01       		.byte	0x1
+ 1885 04a1 EB       		.byte	0xeb
+ 1886 04a2 05       		.byte	0x5
+ 1887 04a3 25000000 		.4byte	0x25
+ 1888 04a7 8C020000 		.4byte	.LFB69
+ 1889 04ab 78030000 		.4byte	.LFE69
+ 1890 04af 00000000 		.4byte	.LLST5
+ 1891 04b3 01       		.byte	0x1
+ 1892 04b4 12       		.uleb128 0x12
+ 1893 04b5 01       		.byte	0x1
+ 1894 04b6 77030000 		.4byte	.LASF72
+ 1895 04ba 01       		.byte	0x1
+ 1896 04bb 47       		.byte	0x47
+ 1897 04bc 06       		.byte	0x6
+ 1898 04bd 01       		.byte	0x1
+ 1899 04be 64010000 		.4byte	.LFB68
+ 1900 04c2 8C020000 		.4byte	.LFE68
+ 1901 04c6 20000000 		.4byte	.LLST4
+ 1902 04ca 01       		.byte	0x1
+ 1903 04cb F8040000 		.4byte	0x4f8
+ 1904 04cf 13       		.uleb128 0x13
+ 1905 04d0 88010000 		.4byte	.LBB2
+ 1906 04d4 70020000 		.4byte	.LBE2
+ 1907 04d8 10       		.uleb128 0x10
+ 1908 04d9 F1030000 		.4byte	.LASF63
+ 1909 04dd 01       		.byte	0x1
+ 1910 04de 5D       		.byte	0x5d
+ 1911 04df 15       		.byte	0x15
+ 1912 04e0 83000000 		.4byte	0x83
+ 1913 04e4 02       		.byte	0x2
+ 1914 04e5 91       		.byte	0x91
+ 1915 04e6 70       		.sleb128 -16
+ 1916 04e7 14       		.uleb128 0x14
+ 1917 04e8 746D7000 		.ascii	"tmp\000"
+ 1918 04ec 01       		.byte	0x1
+ 1919 04ed 5D       		.byte	0x5d
+ 1920 04ee 1C       		.byte	0x1c
+ 1921 04ef 83000000 		.4byte	0x83
+ 1922 04f3 02       		.byte	0x2
+ 1923 04f4 91       		.byte	0x91
+ 1924 04f5 74       		.sleb128 -12
+ 1925 04f6 00       		.byte	0
+ 1926 04f7 00       		.byte	0
+ 1927 04f8 15       		.uleb128 0x15
+ 1928 04f9 01       		.byte	0x1
+ 1929 04fa 67010000 		.4byte	.LASF65
+ 1930 04fe 01       		.byte	0x1
+ 1931 04ff 3F       		.byte	0x3f
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 40
+
+
+ 1932 0500 06       		.byte	0x6
+ 1933 0501 01       		.byte	0x1
+ 1934 0502 2C010000 		.4byte	.LFB67
+ 1935 0506 64010000 		.4byte	.LFE67
+ 1936 050a 58000000 		.4byte	.LLST3
+ 1937 050e 01       		.byte	0x1
+ 1938 050f 15       		.uleb128 0x15
+ 1939 0510 01       		.byte	0x1
+ 1940 0511 55000000 		.4byte	.LASF66
+ 1941 0515 01       		.byte	0x1
+ 1942 0516 37       		.byte	0x37
+ 1943 0517 06       		.byte	0x6
+ 1944 0518 01       		.byte	0x1
+ 1945 0519 D4000000 		.4byte	.LFB66
+ 1946 051d 2C010000 		.4byte	.LFE66
+ 1947 0521 78000000 		.4byte	.LLST2
+ 1948 0525 01       		.byte	0x1
+ 1949 0526 15       		.uleb128 0x15
+ 1950 0527 01       		.byte	0x1
+ 1951 0528 1A010000 		.4byte	.LASF67
+ 1952 052c 01       		.byte	0x1
+ 1953 052d 32       		.byte	0x32
+ 1954 052e 06       		.byte	0x6
+ 1955 052f 01       		.byte	0x1
+ 1956 0530 A8000000 		.4byte	.LFB65
+ 1957 0534 D4000000 		.4byte	.LFE65
+ 1958 0538 B0000000 		.4byte	.LLST1
+ 1959 053c 01       		.byte	0x1
+ 1960 053d 16       		.uleb128 0x16
+ 1961 053e 01       		.byte	0x1
+ 1962 053f 23020000 		.4byte	.LASF68
+ 1963 0543 01       		.byte	0x1
+ 1964 0544 2E       		.byte	0x2e
+ 1965 0545 06       		.byte	0x6
+ 1966 0546 01       		.byte	0x1
+ 1967 0547 98000000 		.4byte	.LFB64
+ 1968 054b A8000000 		.4byte	.LFE64
+ 1969 054f 02       		.byte	0x2
+ 1970 0550 7D       		.byte	0x7d
+ 1971 0551 00       		.sleb128 0
+ 1972 0552 01       		.byte	0x1
+ 1973 0553 16       		.uleb128 0x16
+ 1974 0554 01       		.byte	0x1
+ 1975 0555 51010000 		.4byte	.LASF69
+ 1976 0559 01       		.byte	0x1
+ 1977 055a 2A       		.byte	0x2a
+ 1978 055b 06       		.byte	0x6
+ 1979 055c 01       		.byte	0x1
+ 1980 055d 88000000 		.4byte	.LFB63
+ 1981 0561 98000000 		.4byte	.LFE63
+ 1982 0565 02       		.byte	0x2
+ 1983 0566 7D       		.byte	0x7d
+ 1984 0567 00       		.sleb128 0
+ 1985 0568 01       		.byte	0x1
+ 1986 0569 16       		.uleb128 0x16
+ 1987 056a 01       		.byte	0x1
+ 1988 056b 9F030000 		.4byte	.LASF70
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 41
+
+
+ 1989 056f 01       		.byte	0x1
+ 1990 0570 26       		.byte	0x26
+ 1991 0571 06       		.byte	0x6
+ 1992 0572 01       		.byte	0x1
+ 1993 0573 78000000 		.4byte	.LFB62
+ 1994 0577 88000000 		.4byte	.LFE62
+ 1995 057b 02       		.byte	0x2
+ 1996 057c 7D       		.byte	0x7d
+ 1997 057d 00       		.sleb128 0
+ 1998 057e 01       		.byte	0x1
+ 1999 057f 16       		.uleb128 0x16
+ 2000 0580 01       		.byte	0x1
+ 2001 0581 00000000 		.4byte	.LASF71
+ 2002 0585 01       		.byte	0x1
+ 2003 0586 22       		.byte	0x22
+ 2004 0587 06       		.byte	0x6
+ 2005 0588 01       		.byte	0x1
+ 2006 0589 68000000 		.4byte	.LFB61
+ 2007 058d 78000000 		.4byte	.LFE61
+ 2008 0591 02       		.byte	0x2
+ 2009 0592 7D       		.byte	0x7d
+ 2010 0593 00       		.sleb128 0
+ 2011 0594 01       		.byte	0x1
+ 2012 0595 17       		.uleb128 0x17
+ 2013 0596 01       		.byte	0x1
+ 2014 0597 20040000 		.4byte	.LASF73
+ 2015 059b 01       		.byte	0x1
+ 2016 059c 0C       		.byte	0xc
+ 2017 059d 09       		.byte	0x9
+ 2018 059e 01       		.byte	0x1
+ 2019 059f 83000000 		.4byte	0x83
+ 2020 05a3 00000000 		.4byte	.LFB60
+ 2021 05a7 68000000 		.4byte	.LFE60
+ 2022 05ab E8000000 		.4byte	.LLST0
+ 2023 05af 01       		.byte	0x1
+ 2024 05b0 18       		.uleb128 0x18
+ 2025 05b1 7200     		.ascii	"r\000"
+ 2026 05b3 01       		.byte	0x1
+ 2027 05b4 0C       		.byte	0xc
+ 2028 05b5 18       		.byte	0x18
+ 2029 05b6 83000000 		.4byte	0x83
+ 2030 05ba 02       		.byte	0x2
+ 2031 05bb 91       		.byte	0x91
+ 2032 05bc 64       		.sleb128 -28
+ 2033 05bd 10       		.uleb128 0x10
+ 2034 05be 3C020000 		.4byte	.LASF74
+ 2035 05c2 01       		.byte	0x1
+ 2036 05c3 10       		.byte	0x10
+ 2037 05c4 0D       		.byte	0xd
+ 2038 05c5 83000000 		.4byte	0x83
+ 2039 05c9 02       		.byte	0x2
+ 2040 05ca 91       		.byte	0x91
+ 2041 05cb 7C       		.sleb128 -4
+ 2042 05cc 14       		.uleb128 0x14
+ 2043 05cd 656E6400 		.ascii	"end\000"
+ 2044 05d1 01       		.byte	0x1
+ 2045 05d2 10       		.byte	0x10
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 42
+
+
+ 2046 05d3 16       		.byte	0x16
+ 2047 05d4 83000000 		.4byte	0x83
+ 2048 05d8 02       		.byte	0x2
+ 2049 05d9 91       		.byte	0x91
+ 2050 05da 78       		.sleb128 -8
+ 2051 05db 14       		.uleb128 0x14
+ 2052 05dc 6D696400 		.ascii	"mid\000"
+ 2053 05e0 01       		.byte	0x1
+ 2054 05e1 10       		.byte	0x10
+ 2055 05e2 20       		.byte	0x20
+ 2056 05e3 83000000 		.4byte	0x83
+ 2057 05e7 02       		.byte	0x2
+ 2058 05e8 91       		.byte	0x91
+ 2059 05e9 70       		.sleb128 -16
+ 2060 05ea 14       		.uleb128 0x14
+ 2061 05eb 72657300 		.ascii	"res\000"
+ 2062 05ef 01       		.byte	0x1
+ 2063 05f0 10       		.byte	0x10
+ 2064 05f1 25       		.byte	0x25
+ 2065 05f2 83000000 		.4byte	0x83
+ 2066 05f6 02       		.byte	0x2
+ 2067 05f7 91       		.byte	0x91
+ 2068 05f8 74       		.sleb128 -12
+ 2069 05f9 14       		.uleb128 0x14
+ 2070 05fa 73717200 		.ascii	"sqr\000"
+ 2071 05fe 01       		.byte	0x1
+ 2072 05ff 10       		.byte	0x10
+ 2073 0600 2A       		.byte	0x2a
+ 2074 0601 83000000 		.4byte	0x83
+ 2075 0605 02       		.byte	0x2
+ 2076 0606 91       		.byte	0x91
+ 2077 0607 6C       		.sleb128 -20
+ 2078 0608 00       		.byte	0
+ 2079 0609 00       		.byte	0
+ 2080              		.section	.debug_abbrev,"",%progbits
+ 2081              	.Ldebug_abbrev0:
+ 2082 0000 01       		.uleb128 0x1
+ 2083 0001 11       		.uleb128 0x11
+ 2084 0002 01       		.byte	0x1
+ 2085 0003 25       		.uleb128 0x25
+ 2086 0004 0E       		.uleb128 0xe
+ 2087 0005 13       		.uleb128 0x13
+ 2088 0006 0B       		.uleb128 0xb
+ 2089 0007 03       		.uleb128 0x3
+ 2090 0008 0E       		.uleb128 0xe
+ 2091 0009 1B       		.uleb128 0x1b
+ 2092 000a 0E       		.uleb128 0xe
+ 2093 000b 11       		.uleb128 0x11
+ 2094 000c 01       		.uleb128 0x1
+ 2095 000d 12       		.uleb128 0x12
+ 2096 000e 01       		.uleb128 0x1
+ 2097 000f 10       		.uleb128 0x10
+ 2098 0010 06       		.uleb128 0x6
+ 2099 0011 00       		.byte	0
+ 2100 0012 00       		.byte	0
+ 2101 0013 02       		.uleb128 0x2
+ 2102 0014 24       		.uleb128 0x24
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 43
+
+
+ 2103 0015 00       		.byte	0
+ 2104 0016 0B       		.uleb128 0xb
+ 2105 0017 0B       		.uleb128 0xb
+ 2106 0018 3E       		.uleb128 0x3e
+ 2107 0019 0B       		.uleb128 0xb
+ 2108 001a 03       		.uleb128 0x3
+ 2109 001b 08       		.uleb128 0x8
+ 2110 001c 00       		.byte	0
+ 2111 001d 00       		.byte	0
+ 2112 001e 03       		.uleb128 0x3
+ 2113 001f 24       		.uleb128 0x24
+ 2114 0020 00       		.byte	0
+ 2115 0021 0B       		.uleb128 0xb
+ 2116 0022 0B       		.uleb128 0xb
+ 2117 0023 3E       		.uleb128 0x3e
+ 2118 0024 0B       		.uleb128 0xb
+ 2119 0025 03       		.uleb128 0x3
+ 2120 0026 0E       		.uleb128 0xe
+ 2121 0027 00       		.byte	0
+ 2122 0028 00       		.byte	0
+ 2123 0029 04       		.uleb128 0x4
+ 2124 002a 16       		.uleb128 0x16
+ 2125 002b 00       		.byte	0
+ 2126 002c 03       		.uleb128 0x3
+ 2127 002d 0E       		.uleb128 0xe
+ 2128 002e 3A       		.uleb128 0x3a
+ 2129 002f 0B       		.uleb128 0xb
+ 2130 0030 3B       		.uleb128 0x3b
+ 2131 0031 0B       		.uleb128 0xb
+ 2132 0032 39       		.uleb128 0x39
+ 2133 0033 0B       		.uleb128 0xb
+ 2134 0034 49       		.uleb128 0x49
+ 2135 0035 13       		.uleb128 0x13
+ 2136 0036 00       		.byte	0
+ 2137 0037 00       		.byte	0
+ 2138 0038 05       		.uleb128 0x5
+ 2139 0039 04       		.uleb128 0x4
+ 2140 003a 01       		.byte	0x1
+ 2141 003b 3E       		.uleb128 0x3e
+ 2142 003c 0B       		.uleb128 0xb
+ 2143 003d 0B       		.uleb128 0xb
+ 2144 003e 0B       		.uleb128 0xb
+ 2145 003f 49       		.uleb128 0x49
+ 2146 0040 13       		.uleb128 0x13
+ 2147 0041 3A       		.uleb128 0x3a
+ 2148 0042 0B       		.uleb128 0xb
+ 2149 0043 3B       		.uleb128 0x3b
+ 2150 0044 05       		.uleb128 0x5
+ 2151 0045 39       		.uleb128 0x39
+ 2152 0046 0B       		.uleb128 0xb
+ 2153 0047 01       		.uleb128 0x1
+ 2154 0048 13       		.uleb128 0x13
+ 2155 0049 00       		.byte	0
+ 2156 004a 00       		.byte	0
+ 2157 004b 06       		.uleb128 0x6
+ 2158 004c 28       		.uleb128 0x28
+ 2159 004d 00       		.byte	0
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 44
+
+
+ 2160 004e 03       		.uleb128 0x3
+ 2161 004f 0E       		.uleb128 0xe
+ 2162 0050 1C       		.uleb128 0x1c
+ 2163 0051 0B       		.uleb128 0xb
+ 2164 0052 00       		.byte	0
+ 2165 0053 00       		.byte	0
+ 2166 0054 07       		.uleb128 0x7
+ 2167 0055 16       		.uleb128 0x16
+ 2168 0056 00       		.byte	0
+ 2169 0057 03       		.uleb128 0x3
+ 2170 0058 0E       		.uleb128 0xe
+ 2171 0059 3A       		.uleb128 0x3a
+ 2172 005a 0B       		.uleb128 0xb
+ 2173 005b 3B       		.uleb128 0x3b
+ 2174 005c 05       		.uleb128 0x5
+ 2175 005d 39       		.uleb128 0x39
+ 2176 005e 0B       		.uleb128 0xb
+ 2177 005f 49       		.uleb128 0x49
+ 2178 0060 13       		.uleb128 0x13
+ 2179 0061 00       		.byte	0
+ 2180 0062 00       		.byte	0
+ 2181 0063 08       		.uleb128 0x8
+ 2182 0064 0F       		.uleb128 0xf
+ 2183 0065 00       		.byte	0
+ 2184 0066 0B       		.uleb128 0xb
+ 2185 0067 0B       		.uleb128 0xb
+ 2186 0068 49       		.uleb128 0x49
+ 2187 0069 13       		.uleb128 0x13
+ 2188 006a 00       		.byte	0
+ 2189 006b 00       		.byte	0
+ 2190 006c 09       		.uleb128 0x9
+ 2191 006d 15       		.uleb128 0x15
+ 2192 006e 00       		.byte	0
+ 2193 006f 27       		.uleb128 0x27
+ 2194 0070 0C       		.uleb128 0xc
+ 2195 0071 00       		.byte	0
+ 2196 0072 00       		.byte	0
+ 2197 0073 0A       		.uleb128 0xa
+ 2198 0074 04       		.uleb128 0x4
+ 2199 0075 01       		.byte	0x1
+ 2200 0076 3E       		.uleb128 0x3e
+ 2201 0077 0B       		.uleb128 0xb
+ 2202 0078 0B       		.uleb128 0xb
+ 2203 0079 0B       		.uleb128 0xb
+ 2204 007a 49       		.uleb128 0x49
+ 2205 007b 13       		.uleb128 0x13
+ 2206 007c 3A       		.uleb128 0x3a
+ 2207 007d 0B       		.uleb128 0xb
+ 2208 007e 3B       		.uleb128 0x3b
+ 2209 007f 0B       		.uleb128 0xb
+ 2210 0080 39       		.uleb128 0x39
+ 2211 0081 0B       		.uleb128 0xb
+ 2212 0082 01       		.uleb128 0x1
+ 2213 0083 13       		.uleb128 0x13
+ 2214 0084 00       		.byte	0
+ 2215 0085 00       		.byte	0
+ 2216 0086 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 45
+
+
+ 2217 0087 13       		.uleb128 0x13
+ 2218 0088 01       		.byte	0x1
+ 2219 0089 0B       		.uleb128 0xb
+ 2220 008a 0B       		.uleb128 0xb
+ 2221 008b 3A       		.uleb128 0x3a
+ 2222 008c 0B       		.uleb128 0xb
+ 2223 008d 3B       		.uleb128 0x3b
+ 2224 008e 0B       		.uleb128 0xb
+ 2225 008f 39       		.uleb128 0x39
+ 2226 0090 0B       		.uleb128 0xb
+ 2227 0091 01       		.uleb128 0x1
+ 2228 0092 13       		.uleb128 0x13
+ 2229 0093 00       		.byte	0
+ 2230 0094 00       		.byte	0
+ 2231 0095 0C       		.uleb128 0xc
+ 2232 0096 0D       		.uleb128 0xd
+ 2233 0097 00       		.byte	0
+ 2234 0098 03       		.uleb128 0x3
+ 2235 0099 0E       		.uleb128 0xe
+ 2236 009a 3A       		.uleb128 0x3a
+ 2237 009b 0B       		.uleb128 0xb
+ 2238 009c 3B       		.uleb128 0x3b
+ 2239 009d 0B       		.uleb128 0xb
+ 2240 009e 39       		.uleb128 0x39
+ 2241 009f 0B       		.uleb128 0xb
+ 2242 00a0 49       		.uleb128 0x49
+ 2243 00a1 13       		.uleb128 0x13
+ 2244 00a2 38       		.uleb128 0x38
+ 2245 00a3 0A       		.uleb128 0xa
+ 2246 00a4 00       		.byte	0
+ 2247 00a5 00       		.byte	0
+ 2248 00a6 0D       		.uleb128 0xd
+ 2249 00a7 13       		.uleb128 0x13
+ 2250 00a8 01       		.byte	0x1
+ 2251 00a9 03       		.uleb128 0x3
+ 2252 00aa 0E       		.uleb128 0xe
+ 2253 00ab 0B       		.uleb128 0xb
+ 2254 00ac 0B       		.uleb128 0xb
+ 2255 00ad 3A       		.uleb128 0x3a
+ 2256 00ae 0B       		.uleb128 0xb
+ 2257 00af 3B       		.uleb128 0x3b
+ 2258 00b0 0B       		.uleb128 0xb
+ 2259 00b1 39       		.uleb128 0x39
+ 2260 00b2 0B       		.uleb128 0xb
+ 2261 00b3 01       		.uleb128 0x1
+ 2262 00b4 13       		.uleb128 0x13
+ 2263 00b5 00       		.byte	0
+ 2264 00b6 00       		.byte	0
+ 2265 00b7 0E       		.uleb128 0xe
+ 2266 00b8 34       		.uleb128 0x34
+ 2267 00b9 00       		.byte	0
+ 2268 00ba 03       		.uleb128 0x3
+ 2269 00bb 0E       		.uleb128 0xe
+ 2270 00bc 3A       		.uleb128 0x3a
+ 2271 00bd 0B       		.uleb128 0xb
+ 2272 00be 3B       		.uleb128 0x3b
+ 2273 00bf 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 46
+
+
+ 2274 00c0 39       		.uleb128 0x39
+ 2275 00c1 0B       		.uleb128 0xb
+ 2276 00c2 49       		.uleb128 0x49
+ 2277 00c3 13       		.uleb128 0x13
+ 2278 00c4 3F       		.uleb128 0x3f
+ 2279 00c5 0C       		.uleb128 0xc
+ 2280 00c6 02       		.uleb128 0x2
+ 2281 00c7 0A       		.uleb128 0xa
+ 2282 00c8 00       		.byte	0
+ 2283 00c9 00       		.byte	0
+ 2284 00ca 0F       		.uleb128 0xf
+ 2285 00cb 34       		.uleb128 0x34
+ 2286 00cc 00       		.byte	0
+ 2287 00cd 03       		.uleb128 0x3
+ 2288 00ce 08       		.uleb128 0x8
+ 2289 00cf 3A       		.uleb128 0x3a
+ 2290 00d0 0B       		.uleb128 0xb
+ 2291 00d1 3B       		.uleb128 0x3b
+ 2292 00d2 0B       		.uleb128 0xb
+ 2293 00d3 39       		.uleb128 0x39
+ 2294 00d4 0B       		.uleb128 0xb
+ 2295 00d5 49       		.uleb128 0x49
+ 2296 00d6 13       		.uleb128 0x13
+ 2297 00d7 3F       		.uleb128 0x3f
+ 2298 00d8 0C       		.uleb128 0xc
+ 2299 00d9 02       		.uleb128 0x2
+ 2300 00da 0A       		.uleb128 0xa
+ 2301 00db 00       		.byte	0
+ 2302 00dc 00       		.byte	0
+ 2303 00dd 10       		.uleb128 0x10
+ 2304 00de 34       		.uleb128 0x34
+ 2305 00df 00       		.byte	0
+ 2306 00e0 03       		.uleb128 0x3
+ 2307 00e1 0E       		.uleb128 0xe
+ 2308 00e2 3A       		.uleb128 0x3a
+ 2309 00e3 0B       		.uleb128 0xb
+ 2310 00e4 3B       		.uleb128 0x3b
+ 2311 00e5 0B       		.uleb128 0xb
+ 2312 00e6 39       		.uleb128 0x39
+ 2313 00e7 0B       		.uleb128 0xb
+ 2314 00e8 49       		.uleb128 0x49
+ 2315 00e9 13       		.uleb128 0x13
+ 2316 00ea 02       		.uleb128 0x2
+ 2317 00eb 0A       		.uleb128 0xa
+ 2318 00ec 00       		.byte	0
+ 2319 00ed 00       		.byte	0
+ 2320 00ee 11       		.uleb128 0x11
+ 2321 00ef 2E       		.uleb128 0x2e
+ 2322 00f0 00       		.byte	0
+ 2323 00f1 3F       		.uleb128 0x3f
+ 2324 00f2 0C       		.uleb128 0xc
+ 2325 00f3 03       		.uleb128 0x3
+ 2326 00f4 0E       		.uleb128 0xe
+ 2327 00f5 3A       		.uleb128 0x3a
+ 2328 00f6 0B       		.uleb128 0xb
+ 2329 00f7 3B       		.uleb128 0x3b
+ 2330 00f8 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 47
+
+
+ 2331 00f9 39       		.uleb128 0x39
+ 2332 00fa 0B       		.uleb128 0xb
+ 2333 00fb 49       		.uleb128 0x49
+ 2334 00fc 13       		.uleb128 0x13
+ 2335 00fd 11       		.uleb128 0x11
+ 2336 00fe 01       		.uleb128 0x1
+ 2337 00ff 12       		.uleb128 0x12
+ 2338 0100 01       		.uleb128 0x1
+ 2339 0101 40       		.uleb128 0x40
+ 2340 0102 06       		.uleb128 0x6
+ 2341 0103 9642     		.uleb128 0x2116
+ 2342 0105 0C       		.uleb128 0xc
+ 2343 0106 00       		.byte	0
+ 2344 0107 00       		.byte	0
+ 2345 0108 12       		.uleb128 0x12
+ 2346 0109 2E       		.uleb128 0x2e
+ 2347 010a 01       		.byte	0x1
+ 2348 010b 3F       		.uleb128 0x3f
+ 2349 010c 0C       		.uleb128 0xc
+ 2350 010d 03       		.uleb128 0x3
+ 2351 010e 0E       		.uleb128 0xe
+ 2352 010f 3A       		.uleb128 0x3a
+ 2353 0110 0B       		.uleb128 0xb
+ 2354 0111 3B       		.uleb128 0x3b
+ 2355 0112 0B       		.uleb128 0xb
+ 2356 0113 39       		.uleb128 0x39
+ 2357 0114 0B       		.uleb128 0xb
+ 2358 0115 27       		.uleb128 0x27
+ 2359 0116 0C       		.uleb128 0xc
+ 2360 0117 11       		.uleb128 0x11
+ 2361 0118 01       		.uleb128 0x1
+ 2362 0119 12       		.uleb128 0x12
+ 2363 011a 01       		.uleb128 0x1
+ 2364 011b 40       		.uleb128 0x40
+ 2365 011c 06       		.uleb128 0x6
+ 2366 011d 9642     		.uleb128 0x2116
+ 2367 011f 0C       		.uleb128 0xc
+ 2368 0120 01       		.uleb128 0x1
+ 2369 0121 13       		.uleb128 0x13
+ 2370 0122 00       		.byte	0
+ 2371 0123 00       		.byte	0
+ 2372 0124 13       		.uleb128 0x13
+ 2373 0125 0B       		.uleb128 0xb
+ 2374 0126 01       		.byte	0x1
+ 2375 0127 11       		.uleb128 0x11
+ 2376 0128 01       		.uleb128 0x1
+ 2377 0129 12       		.uleb128 0x12
+ 2378 012a 01       		.uleb128 0x1
+ 2379 012b 00       		.byte	0
+ 2380 012c 00       		.byte	0
+ 2381 012d 14       		.uleb128 0x14
+ 2382 012e 34       		.uleb128 0x34
+ 2383 012f 00       		.byte	0
+ 2384 0130 03       		.uleb128 0x3
+ 2385 0131 08       		.uleb128 0x8
+ 2386 0132 3A       		.uleb128 0x3a
+ 2387 0133 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 48
+
+
+ 2388 0134 3B       		.uleb128 0x3b
+ 2389 0135 0B       		.uleb128 0xb
+ 2390 0136 39       		.uleb128 0x39
+ 2391 0137 0B       		.uleb128 0xb
+ 2392 0138 49       		.uleb128 0x49
+ 2393 0139 13       		.uleb128 0x13
+ 2394 013a 02       		.uleb128 0x2
+ 2395 013b 0A       		.uleb128 0xa
+ 2396 013c 00       		.byte	0
+ 2397 013d 00       		.byte	0
+ 2398 013e 15       		.uleb128 0x15
+ 2399 013f 2E       		.uleb128 0x2e
+ 2400 0140 00       		.byte	0
+ 2401 0141 3F       		.uleb128 0x3f
+ 2402 0142 0C       		.uleb128 0xc
+ 2403 0143 03       		.uleb128 0x3
+ 2404 0144 0E       		.uleb128 0xe
+ 2405 0145 3A       		.uleb128 0x3a
+ 2406 0146 0B       		.uleb128 0xb
+ 2407 0147 3B       		.uleb128 0x3b
+ 2408 0148 0B       		.uleb128 0xb
+ 2409 0149 39       		.uleb128 0x39
+ 2410 014a 0B       		.uleb128 0xb
+ 2411 014b 27       		.uleb128 0x27
+ 2412 014c 0C       		.uleb128 0xc
+ 2413 014d 11       		.uleb128 0x11
+ 2414 014e 01       		.uleb128 0x1
+ 2415 014f 12       		.uleb128 0x12
+ 2416 0150 01       		.uleb128 0x1
+ 2417 0151 40       		.uleb128 0x40
+ 2418 0152 06       		.uleb128 0x6
+ 2419 0153 9642     		.uleb128 0x2116
+ 2420 0155 0C       		.uleb128 0xc
+ 2421 0156 00       		.byte	0
+ 2422 0157 00       		.byte	0
+ 2423 0158 16       		.uleb128 0x16
+ 2424 0159 2E       		.uleb128 0x2e
+ 2425 015a 00       		.byte	0
+ 2426 015b 3F       		.uleb128 0x3f
+ 2427 015c 0C       		.uleb128 0xc
+ 2428 015d 03       		.uleb128 0x3
+ 2429 015e 0E       		.uleb128 0xe
+ 2430 015f 3A       		.uleb128 0x3a
+ 2431 0160 0B       		.uleb128 0xb
+ 2432 0161 3B       		.uleb128 0x3b
+ 2433 0162 0B       		.uleb128 0xb
+ 2434 0163 39       		.uleb128 0x39
+ 2435 0164 0B       		.uleb128 0xb
+ 2436 0165 27       		.uleb128 0x27
+ 2437 0166 0C       		.uleb128 0xc
+ 2438 0167 11       		.uleb128 0x11
+ 2439 0168 01       		.uleb128 0x1
+ 2440 0169 12       		.uleb128 0x12
+ 2441 016a 01       		.uleb128 0x1
+ 2442 016b 40       		.uleb128 0x40
+ 2443 016c 0A       		.uleb128 0xa
+ 2444 016d 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 49
+
+
+ 2445 016f 0C       		.uleb128 0xc
+ 2446 0170 00       		.byte	0
+ 2447 0171 00       		.byte	0
+ 2448 0172 17       		.uleb128 0x17
+ 2449 0173 2E       		.uleb128 0x2e
+ 2450 0174 01       		.byte	0x1
+ 2451 0175 3F       		.uleb128 0x3f
+ 2452 0176 0C       		.uleb128 0xc
+ 2453 0177 03       		.uleb128 0x3
+ 2454 0178 0E       		.uleb128 0xe
+ 2455 0179 3A       		.uleb128 0x3a
+ 2456 017a 0B       		.uleb128 0xb
+ 2457 017b 3B       		.uleb128 0x3b
+ 2458 017c 0B       		.uleb128 0xb
+ 2459 017d 39       		.uleb128 0x39
+ 2460 017e 0B       		.uleb128 0xb
+ 2461 017f 27       		.uleb128 0x27
+ 2462 0180 0C       		.uleb128 0xc
+ 2463 0181 49       		.uleb128 0x49
+ 2464 0182 13       		.uleb128 0x13
+ 2465 0183 11       		.uleb128 0x11
+ 2466 0184 01       		.uleb128 0x1
+ 2467 0185 12       		.uleb128 0x12
+ 2468 0186 01       		.uleb128 0x1
+ 2469 0187 40       		.uleb128 0x40
+ 2470 0188 06       		.uleb128 0x6
+ 2471 0189 9742     		.uleb128 0x2117
+ 2472 018b 0C       		.uleb128 0xc
+ 2473 018c 00       		.byte	0
+ 2474 018d 00       		.byte	0
+ 2475 018e 18       		.uleb128 0x18
+ 2476 018f 05       		.uleb128 0x5
+ 2477 0190 00       		.byte	0
+ 2478 0191 03       		.uleb128 0x3
+ 2479 0192 08       		.uleb128 0x8
+ 2480 0193 3A       		.uleb128 0x3a
+ 2481 0194 0B       		.uleb128 0xb
+ 2482 0195 3B       		.uleb128 0x3b
+ 2483 0196 0B       		.uleb128 0xb
+ 2484 0197 39       		.uleb128 0x39
+ 2485 0198 0B       		.uleb128 0xb
+ 2486 0199 49       		.uleb128 0x49
+ 2487 019a 13       		.uleb128 0x13
+ 2488 019b 02       		.uleb128 0x2
+ 2489 019c 0A       		.uleb128 0xa
+ 2490 019d 00       		.byte	0
+ 2491 019e 00       		.byte	0
+ 2492 019f 00       		.byte	0
+ 2493              		.section	.debug_loc,"",%progbits
+ 2494              	.Ldebug_loc0:
+ 2495              	.LLST5:
+ 2496 0000 8C020000 		.4byte	.LFB69-.Ltext0
+ 2497 0004 8E020000 		.4byte	.LCFI12-.Ltext0
+ 2498 0008 0200     		.2byte	0x2
+ 2499 000a 7D       		.byte	0x7d
+ 2500 000b 00       		.sleb128 0
+ 2501 000c 8E020000 		.4byte	.LCFI12-.Ltext0
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 50
+
+
+ 2502 0010 78030000 		.4byte	.LFE69-.Ltext0
+ 2503 0014 0200     		.2byte	0x2
+ 2504 0016 7D       		.byte	0x7d
+ 2505 0017 08       		.sleb128 8
+ 2506 0018 00000000 		.4byte	0
+ 2507 001c 00000000 		.4byte	0
+ 2508              	.LLST4:
+ 2509 0020 64010000 		.4byte	.LFB68-.Ltext0
+ 2510 0024 66010000 		.4byte	.LCFI9-.Ltext0
+ 2511 0028 0200     		.2byte	0x2
+ 2512 002a 7D       		.byte	0x7d
+ 2513 002b 00       		.sleb128 0
+ 2514 002c 66010000 		.4byte	.LCFI9-.Ltext0
+ 2515 0030 68010000 		.4byte	.LCFI10-.Ltext0
+ 2516 0034 0200     		.2byte	0x2
+ 2517 0036 7D       		.byte	0x7d
+ 2518 0037 04       		.sleb128 4
+ 2519 0038 68010000 		.4byte	.LCFI10-.Ltext0
+ 2520 003c 74020000 		.4byte	.LCFI11-.Ltext0
+ 2521 0040 0200     		.2byte	0x2
+ 2522 0042 7D       		.byte	0x7d
+ 2523 0043 10       		.sleb128 16
+ 2524 0044 74020000 		.4byte	.LCFI11-.Ltext0
+ 2525 0048 8C020000 		.4byte	.LFE68-.Ltext0
+ 2526 004c 0200     		.2byte	0x2
+ 2527 004e 7D       		.byte	0x7d
+ 2528 004f 04       		.sleb128 4
+ 2529 0050 00000000 		.4byte	0
+ 2530 0054 00000000 		.4byte	0
+ 2531              	.LLST3:
+ 2532 0058 2C010000 		.4byte	.LFB67-.Ltext0
+ 2533 005c 2E010000 		.4byte	.LCFI8-.Ltext0
+ 2534 0060 0200     		.2byte	0x2
+ 2535 0062 7D       		.byte	0x7d
+ 2536 0063 00       		.sleb128 0
+ 2537 0064 2E010000 		.4byte	.LCFI8-.Ltext0
+ 2538 0068 64010000 		.4byte	.LFE67-.Ltext0
+ 2539 006c 0200     		.2byte	0x2
+ 2540 006e 7D       		.byte	0x7d
+ 2541 006f 08       		.sleb128 8
+ 2542 0070 00000000 		.4byte	0
+ 2543 0074 00000000 		.4byte	0
+ 2544              	.LLST2:
+ 2545 0078 D4000000 		.4byte	.LFB66-.Ltext0
+ 2546 007c D6000000 		.4byte	.LCFI5-.Ltext0
+ 2547 0080 0200     		.2byte	0x2
+ 2548 0082 7D       		.byte	0x7d
+ 2549 0083 00       		.sleb128 0
+ 2550 0084 D6000000 		.4byte	.LCFI5-.Ltext0
+ 2551 0088 D8000000 		.4byte	.LCFI6-.Ltext0
+ 2552 008c 0200     		.2byte	0x2
+ 2553 008e 7D       		.byte	0x7d
+ 2554 008f 04       		.sleb128 4
+ 2555 0090 D8000000 		.4byte	.LCFI6-.Ltext0
+ 2556 0094 1E010000 		.4byte	.LCFI7-.Ltext0
+ 2557 0098 0200     		.2byte	0x2
+ 2558 009a 7D       		.byte	0x7d
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 51
+
+
+ 2559 009b 10       		.sleb128 16
+ 2560 009c 1E010000 		.4byte	.LCFI7-.Ltext0
+ 2561 00a0 2C010000 		.4byte	.LFE66-.Ltext0
+ 2562 00a4 0200     		.2byte	0x2
+ 2563 00a6 7D       		.byte	0x7d
+ 2564 00a7 04       		.sleb128 4
+ 2565 00a8 00000000 		.4byte	0
+ 2566 00ac 00000000 		.4byte	0
+ 2567              	.LLST1:
+ 2568 00b0 A8000000 		.4byte	.LFB65-.Ltext0
+ 2569 00b4 AA000000 		.4byte	.LCFI2-.Ltext0
+ 2570 00b8 0200     		.2byte	0x2
+ 2571 00ba 7D       		.byte	0x7d
+ 2572 00bb 00       		.sleb128 0
+ 2573 00bc AA000000 		.4byte	.LCFI2-.Ltext0
+ 2574 00c0 AC000000 		.4byte	.LCFI3-.Ltext0
+ 2575 00c4 0200     		.2byte	0x2
+ 2576 00c6 7D       		.byte	0x7d
+ 2577 00c7 04       		.sleb128 4
+ 2578 00c8 AC000000 		.4byte	.LCFI3-.Ltext0
+ 2579 00cc C8000000 		.4byte	.LCFI4-.Ltext0
+ 2580 00d0 0200     		.2byte	0x2
+ 2581 00d2 7D       		.byte	0x7d
+ 2582 00d3 10       		.sleb128 16
+ 2583 00d4 C8000000 		.4byte	.LCFI4-.Ltext0
+ 2584 00d8 D4000000 		.4byte	.LFE65-.Ltext0
+ 2585 00dc 0200     		.2byte	0x2
+ 2586 00de 7D       		.byte	0x7d
+ 2587 00df 04       		.sleb128 4
+ 2588 00e0 00000000 		.4byte	0
+ 2589 00e4 00000000 		.4byte	0
+ 2590              	.LLST0:
+ 2591 00e8 00000000 		.4byte	.LFB60-.Ltext0
+ 2592 00ec 02000000 		.4byte	.LCFI0-.Ltext0
+ 2593 00f0 0200     		.2byte	0x2
+ 2594 00f2 7D       		.byte	0x7d
+ 2595 00f3 00       		.sleb128 0
+ 2596 00f4 02000000 		.4byte	.LCFI0-.Ltext0
+ 2597 00f8 66000000 		.4byte	.LCFI1-.Ltext0
+ 2598 00fc 0200     		.2byte	0x2
+ 2599 00fe 7D       		.byte	0x7d
+ 2600 00ff 20       		.sleb128 32
+ 2601 0100 66000000 		.4byte	.LCFI1-.Ltext0
+ 2602 0104 68000000 		.4byte	.LFE60-.Ltext0
+ 2603 0108 0200     		.2byte	0x2
+ 2604 010a 7D       		.byte	0x7d
+ 2605 010b 00       		.sleb128 0
+ 2606 010c 00000000 		.4byte	0
+ 2607 0110 00000000 		.4byte	0
+ 2608              		.section	.debug_aranges,"",%progbits
+ 2609 0000 1C000000 		.4byte	0x1c
+ 2610 0004 0200     		.2byte	0x2
+ 2611 0006 00000000 		.4byte	.Ldebug_info0
+ 2612 000a 04       		.byte	0x4
+ 2613 000b 00       		.byte	0
+ 2614 000c 0000     		.2byte	0
+ 2615 000e 0000     		.2byte	0
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 52
+
+
+ 2616 0010 00000000 		.4byte	.Ltext0
+ 2617 0014 78030000 		.4byte	.Letext0-.Ltext0
+ 2618 0018 00000000 		.4byte	0
+ 2619 001c 00000000 		.4byte	0
+ 2620              		.section	.debug_line,"",%progbits
+ 2621              	.Ldebug_line0:
+ 2622 0000 EC010000 		.section	.debug_str,"MS",%progbits,1
+ 2622      03009C00 
+ 2622      00000201 
+ 2622      FB0E0D00 
+ 2622      01010101 
+ 2623              	.LASF71:
+ 2624 0000 66726565 		.ascii	"freeHandBtnEventHandler\000"
+ 2624      48616E64 
+ 2624      42746E45 
+ 2624      76656E74 
+ 2624      48616E64 
+ 2625              	.LASF58:
+ 2626 0018 6C696E65 		.ascii	"lineBtnWidget\000"
+ 2626      42746E57 
+ 2626      69646765 
+ 2626      7400
+ 2627              	.LASF61:
+ 2628 0026 636C6561 		.ascii	"clearscreenBtnWidget\000"
+ 2628      72736372 
+ 2628      65656E42 
+ 2628      746E5769 
+ 2628      64676574 
+ 2629              	.LASF15:
+ 2630 003b 656E426F 		.ascii	"enBooleanTrue\000"
+ 2630      6F6C6561 
+ 2630      6E547275 
+ 2630      6500
+ 2631              	.LASF42:
+ 2632 0049 666F6E74 		.ascii	"font\000"
+ 2632      00
+ 2633              	.LASF9:
+ 2634 004e 50466279 		.ascii	"PFbyte\000"
+ 2634      746500
+ 2635              	.LASF66:
+ 2636 0055 686F6D65 		.ascii	"homeScreen\000"
+ 2636      53637265 
+ 2636      656E00
+ 2637              	.LASF33:
+ 2638 0060 6261636B 		.ascii	"backgroundColor\000"
+ 2638      67726F75 
+ 2638      6E64436F 
+ 2638      6C6F7200 
+ 2639              	.LASF14:
+ 2640 0070 656E426F 		.ascii	"enBooleanFalse\000"
+ 2640      6F6C6561 
+ 2640      6E46616C 
+ 2640      736500
+ 2641              	.LASF10:
+ 2642 007f 5046776F 		.ascii	"PFword\000"
+ 2642      726400
+ 2643              	.LASF35:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 53
+
+
+ 2644 0086 57696E64 		.ascii	"WindowCfg\000"
+ 2644      6F774366 
+ 2644      6700
+ 2645              	.LASF37:
+ 2646 0090 6F6E6553 		.ascii	"oneShotHandler\000"
+ 2646      686F7448 
+ 2646      616E646C 
+ 2646      657200
+ 2647              	.LASF43:
+ 2648 009f 666F6E74 		.ascii	"fontColor\000"
+ 2648      436F6C6F 
+ 2648      7200
+ 2649              	.LASF3:
+ 2650 00a9 73686F72 		.ascii	"short int\000"
+ 2650      7420696E 
+ 2650      7400
+ 2651              	.LASF38:
+ 2652 00b3 43616E76 		.ascii	"CanvasCfg\000"
+ 2652      61734366 
+ 2652      6700
+ 2653              	.LASF57:
+ 2654 00bd 66726565 		.ascii	"freeHandBtnWidget\000"
+ 2654      48616E64 
+ 2654      42746E57 
+ 2654      69646765 
+ 2654      7400
+ 2655              	.LASF26:
+ 2656 00cf 77696474 		.ascii	"width\000"
+ 2656      6800
+ 2657              	.LASF34:
+ 2658 00d5 626F7264 		.ascii	"border\000"
+ 2658      657200
+ 2659              	.LASF12:
+ 2660 00dc 666C6F61 		.ascii	"float\000"
+ 2660      7400
+ 2661              	.LASF19:
+ 2662 00e2 656E4766 		.ascii	"enGfxFont_8X8\000"
+ 2662      78466F6E 
+ 2662      745F3858 
+ 2662      3800
+ 2663              	.LASF39:
+ 2664 00f0 63616E76 		.ascii	"canvasAttr\000"
+ 2664      61734174 
+ 2664      747200
+ 2665              	.LASF11:
+ 2666 00fb 50466477 		.ascii	"PFdword\000"
+ 2666      6F726400 
+ 2667              	.LASF5:
+ 2668 0103 6C6F6E67 		.ascii	"long int\000"
+ 2668      20696E74 
+ 2668      00
+ 2669              	.LASF62:
+ 2670 010c 73617665 		.ascii	"saveBtnWidget\000"
+ 2670      42746E57 
+ 2670      69646765 
+ 2670      7400
+ 2671              	.LASF67:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 54
+
+
+ 2672 011a 73617665 		.ascii	"saveBtnEventHandler\000"
+ 2672      42746E45 
+ 2672      76656E74 
+ 2672      48616E64 
+ 2672      6C657200 
+ 2673              	.LASF25:
+ 2674 012e 436F6F72 		.ascii	"Coordinate\000"
+ 2674      64696E61 
+ 2674      746500
+ 2675              	.LASF16:
+ 2676 0139 5046456E 		.ascii	"PFEnBoolean\000"
+ 2676      426F6F6C 
+ 2676      65616E00 
+ 2677              	.LASF23:
+ 2678 0145 7856616C 		.ascii	"xValue\000"
+ 2678      756500
+ 2679              	.LASF30:
+ 2680 014c 6E616D65 		.ascii	"name\000"
+ 2680      00
+ 2681              	.LASF69:
+ 2682 0151 63697263 		.ascii	"circleBtnEventHandler\000"
+ 2682      6C654274 
+ 2682      6E457665 
+ 2682      6E744861 
+ 2682      6E646C65 
+ 2683              	.LASF65:
+ 2684 0167 636C6561 		.ascii	"clearscreenBtnEventHandler\000"
+ 2684      72736372 
+ 2684      65656E42 
+ 2684      746E4576 
+ 2684      656E7448 
+ 2685              	.LASF2:
+ 2686 0182 756E7369 		.ascii	"unsigned char\000"
+ 2686      676E6564 
+ 2686      20636861 
+ 2686      7200
+ 2687              	.LASF54:
+ 2688 0190 77696467 		.ascii	"widget6ID\000"
+ 2688      65743649 
+ 2688      4400
+ 2689              	.LASF20:
+ 2690 019a 656E4766 		.ascii	"enGfxFont_8X16\000"
+ 2690      78466F6E 
+ 2690      745F3858 
+ 2690      313600
+ 2691              	.LASF1:
+ 2692 01a9 7369676E 		.ascii	"signed char\000"
+ 2692      65642063 
+ 2692      68617200 
+ 2693              	.LASF8:
+ 2694 01b5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2694      206C6F6E 
+ 2694      6720756E 
+ 2694      7369676E 
+ 2694      65642069 
+ 2695              	.LASF40:
+ 2696 01cc 6576656E 		.ascii	"eventHandler\000"
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 55
+
+
+ 2696      7448616E 
+ 2696      646C6572 
+ 2696      00
+ 2697              	.LASF77:
+ 2698 01d9 443A5C46 		.ascii	"D:\\Final year project\\Paint Application\\UserInte"
+ 2698      696E616C 
+ 2698      20796561 
+ 2698      72207072 
+ 2698      6F6A6563 
+ 2699 0209 72666163 		.ascii	"rface\000"
+ 2699      6500
+ 2700              	.LASF27:
+ 2701 020f 68656967 		.ascii	"height\000"
+ 2701      687400
+ 2702              	.LASF0:
+ 2703 0216 756E7369 		.ascii	"unsigned int\000"
+ 2703      676E6564 
+ 2703      20696E74 
+ 2703      00
+ 2704              	.LASF68:
+ 2705 0223 72656374 		.ascii	"rectangleBtnEventHandler\000"
+ 2705      616E676C 
+ 2705      6542746E 
+ 2705      4576656E 
+ 2705      7448616E 
+ 2706              	.LASF74:
+ 2707 023c 73746172 		.ascii	"start\000"
+ 2707      7400
+ 2708              	.LASF4:
+ 2709 0242 73686F72 		.ascii	"short unsigned int\000"
+ 2709      7420756E 
+ 2709      7369676E 
+ 2709      65642069 
+ 2709      6E7400
+ 2710              	.LASF21:
+ 2711 0255 656E4766 		.ascii	"enGfxFont_16X24\000"
+ 2711      78466F6E 
+ 2711      745F3136 
+ 2711      58323400 
+ 2712              	.LASF53:
+ 2713 0265 77696467 		.ascii	"widget5ID\000"
+ 2713      65743549 
+ 2713      4400
+ 2714              	.LASF18:
+ 2715 026f 63686172 		.ascii	"char\000"
+ 2715      00
+ 2716              	.LASF64:
+ 2717 0274 6D61696E 		.ascii	"main\000"
+ 2717      00
+ 2718              	.LASF31:
+ 2719 0279 746F704C 		.ascii	"topLeft\000"
+ 2719      65667400 
+ 2720              	.LASF36:
+ 2721 0281 77696E64 		.ascii	"windowAttr\000"
+ 2721      6F774174 
+ 2721      747200
+ 2722              	.LASF17:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 56
+
+
+ 2723 028c 50466361 		.ascii	"PFcallback\000"
+ 2723      6C6C6261 
+ 2723      636B00
+ 2724              	.LASF44:
+ 2725 0297 696D6167 		.ascii	"image1\000"
+ 2725      653100
+ 2726              	.LASF32:
+ 2727 029e 73697A65 		.ascii	"size\000"
+ 2727      00
+ 2728              	.LASF59:
+ 2729 02a3 63697263 		.ascii	"circleBtnWidget\000"
+ 2729      6C654274 
+ 2729      6E576964 
+ 2729      67657400 
+ 2730              	.LASF52:
+ 2731 02b3 77696467 		.ascii	"widget4ID\000"
+ 2731      65743449 
+ 2731      4400
+ 2732              	.LASF76:
+ 2733 02bd 6D61696E 		.ascii	"main.c\000"
+ 2733      2E6300
+ 2734              	.LASF6:
+ 2735 02c4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2735      20756E73 
+ 2735      69676E65 
+ 2735      6420696E 
+ 2735      7400
+ 2736              	.LASF48:
+ 2737 02d6 63616E76 		.ascii	"canvasID\000"
+ 2737      61734944 
+ 2737      00
+ 2738              	.LASF56:
+ 2739 02df 43616E76 		.ascii	"Canvas\000"
+ 2739      617300
+ 2740              	.LASF47:
+ 2741 02e6 77696E64 		.ascii	"windowID\000"
+ 2741      6F774944 
+ 2741      00
+ 2742              	.LASF75:
+ 2743 02ef 474E5520 		.ascii	"GNU C99 10.3.1 20210824 (release) -mcpu=cortex-m3 -"
+ 2743      43393920 
+ 2743      31302E33 
+ 2743      2E312032 
+ 2743      30323130 
+ 2744 0322 6D746875 		.ascii	"mthumb -mfloat-abi=soft -march=armv7-m -gdwarf-2 -O"
+ 2744      6D62202D 
+ 2744      6D666C6F 
+ 2744      61742D61 
+ 2744      62693D73 
+ 2745 0355 30202D73 		.ascii	"0 -std=gnu99 -fomit-frame-pointer\000"
+ 2745      74643D67 
+ 2745      6E753939 
+ 2745      202D666F 
+ 2745      6D69742D 
+ 2746              	.LASF72:
+ 2747 0377 63616E76 		.ascii	"canvasEventHandler\000"
+ 2747      61734576 
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 57
+
+
+ 2747      656E7448 
+ 2747      616E646C 
+ 2747      657200
+ 2748              	.LASF22:
+ 2749 038a 456E4766 		.ascii	"EnGfxFonts\000"
+ 2749      78466F6E 
+ 2749      747300
+ 2750              	.LASF51:
+ 2751 0395 77696467 		.ascii	"widget3ID\000"
+ 2751      65743349 
+ 2751      4400
+ 2752              	.LASF70:
+ 2753 039f 6C696E65 		.ascii	"lineBtnEventHandler\000"
+ 2753      42746E45 
+ 2753      76656E74 
+ 2753      48616E64 
+ 2753      6C657200 
+ 2754              	.LASF50:
+ 2755 03b3 77696467 		.ascii	"widget2ID\000"
+ 2755      65743249 
+ 2755      4400
+ 2756              	.LASF46:
+ 2757 03bd 77696467 		.ascii	"widgetAttr\000"
+ 2757      65744174 
+ 2757      747200
+ 2758              	.LASF45:
+ 2759 03c8 57696467 		.ascii	"WidgetCfg\000"
+ 2759      65744366 
+ 2759      6700
+ 2760              	.LASF28:
+ 2761 03d2 44696D65 		.ascii	"Dimension\000"
+ 2761      6E73696F 
+ 2761      6E00
+ 2762              	.LASF13:
+ 2763 03dc 646F7562 		.ascii	"double\000"
+ 2763      6C6500
+ 2764              	.LASF41:
+ 2765 03e3 64697370 		.ascii	"displayString\000"
+ 2765      6C617953 
+ 2765      7472696E 
+ 2765      6700
+ 2766              	.LASF63:
+ 2767 03f1 72616469 		.ascii	"radius\000"
+ 2767      757300
+ 2768              	.LASF24:
+ 2769 03f8 7956616C 		.ascii	"yValue\000"
+ 2769      756500
+ 2770              	.LASF55:
+ 2771 03ff 77696E64 		.ascii	"window1\000"
+ 2771      6F773100 
+ 2772              	.LASF49:
+ 2773 0407 77696467 		.ascii	"widget1ID\000"
+ 2773      65743149 
+ 2773      4400
+ 2774              	.LASF29:
+ 2775 0411 636F6D6D 		.ascii	"commAttributes\000"
+ 2775      41747472 
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 58
+
+
+ 2775      69627574 
+ 2775      657300
+ 2776              	.LASF73:
+ 2777 0420 7371726F 		.ascii	"sqroot\000"
+ 2777      6F7400
+ 2778              	.LASF60:
+ 2779 0427 72656374 		.ascii	"rectangleBtnWidget\000"
+ 2779      616E676C 
+ 2779      6542746E 
+ 2779      57696467 
+ 2779      657400
+ 2780              	.LASF7:
+ 2781 043a 6C6F6E67 		.ascii	"long long int\000"
+ 2781      206C6F6E 
+ 2781      6720696E 
+ 2781      7400
+ 2782              		.ident	"GCC: (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)"
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 59
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:61     .bss:00000000 windowID
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:62     .bss:00000000 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:66     .bss:00000001 canvasID
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:71     .bss:00000002 widget1ID
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:76     .bss:00000003 widget2ID
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:81     .bss:00000004 widget3ID
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:86     .bss:00000005 widget4ID
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:91     .bss:00000006 widget5ID
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:96     .bss:00000007 widget6ID
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:102    .bss:00000008 x
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:108    .bss:0000000c y
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:114    .bss:00000010 a
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:120    .bss:00000014 b
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:127    .data:00000000 val
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:124    .data:00000000 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:134    .bss:00000018 idx
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:137    .text:00000000 $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:143    .text:00000000 sqroot
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:259    .text:00000068 freeHandBtnEventHandler
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:278    .text:00000074 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:282    .text:00000078 $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:288    .text:00000078 lineBtnEventHandler
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:307    .text:00000084 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:311    .text:00000088 $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:317    .text:00000088 circleBtnEventHandler
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:336    .text:00000094 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:340    .text:00000098 $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:346    .text:00000098 rectangleBtnEventHandler
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:365    .text:000000a4 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:370    .rodata:00000000 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:374    .text:000000a8 $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:380    .text:000000a8 saveBtnEventHandler
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:416    .text:000000cc $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:426    .text:000000d4 $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:432    .text:000000d4 homeScreen
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:493    .text:00000124 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:498    .text:0000012c $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:504    .text:0000012c clearscreenBtnEventHandler
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:547    .text:00000158 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:553    .text:00000164 $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:559    .text:00000164 canvasEventHandler
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:583    .text:00000178 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:587    .text:00000188 $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:776    .text:00000278 $d
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:792    .data:00000004 window1
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:824    .data:00000018 Canvas
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:865    .data:00000038 freeHandBtnWidget
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:903    .data:00000058 lineBtnWidget
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:941    .data:00000078 circleBtnWidget
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:979    .data:00000098 rectangleBtnWidget
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:1020   .data:000000b8 clearscreenBtnWidget
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:1058   .data:000000d8 saveBtnWidget
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:1089   .text:0000028c $t
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:1095   .text:0000028c main
+C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s:1209   .text:00000330 $d
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccCACoCP.s 			page 60
+
+
+
+UNDEFINED SYMBOLS
+gfxDrawString
+setWindow
+gfxDrawLine
+gfxDrawCircle
+gfxDrawRectangle
+touchAvailable
+windowEventHandler
+gfxDrawPixels
+appInit
+gameEngineInit
+gfxSetColor
+createWindow
+createCanvas
+createWidget

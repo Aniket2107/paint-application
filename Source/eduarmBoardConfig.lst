@@ -1,0 +1,2516 @@
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   5              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   6              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   7              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   8              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   9              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+  10              		.eabi_attribute 30, 6	@ Tag_ABI_optimization_goals
+  11              		.eabi_attribute 34, 1	@ Tag_CPU_unaligned_access
+  12              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  13              		.file	"eduarmBoardConfig.c"
+  14              	@ GNU C99 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eab
+  15              	@	compiled by GNU C version 7.3-win32 20180312, GMP version 6.1.0, MPFR version 3.1.4, MPC version 
+  16              	
+  17              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  18              	@ options passed:  -I . -I ../../Include -I ../../Include/PrimeFramework
+  19              	@ -I ../../Include/AppHelper -I ../../Include/GameEngine
+  20              	@ -I ../../Include/GameEngine/Graphics -I ../../Include/GameEngine/Object
+  21              	@ -I ../../Include/GameEngine/Renderer -I ../../Include/GameEngine/Resource
+  22              	@ -imultilib thumb/v7-m/nofp
+  23              	@ -iprefix c:\program files (x86)\gnu arm embedded toolchain\10 2021.10\bin\../lib/gcc/arm-none-eab
+  24              	@ -isysroot c:\program files (x86)\gnu arm embedded toolchain\10 2021.10\bin\../arm-none-eabi
+  25              	@ -MD Build/Obj/Debug/eduarmBoardConfig.d -MF .dep/eduarmBoardConfig.o.d
+  26              	@ -MP -MQ Build/Obj/Debug/eduarmBoardConfig.o -D__USES_INITFINI__
+  27              	@ -D MCU_CHIP_lpc1768 -D PRIME_DEBUG ../../Source/eduarmBoardConfig.c
+  28              	@ -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -mlibarch=armv7-m -march=armv7-m
+  29              	@ -auxbase-strip Build/Obj/Debug/eduarmBoardConfig.o -gdwarf-2 -O0 -Wall
+  30              	@ -Wno-cpp -std=gnu99 -fomit-frame-pointer -fverbose-asm
+  31              	@ options enabled:  -faggressive-loop-optimizations -fallocation-dce
+  32              	@ -fauto-inc-dec -fdelete-null-pointer-checks -fdwarf2-cfi-asm
+  33              	@ -fearly-inlining -feliminate-unused-debug-symbols
+  34              	@ -feliminate-unused-debug-types -ffp-int-builtin-inexact -ffunction-cse
+  35              	@ -fgcse-lm -fgnu-unique -fident -finline-atomics -fipa-stack-alignment
+  36              	@ -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
+  37              	@ -fivopts -fkeep-static-consts -fleading-underscore -flifetime-dse
+  38              	@ -fmath-errno -fmerge-debug-strings -fomit-frame-pointer -fpeephole -fplt
+  39              	@ -fprefetch-loop-arrays -freg-struct-return
+  40              	@ -fsched-critical-path-heuristic -fsched-dep-count-heuristic
+  41              	@ -fsched-group-heuristic -fsched-interblock -fsched-last-insn-heuristic
+  42              	@ -fsched-rank-heuristic -fsched-spec -fsched-spec-insn-heuristic
+  43              	@ -fsched-stalled-insns-dep -fsemantic-interposition -fshow-column
+  44              	@ -fshrink-wrap-separate -fsigned-zeros -fsplit-ivs-in-unroller
+  45              	@ -fssa-backprop -fstdarg-opt -fstrict-volatile-bitfields -fsync-libcalls
+  46              	@ -ftrapping-math -ftree-cselim -ftree-forwprop -ftree-loop-if-convert
+  47              	@ -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
+  48              	@ -ftree-parallelize-loops= -ftree-phiprop -ftree-reassoc -ftree-scev-cprop
+  49              	@ -funit-at-a-time -fverbose-asm -fzero-initialized-in-bss
+  50              	@ -masm-syntax-unified -mbe32 -mfix-cortex-m3-ldrd -mlittle-endian
+  51              	@ -mpic-data-is-text-relative -msched-prolog -mthumb -munaligned-access
+  52              	@ -mvectorize-with-neon-quad
+  53              	
+  54              		.text
+  55              	.Ltext0:
+  56              		.cfi_sections	.debug_frame
+  57              		.global	eduarmLedGpioCfg
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 2
+
+
+  58              		.data
+  59              		.align	2
+  60              		.type	eduarmLedGpioCfg, %object
+  61              		.size	eduarmLedGpioCfg, 36
+  62              	eduarmLedGpioCfg:
+  63              	@ port:
+  64 0000 20000000 		.word	32
+  65              	@ pins:
+  66 0004 00010000 		.word	256
+  67              	@ direction:
+  68 0008 01       		.byte	1
+  69              	@ mode:
+  70 0009 00       		.byte	0
+  71              	@ openDrain:
+  72 000a 00       		.byte	0
+  73              	@ altFuction:
+  74 000b 00       		.byte	0
+  75              	@ port:
+  76 000c 20000000 		.word	32
+  77              	@ pins:
+  78 0010 00020000 		.word	512
+  79              	@ direction:
+  80 0014 01       		.byte	1
+  81              	@ mode:
+  82 0015 00       		.byte	0
+  83              	@ openDrain:
+  84 0016 00       		.byte	0
+  85              	@ altFuction:
+  86 0017 00       		.byte	0
+  87              	@ port:
+  88 0018 20000000 		.word	32
+  89              	@ pins:
+  90 001c 00040000 		.word	1024
+  91              	@ direction:
+  92 0020 01       		.byte	1
+  93              	@ mode:
+  94 0021 00       		.byte	0
+  95              	@ openDrain:
+  96 0022 00       		.byte	0
+  97              	@ altFuction:
+  98 0023 00       		.byte	0
+  99              		.global	eduarmPushButtonGpioCfg
+ 100              		.align	2
+ 101              		.type	eduarmPushButtonGpioCfg, %object
+ 102              		.size	eduarmPushButtonGpioCfg, 60
+ 103              	eduarmPushButtonGpioCfg:
+ 104              	@ port:
+ 105 0024 20000000 		.word	32
+ 106              	@ pins:
+ 107 0028 00400000 		.word	16384
+ 108              	@ direction:
+ 109 002c 00       		.byte	0
+ 110              	@ mode:
+ 111 002d 00       		.byte	0
+ 112              	@ openDrain:
+ 113 002e 00       		.byte	0
+ 114              	@ altFuction:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 3
+
+
+ 115 002f 00       		.byte	0
+ 116              	@ port:
+ 117 0030 20000000 		.word	32
+ 118              	@ pins:
+ 119 0034 00800000 		.word	32768
+ 120              	@ direction:
+ 121 0038 00       		.byte	0
+ 122              	@ mode:
+ 123 0039 00       		.byte	0
+ 124              	@ openDrain:
+ 125 003a 00       		.byte	0
+ 126              	@ altFuction:
+ 127 003b 00       		.byte	0
+ 128              	@ port:
+ 129 003c 20000000 		.word	32
+ 130              	@ pins:
+ 131 0040 10000000 		.word	16
+ 132              	@ direction:
+ 133 0044 00       		.byte	0
+ 134              	@ mode:
+ 135 0045 00       		.byte	0
+ 136              	@ openDrain:
+ 137 0046 00       		.byte	0
+ 138              	@ altFuction:
+ 139 0047 00       		.byte	0
+ 140              	@ port:
+ 141 0048 20000000 		.word	32
+ 142              	@ pins:
+ 143 004c 01000000 		.word	1
+ 144              	@ direction:
+ 145 0050 00       		.byte	0
+ 146              	@ mode:
+ 147 0051 00       		.byte	0
+ 148              	@ openDrain:
+ 149 0052 00       		.byte	0
+ 150              	@ altFuction:
+ 151 0053 00       		.byte	0
+ 152              	@ port:
+ 153 0054 20000000 		.word	32
+ 154              	@ pins:
+ 155 0058 02000000 		.word	2
+ 156              	@ direction:
+ 157 005c 00       		.byte	0
+ 158              	@ mode:
+ 159 005d 00       		.byte	0
+ 160              	@ openDrain:
+ 161 005e 00       		.byte	0
+ 162              	@ altFuction:
+ 163 005f 00       		.byte	0
+ 164              		.global	eduarmUart0GpioCfg
+ 165              		.align	2
+ 166              		.type	eduarmUart0GpioCfg, %object
+ 167              		.size	eduarmUart0GpioCfg, 24
+ 168              	eduarmUart0GpioCfg:
+ 169              	@ port:
+ 170 0060 00000000 		.word	0
+ 171              	@ pins:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 4
+
+
+ 172 0064 04000000 		.word	4
+ 173              	@ direction:
+ 174 0068 01       		.byte	1
+ 175              	@ mode:
+ 176 0069 00       		.byte	0
+ 177              	@ openDrain:
+ 178 006a 00       		.byte	0
+ 179              	@ altFuction:
+ 180 006b 01       		.byte	1
+ 181              	@ port:
+ 182 006c 00000000 		.word	0
+ 183              	@ pins:
+ 184 0070 08000000 		.word	8
+ 185              	@ direction:
+ 186 0074 00       		.byte	0
+ 187              	@ mode:
+ 188 0075 00       		.byte	0
+ 189              	@ openDrain:
+ 190 0076 00       		.byte	0
+ 191              	@ altFuction:
+ 192 0077 01       		.byte	1
+ 193              		.global	eduarmUart2GpioCfg
+ 194              		.align	2
+ 195              		.type	eduarmUart2GpioCfg, %object
+ 196              		.size	eduarmUart2GpioCfg, 24
+ 197              	eduarmUart2GpioCfg:
+ 198              	@ port:
+ 199 0078 40000000 		.word	64
+ 200              	@ pins:
+ 201 007c 00010000 		.word	256
+ 202              	@ direction:
+ 203 0080 01       		.byte	1
+ 204              	@ mode:
+ 205 0081 00       		.byte	0
+ 206              	@ openDrain:
+ 207 0082 00       		.byte	0
+ 208              	@ altFuction:
+ 209 0083 02       		.byte	2
+ 210              	@ port:
+ 211 0084 40000000 		.word	64
+ 212              	@ pins:
+ 213 0088 00020000 		.word	512
+ 214              	@ direction:
+ 215 008c 00       		.byte	0
+ 216              	@ mode:
+ 217 008d 00       		.byte	0
+ 218              	@ openDrain:
+ 219 008e 00       		.byte	0
+ 220              	@ altFuction:
+ 221 008f 02       		.byte	2
+ 222              		.global	eduarmUart3GpioCfg
+ 223              		.align	2
+ 224              		.type	eduarmUart3GpioCfg, %object
+ 225              		.size	eduarmUart3GpioCfg, 24
+ 226              	eduarmUart3GpioCfg:
+ 227              	@ port:
+ 228 0090 00000000 		.word	0
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 5
+
+
+ 229              	@ pins:
+ 230 0094 01000000 		.word	1
+ 231              	@ direction:
+ 232 0098 01       		.byte	1
+ 233              	@ mode:
+ 234 0099 00       		.byte	0
+ 235              	@ openDrain:
+ 236 009a 00       		.byte	0
+ 237              	@ altFuction:
+ 238 009b 02       		.byte	2
+ 239              	@ port:
+ 240 009c 00000000 		.word	0
+ 241              	@ pins:
+ 242 00a0 02000000 		.word	2
+ 243              	@ direction:
+ 244 00a4 00       		.byte	0
+ 245              	@ mode:
+ 246 00a5 00       		.byte	0
+ 247              	@ openDrain:
+ 248 00a6 00       		.byte	0
+ 249              	@ altFuction:
+ 250 00a7 02       		.byte	2
+ 251              		.global	eduarmEint3GpioCfg
+ 252              		.align	2
+ 253              		.type	eduarmEint3GpioCfg, %object
+ 254              		.size	eduarmEint3GpioCfg, 12
+ 255              	eduarmEint3GpioCfg:
+ 256              	@ port:
+ 257 00a8 40000000 		.word	64
+ 258              	@ pins:
+ 259 00ac 00200000 		.word	8192
+ 260              	@ direction:
+ 261 00b0 00       		.byte	0
+ 262              	@ mode:
+ 263 00b1 00       		.byte	0
+ 264              	@ openDrain:
+ 265 00b2 00       		.byte	0
+ 266              	@ altFuction:
+ 267 00b3 01       		.byte	1
+ 268              		.global	eduarmMma7660IntGpioCfg
+ 269              		.align	2
+ 270              		.type	eduarmMma7660IntGpioCfg, %object
+ 271              		.size	eduarmMma7660IntGpioCfg, 12
+ 272              	eduarmMma7660IntGpioCfg:
+ 273              	@ port:
+ 274 00b4 40000000 		.word	64
+ 275              	@ pins:
+ 276 00b8 00100000 		.word	4096
+ 277              	@ direction:
+ 278 00bc 00       		.byte	0
+ 279              	@ mode:
+ 280 00bd 00       		.byte	0
+ 281              	@ openDrain:
+ 282 00be 00       		.byte	0
+ 283              	@ altFuction:
+ 284 00bf 01       		.byte	1
+ 285              		.global	eduarmTouchIntGpioCfg
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 6
+
+
+ 286              		.align	2
+ 287              		.type	eduarmTouchIntGpioCfg, %object
+ 288              		.size	eduarmTouchIntGpioCfg, 12
+ 289              	eduarmTouchIntGpioCfg:
+ 290              	@ port:
+ 291 00c0 40000000 		.word	64
+ 292              	@ pins:
+ 293 00c4 00080000 		.word	2048
+ 294              	@ direction:
+ 295 00c8 00       		.byte	0
+ 296              	@ mode:
+ 297 00c9 00       		.byte	0
+ 298              	@ openDrain:
+ 299 00ca 00       		.byte	0
+ 300              	@ altFuction:
+ 301 00cb 01       		.byte	1
+ 302              		.global	eduarmAdc0GpioCfg
+ 303              		.align	2
+ 304              		.type	eduarmAdc0GpioCfg, %object
+ 305              		.size	eduarmAdc0GpioCfg, 12
+ 306              	eduarmAdc0GpioCfg:
+ 307              	@ port:
+ 308 00cc 00000000 		.word	0
+ 309              	@ pins:
+ 310 00d0 00008000 		.word	8388608
+ 311              	@ direction:
+ 312 00d4 00       		.byte	0
+ 313              	@ mode:
+ 314 00d5 00       		.byte	0
+ 315              	@ openDrain:
+ 316 00d6 00       		.byte	0
+ 317              	@ altFuction:
+ 318 00d7 01       		.byte	1
+ 319              		.global	eduarmAdc1GpioCfg
+ 320              		.align	2
+ 321              		.type	eduarmAdc1GpioCfg, %object
+ 322              		.size	eduarmAdc1GpioCfg, 12
+ 323              	eduarmAdc1GpioCfg:
+ 324              	@ port:
+ 325 00d8 00000000 		.word	0
+ 326              	@ pins:
+ 327 00dc 00000001 		.word	16777216
+ 328              	@ direction:
+ 329 00e0 00       		.byte	0
+ 330              	@ mode:
+ 331 00e1 00       		.byte	0
+ 332              	@ openDrain:
+ 333 00e2 00       		.byte	0
+ 334              	@ altFuction:
+ 335 00e3 01       		.byte	1
+ 336              		.global	eduarmAdc2GpioCfg
+ 337              		.align	2
+ 338              		.type	eduarmAdc2GpioCfg, %object
+ 339              		.size	eduarmAdc2GpioCfg, 12
+ 340              	eduarmAdc2GpioCfg:
+ 341              	@ port:
+ 342 00e4 00000000 		.word	0
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 7
+
+
+ 343              	@ pins:
+ 344 00e8 00000002 		.word	33554432
+ 345              	@ direction:
+ 346 00ec 00       		.byte	0
+ 347              	@ mode:
+ 348 00ed 00       		.byte	0
+ 349              	@ openDrain:
+ 350 00ee 00       		.byte	0
+ 351              	@ altFuction:
+ 352 00ef 01       		.byte	1
+ 353              		.global	eduarmAdc3GpioCfg
+ 354              		.align	2
+ 355              		.type	eduarmAdc3GpioCfg, %object
+ 356              		.size	eduarmAdc3GpioCfg, 12
+ 357              	eduarmAdc3GpioCfg:
+ 358              	@ port:
+ 359 00f0 00000000 		.word	0
+ 360              	@ pins:
+ 361 00f4 00000004 		.word	67108864
+ 362              	@ direction:
+ 363 00f8 00       		.byte	0
+ 364              	@ mode:
+ 365 00f9 00       		.byte	0
+ 366              	@ openDrain:
+ 367 00fa 00       		.byte	0
+ 368              	@ altFuction:
+ 369 00fb 01       		.byte	1
+ 370              		.global	eduarmAdc4GpioCfg
+ 371              		.align	2
+ 372              		.type	eduarmAdc4GpioCfg, %object
+ 373              		.size	eduarmAdc4GpioCfg, 12
+ 374              	eduarmAdc4GpioCfg:
+ 375              	@ port:
+ 376 00fc 20000000 		.word	32
+ 377              	@ pins:
+ 378 0100 00000040 		.word	1073741824
+ 379              	@ direction:
+ 380 0104 00       		.byte	0
+ 381              	@ mode:
+ 382 0105 00       		.byte	0
+ 383              	@ openDrain:
+ 384 0106 00       		.byte	0
+ 385              	@ altFuction:
+ 386 0107 03       		.byte	3
+ 387              		.global	eduarmAdc5GpioCfg
+ 388              		.align	2
+ 389              		.type	eduarmAdc5GpioCfg, %object
+ 390              		.size	eduarmAdc5GpioCfg, 12
+ 391              	eduarmAdc5GpioCfg:
+ 392              	@ port:
+ 393 0108 20000000 		.word	32
+ 394              	@ pins:
+ 395 010c 00000080 		.word	-2147483648
+ 396              	@ direction:
+ 397 0110 00       		.byte	0
+ 398              	@ mode:
+ 399 0111 00       		.byte	0
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 8
+
+
+ 400              	@ openDrain:
+ 401 0112 00       		.byte	0
+ 402              	@ altFuction:
+ 403 0113 03       		.byte	3
+ 404              		.global	eduarmI2c1GpioCfg
+ 405              		.align	2
+ 406              		.type	eduarmI2c1GpioCfg, %object
+ 407              		.size	eduarmI2c1GpioCfg, 24
+ 408              	eduarmI2c1GpioCfg:
+ 409              	@ port:
+ 410 0114 00000000 		.word	0
+ 411              	@ pins:
+ 412 0118 01000000 		.word	1
+ 413              	@ direction:
+ 414 011c 00       		.byte	0
+ 415              	@ mode:
+ 416 011d 00       		.byte	0
+ 417              	@ openDrain:
+ 418 011e 00       		.byte	0
+ 419              	@ altFuction:
+ 420 011f 03       		.byte	3
+ 421              	@ port:
+ 422 0120 00000000 		.word	0
+ 423              	@ pins:
+ 424 0124 02000000 		.word	2
+ 425              	@ direction:
+ 426 0128 01       		.byte	1
+ 427              	@ mode:
+ 428 0129 00       		.byte	0
+ 429              	@ openDrain:
+ 430 012a 00       		.byte	0
+ 431              	@ altFuction:
+ 432 012b 03       		.byte	3
+ 433              		.global	eduarmI2c2GpioCfg
+ 434              		.align	2
+ 435              		.type	eduarmI2c2GpioCfg, %object
+ 436              		.size	eduarmI2c2GpioCfg, 24
+ 437              	eduarmI2c2GpioCfg:
+ 438              	@ port:
+ 439 012c 00000000 		.word	0
+ 440              	@ pins:
+ 441 0130 00040000 		.word	1024
+ 442              	@ direction:
+ 443 0134 00       		.byte	0
+ 444              	@ mode:
+ 445 0135 00       		.byte	0
+ 446              	@ openDrain:
+ 447 0136 00       		.byte	0
+ 448              	@ altFuction:
+ 449 0137 02       		.byte	2
+ 450              	@ port:
+ 451 0138 00000000 		.word	0
+ 452              	@ pins:
+ 453 013c 00080000 		.word	2048
+ 454              	@ direction:
+ 455 0140 01       		.byte	1
+ 456              	@ mode:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 9
+
+
+ 457 0141 00       		.byte	0
+ 458              	@ openDrain:
+ 459 0142 00       		.byte	0
+ 460              	@ altFuction:
+ 461 0143 02       		.byte	2
+ 462              		.global	eduarmSsp0GpioCfg
+ 463              		.align	2
+ 464              		.type	eduarmSsp0GpioCfg, %object
+ 465              		.size	eduarmSsp0GpioCfg, 48
+ 466              	eduarmSsp0GpioCfg:
+ 467              	@ port:
+ 468 0144 20000000 		.word	32
+ 469              	@ pins:
+ 470 0148 00008000 		.word	8388608
+ 471              	@ direction:
+ 472 014c 00       		.byte	0
+ 473              	@ mode:
+ 474 014d 00       		.byte	0
+ 475              	@ openDrain:
+ 476 014e 00       		.byte	0
+ 477              	@ altFuction:
+ 478 014f 03       		.byte	3
+ 479              	@ port:
+ 480 0150 20000000 		.word	32
+ 481              	@ pins:
+ 482 0154 00000001 		.word	16777216
+ 483              	@ direction:
+ 484 0158 01       		.byte	1
+ 485              	@ mode:
+ 486 0159 00       		.byte	0
+ 487              	@ openDrain:
+ 488 015a 00       		.byte	0
+ 489              	@ altFuction:
+ 490 015b 03       		.byte	3
+ 491              	@ port:
+ 492 015c 20000000 		.word	32
+ 493              	@ pins:
+ 494 0160 00001000 		.word	1048576
+ 495              	@ direction:
+ 496 0164 01       		.byte	1
+ 497              	@ mode:
+ 498 0165 00       		.byte	0
+ 499              	@ openDrain:
+ 500 0166 00       		.byte	0
+ 501              	@ altFuction:
+ 502 0167 03       		.byte	3
+ 503              	@ port:
+ 504 0168 20000000 		.word	32
+ 505              	@ pins:
+ 506 016c 00002000 		.word	2097152
+ 507              	@ direction:
+ 508 0170 01       		.byte	1
+ 509              	@ mode:
+ 510 0171 00       		.byte	0
+ 511              	@ openDrain:
+ 512 0172 00       		.byte	0
+ 513              	@ altFuction:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 10
+
+
+ 514 0173 03       		.byte	3
+ 515              		.global	eduarmTouchGpioCfg
+ 516              		.align	2
+ 517              		.type	eduarmTouchGpioCfg, %object
+ 518              		.size	eduarmTouchGpioCfg, 72
+ 519              	eduarmTouchGpioCfg:
+ 520              	@ port:
+ 521 0174 00000000 		.word	0
+ 522              	@ pins:
+ 523 0178 00000200 		.word	131072
+ 524              	@ direction:
+ 525 017c 00       		.byte	0
+ 526              	@ mode:
+ 527 017d 00       		.byte	0
+ 528              	@ openDrain:
+ 529 017e 00       		.byte	0
+ 530              	@ altFuction:
+ 531 017f 02       		.byte	2
+ 532              	@ port:
+ 533 0180 00000000 		.word	0
+ 534              	@ pins:
+ 535 0184 00000400 		.word	262144
+ 536              	@ direction:
+ 537 0188 01       		.byte	1
+ 538              	@ mode:
+ 539 0189 00       		.byte	0
+ 540              	@ openDrain:
+ 541 018a 00       		.byte	0
+ 542              	@ altFuction:
+ 543 018b 02       		.byte	2
+ 544              	@ port:
+ 545 018c 00000000 		.word	0
+ 546              	@ pins:
+ 547 0190 00800000 		.word	32768
+ 548              	@ direction:
+ 549 0194 01       		.byte	1
+ 550              	@ mode:
+ 551 0195 00       		.byte	0
+ 552              	@ openDrain:
+ 553 0196 00       		.byte	0
+ 554              	@ altFuction:
+ 555 0197 02       		.byte	2
+ 556              	@ port:
+ 557 0198 00000000 		.word	0
+ 558              	@ pins:
+ 559 019c 00001000 		.word	1048576
+ 560              	@ direction:
+ 561 01a0 01       		.byte	1
+ 562              	@ mode:
+ 563 01a1 00       		.byte	0
+ 564              	@ openDrain:
+ 565 01a2 00       		.byte	0
+ 566              	@ altFuction:
+ 567 01a3 00       		.byte	0
+ 568              	@ port:
+ 569 01a4 40000000 		.word	64
+ 570              	@ pins:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 11
+
+
+ 571 01a8 00080000 		.word	2048
+ 572              	@ direction:
+ 573 01ac 00       		.byte	0
+ 574              	@ mode:
+ 575 01ad 00       		.byte	0
+ 576              	@ openDrain:
+ 577 01ae 00       		.byte	0
+ 578              	@ altFuction:
+ 579 01af 00       		.byte	0
+ 580              	@ port:
+ 581 01b0 00000000 		.word	0
+ 582              	@ pins:
+ 583 01b4 00000800 		.word	524288
+ 584              	@ direction:
+ 585 01b8 00       		.byte	0
+ 586              	@ mode:
+ 587 01b9 03       		.byte	3
+ 588              	@ openDrain:
+ 589 01ba 00       		.byte	0
+ 590              	@ altFuction:
+ 591 01bb 00       		.byte	0
+ 592              		.global	eduarmSdcardGpioCfg
+ 593              		.align	2
+ 594              		.type	eduarmSdcardGpioCfg, %object
+ 595              		.size	eduarmSdcardGpioCfg, 48
+ 596              	eduarmSdcardGpioCfg:
+ 597              	@ port:
+ 598 01bc 00000000 		.word	0
+ 599              	@ pins:
+ 600 01c0 00000200 		.word	131072
+ 601              	@ direction:
+ 602 01c4 00       		.byte	0
+ 603              	@ mode:
+ 604 01c5 00       		.byte	0
+ 605              	@ openDrain:
+ 606 01c6 00       		.byte	0
+ 607              	@ altFuction:
+ 608 01c7 02       		.byte	2
+ 609              	@ port:
+ 610 01c8 00000000 		.word	0
+ 611              	@ pins:
+ 612 01cc 00000400 		.word	262144
+ 613              	@ direction:
+ 614 01d0 01       		.byte	1
+ 615              	@ mode:
+ 616 01d1 00       		.byte	0
+ 617              	@ openDrain:
+ 618 01d2 00       		.byte	0
+ 619              	@ altFuction:
+ 620 01d3 02       		.byte	2
+ 621              	@ port:
+ 622 01d4 00000000 		.word	0
+ 623              	@ pins:
+ 624 01d8 00800000 		.word	32768
+ 625              	@ direction:
+ 626 01dc 01       		.byte	1
+ 627              	@ mode:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 12
+
+
+ 628 01dd 00       		.byte	0
+ 629              	@ openDrain:
+ 630 01de 00       		.byte	0
+ 631              	@ altFuction:
+ 632 01df 02       		.byte	2
+ 633              	@ port:
+ 634 01e0 00000000 		.word	0
+ 635              	@ pins:
+ 636 01e4 00000100 		.word	65536
+ 637              	@ direction:
+ 638 01e8 01       		.byte	1
+ 639              	@ mode:
+ 640 01e9 00       		.byte	0
+ 641              	@ openDrain:
+ 642 01ea 00       		.byte	0
+ 643              	@ altFuction:
+ 644 01eb 02       		.byte	2
+ 645              		.global	eduarmLcdGpioCfg
+ 646              		.align	2
+ 647              		.type	eduarmLcdGpioCfg, %object
+ 648              		.size	eduarmLcdGpioCfg, 72
+ 649              	eduarmLcdGpioCfg:
+ 650              	@ port:
+ 651 01ec 40000000 		.word	64
+ 652              	@ pins:
+ 653 01f0 FF000000 		.word	255
+ 654              	@ direction:
+ 655 01f4 01       		.byte	1
+ 656              	@ mode:
+ 657 01f5 00       		.byte	0
+ 658              	@ openDrain:
+ 659 01f6 00       		.byte	0
+ 660              	@ altFuction:
+ 661 01f7 00       		.byte	0
+ 662              	@ port:
+ 663 01f8 80000000 		.word	128
+ 664              	@ pins:
+ 665 01fc 00000020 		.word	536870912
+ 666              	@ direction:
+ 667 0200 01       		.byte	1
+ 668              	@ mode:
+ 669 0201 00       		.byte	0
+ 670              	@ openDrain:
+ 671 0202 00       		.byte	0
+ 672              	@ altFuction:
+ 673 0203 00       		.byte	0
+ 674              	@ port:
+ 675 0204 00000000 		.word	0
+ 676              	@ pins:
+ 677 0208 00004000 		.word	4194304
+ 678              	@ direction:
+ 679 020c 01       		.byte	1
+ 680              	@ mode:
+ 681 020d 00       		.byte	0
+ 682              	@ openDrain:
+ 683 020e 00       		.byte	0
+ 684              	@ altFuction:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 13
+
+
+ 685 020f 00       		.byte	0
+ 686              	@ port:
+ 687 0210 00000000 		.word	0
+ 688              	@ pins:
+ 689 0214 00002000 		.word	2097152
+ 690              	@ direction:
+ 691 0218 01       		.byte	1
+ 692              	@ mode:
+ 693 0219 00       		.byte	0
+ 694              	@ openDrain:
+ 695 021a 00       		.byte	0
+ 696              	@ altFuction:
+ 697 021b 00       		.byte	0
+ 698              	@ port:
+ 699 021c 20000000 		.word	32
+ 700              	@ pins:
+ 701 0220 00000020 		.word	536870912
+ 702              	@ direction:
+ 703 0224 01       		.byte	1
+ 704              	@ mode:
+ 705 0225 00       		.byte	0
+ 706              	@ openDrain:
+ 707 0226 00       		.byte	0
+ 708              	@ altFuction:
+ 709 0227 00       		.byte	0
+ 710              	@ port:
+ 711 0228 20000000 		.word	32
+ 712              	@ pins:
+ 713 022c 00000010 		.word	268435456
+ 714              	@ direction:
+ 715 0230 01       		.byte	1
+ 716              	@ mode:
+ 717 0231 00       		.byte	0
+ 718              	@ openDrain:
+ 719 0232 00       		.byte	0
+ 720              	@ altFuction:
+ 721 0233 00       		.byte	0
+ 722              		.global	eduarmCan1GpioCfg
+ 723              		.align	2
+ 724              		.type	eduarmCan1GpioCfg, %object
+ 725              		.size	eduarmCan1GpioCfg, 24
+ 726              	eduarmCan1GpioCfg:
+ 727              	@ port:
+ 728 0234 00000000 		.word	0
+ 729              	@ pins:
+ 730 0238 01000000 		.word	1
+ 731              	@ direction:
+ 732 023c 00       		.byte	0
+ 733              	@ mode:
+ 734 023d 00       		.byte	0
+ 735              	@ openDrain:
+ 736 023e 00       		.byte	0
+ 737              	@ altFuction:
+ 738 023f 01       		.byte	1
+ 739              	@ port:
+ 740 0240 00000000 		.word	0
+ 741              	@ pins:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 14
+
+
+ 742 0244 02000000 		.word	2
+ 743              	@ direction:
+ 744 0248 01       		.byte	1
+ 745              	@ mode:
+ 746 0249 00       		.byte	0
+ 747              	@ openDrain:
+ 748 024a 00       		.byte	0
+ 749              	@ altFuction:
+ 750 024b 01       		.byte	1
+ 751              		.global	eduarmCan2GpioCfg
+ 752              		.align	2
+ 753              		.type	eduarmCan2GpioCfg, %object
+ 754              		.size	eduarmCan2GpioCfg, 24
+ 755              	eduarmCan2GpioCfg:
+ 756              	@ port:
+ 757 024c 00000000 		.word	0
+ 758              	@ pins:
+ 759 0250 10000000 		.word	16
+ 760              	@ direction:
+ 761 0254 00       		.byte	0
+ 762              	@ mode:
+ 763 0255 00       		.byte	0
+ 764              	@ openDrain:
+ 765 0256 00       		.byte	0
+ 766              	@ altFuction:
+ 767 0257 02       		.byte	2
+ 768              	@ port:
+ 769 0258 00000000 		.word	0
+ 770              	@ pins:
+ 771 025c 20000000 		.word	32
+ 772              	@ direction:
+ 773 0260 01       		.byte	1
+ 774              	@ mode:
+ 775 0261 00       		.byte	0
+ 776              	@ openDrain:
+ 777 0262 00       		.byte	0
+ 778              	@ altFuction:
+ 779 0263 02       		.byte	2
+ 780              		.global	eduarmPwm1GpioCfg
+ 781              		.align	2
+ 782              		.type	eduarmPwm1GpioCfg, %object
+ 783              		.size	eduarmPwm1GpioCfg, 12
+ 784              	eduarmPwm1GpioCfg:
+ 785              	@ port:
+ 786 0264 20000000 		.word	32
+ 787              	@ pins:
+ 788 0268 00000400 		.word	262144
+ 789              	@ direction:
+ 790 026c 01       		.byte	1
+ 791              	@ mode:
+ 792 026d 00       		.byte	0
+ 793              	@ openDrain:
+ 794 026e 00       		.byte	0
+ 795              	@ altFuction:
+ 796 026f 02       		.byte	2
+ 797              		.global	eduarmPwm2GpioCfg
+ 798              		.align	2
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 15
+
+
+ 799              		.type	eduarmPwm2GpioCfg, %object
+ 800              		.size	eduarmPwm2GpioCfg, 12
+ 801              	eduarmPwm2GpioCfg:
+ 802              	@ port:
+ 803 0270 20000000 		.word	32
+ 804              	@ pins:
+ 805 0274 00001000 		.word	1048576
+ 806              	@ direction:
+ 807 0278 01       		.byte	1
+ 808              	@ mode:
+ 809 0279 00       		.byte	0
+ 810              	@ openDrain:
+ 811 027a 00       		.byte	0
+ 812              	@ altFuction:
+ 813 027b 02       		.byte	2
+ 814              		.global	eduarmPwm3GpioCfg
+ 815              		.align	2
+ 816              		.type	eduarmPwm3GpioCfg, %object
+ 817              		.size	eduarmPwm3GpioCfg, 12
+ 818              	eduarmPwm3GpioCfg:
+ 819              	@ port:
+ 820 027c 20000000 		.word	32
+ 821              	@ pins:
+ 822 0280 00002000 		.word	2097152
+ 823              	@ direction:
+ 824 0284 01       		.byte	1
+ 825              	@ mode:
+ 826 0285 00       		.byte	0
+ 827              	@ openDrain:
+ 828 0286 00       		.byte	0
+ 829              	@ altFuction:
+ 830 0287 02       		.byte	2
+ 831              		.global	eduarmPwm4GpioCfg
+ 832              		.align	2
+ 833              		.type	eduarmPwm4GpioCfg, %object
+ 834              		.size	eduarmPwm4GpioCfg, 12
+ 835              	eduarmPwm4GpioCfg:
+ 836              	@ port:
+ 837 0288 20000000 		.word	32
+ 838              	@ pins:
+ 839 028c 00008000 		.word	8388608
+ 840              	@ direction:
+ 841 0290 01       		.byte	1
+ 842              	@ mode:
+ 843 0291 00       		.byte	0
+ 844              	@ openDrain:
+ 845 0292 00       		.byte	0
+ 846              	@ altFuction:
+ 847 0293 02       		.byte	2
+ 848              		.global	eduarmPwm5GpioCfg
+ 849              		.align	2
+ 850              		.type	eduarmPwm5GpioCfg, %object
+ 851              		.size	eduarmPwm5GpioCfg, 12
+ 852              	eduarmPwm5GpioCfg:
+ 853              	@ port:
+ 854 0294 20000000 		.word	32
+ 855              	@ pins:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 16
+
+
+ 856 0298 00000001 		.word	16777216
+ 857              	@ direction:
+ 858 029c 01       		.byte	1
+ 859              	@ mode:
+ 860 029d 00       		.byte	0
+ 861              	@ openDrain:
+ 862 029e 00       		.byte	0
+ 863              	@ altFuction:
+ 864 029f 02       		.byte	2
+ 865              		.global	eduarmTimer0Cap1GpioCfg
+ 866              		.align	2
+ 867              		.type	eduarmTimer0Cap1GpioCfg, %object
+ 868              		.size	eduarmTimer0Cap1GpioCfg, 12
+ 869              	eduarmTimer0Cap1GpioCfg:
+ 870              	@ port:
+ 871 02a0 20000000 		.word	32
+ 872              	@ pins:
+ 873 02a4 00000008 		.word	134217728
+ 874              	@ direction:
+ 875 02a8 00       		.byte	0
+ 876              	@ mode:
+ 877 02a9 00       		.byte	0
+ 878              	@ openDrain:
+ 879 02aa 00       		.byte	0
+ 880              	@ altFuction:
+ 881 02ab 03       		.byte	3
+ 882              		.global	eduarmTimer3Cap0GpioCfg
+ 883              		.align	2
+ 884              		.type	eduarmTimer3Cap0GpioCfg, %object
+ 885              		.size	eduarmTimer3Cap0GpioCfg, 12
+ 886              	eduarmTimer3Cap0GpioCfg:
+ 887              	@ port:
+ 888 02ac 20000000 		.word	32
+ 889              	@ pins:
+ 890 02b0 00000008 		.word	134217728
+ 891              	@ direction:
+ 892 02b4 00       		.byte	0
+ 893              	@ mode:
+ 894 02b5 00       		.byte	0
+ 895              	@ openDrain:
+ 896 02b6 00       		.byte	0
+ 897              	@ altFuction:
+ 898 02b7 03       		.byte	3
+ 899              		.global	eduarmTimer1MatGpioCfg
+ 900              		.align	2
+ 901              		.type	eduarmTimer1MatGpioCfg, %object
+ 902              		.size	eduarmTimer1MatGpioCfg, 24
+ 903              	eduarmTimer1MatGpioCfg:
+ 904              	@ port:
+ 905 02b8 20000000 		.word	32
+ 906              	@ pins:
+ 907 02bc 00004000 		.word	4194304
+ 908              	@ direction:
+ 909 02c0 01       		.byte	1
+ 910              	@ mode:
+ 911 02c1 00       		.byte	0
+ 912              	@ openDrain:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 17
+
+
+ 913 02c2 00       		.byte	0
+ 914              	@ altFuction:
+ 915 02c3 03       		.byte	3
+ 916              	@ port:
+ 917 02c4 20000000 		.word	32
+ 918              	@ pins:
+ 919 02c8 00000002 		.word	33554432
+ 920              	@ direction:
+ 921 02cc 01       		.byte	1
+ 922              	@ mode:
+ 923 02cd 00       		.byte	0
+ 924              	@ openDrain:
+ 925 02ce 00       		.byte	0
+ 926              	@ altFuction:
+ 927 02cf 03       		.byte	3
+ 928              		.global	eduarmI2sGpioCfg
+ 929              		.align	2
+ 930              		.type	eduarmI2sGpioCfg, %object
+ 931              		.size	eduarmI2sGpioCfg, 60
+ 932              	eduarmI2sGpioCfg:
+ 933              	@ port:
+ 934 02d0 00000000 		.word	0
+ 935              	@ pins:
+ 936 02d4 40000000 		.word	64
+ 937              	@ direction:
+ 938 02d8 01       		.byte	1
+ 939              	@ mode:
+ 940 02d9 00       		.byte	0
+ 941              	@ openDrain:
+ 942 02da 00       		.byte	0
+ 943              	@ altFuction:
+ 944 02db 01       		.byte	1
+ 945              	@ port:
+ 946 02dc 00000000 		.word	0
+ 947              	@ pins:
+ 948 02e0 80000000 		.word	128
+ 949              	@ direction:
+ 950 02e4 01       		.byte	1
+ 951              	@ mode:
+ 952 02e5 00       		.byte	0
+ 953              	@ openDrain:
+ 954 02e6 00       		.byte	0
+ 955              	@ altFuction:
+ 956 02e7 01       		.byte	1
+ 957              	@ port:
+ 958 02e8 00000000 		.word	0
+ 959              	@ pins:
+ 960 02ec 00010000 		.word	256
+ 961              	@ direction:
+ 962 02f0 01       		.byte	1
+ 963              	@ mode:
+ 964 02f1 00       		.byte	0
+ 965              	@ openDrain:
+ 966 02f2 00       		.byte	0
+ 967              	@ altFuction:
+ 968 02f3 01       		.byte	1
+ 969              	@ port:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 18
+
+
+ 970 02f4 00000000 		.word	0
+ 971              	@ pins:
+ 972 02f8 00020000 		.word	512
+ 973              	@ direction:
+ 974 02fc 01       		.byte	1
+ 975              	@ mode:
+ 976 02fd 00       		.byte	0
+ 977              	@ openDrain:
+ 978 02fe 00       		.byte	0
+ 979              	@ altFuction:
+ 980 02ff 01       		.byte	1
+ 981              	@ port:
+ 982 0300 80000000 		.word	128
+ 983              	@ pins:
+ 984 0304 00000010 		.word	268435456
+ 985              	@ direction:
+ 986 0308 01       		.byte	1
+ 987              	@ mode:
+ 988 0309 00       		.byte	0
+ 989              	@ openDrain:
+ 990 030a 00       		.byte	0
+ 991              	@ altFuction:
+ 992 030b 01       		.byte	1
+ 993              		.text
+ 994              	.Letext0:
+ 995              		.file 1 "../../Include/PrimeFramework/prime_types.h"
+ 996              		.file 2 "../../Include/PrimeFramework/prime_gpio.h"
+ 997              		.file 3 "../../Include/eduarmBoardConfig.h"
+ 998              		.file 4 "../../Source/eduarmBoardConfig.c"
+ 999              		.section	.debug_info,"",%progbits
+ 1000              	.Ldebug_info0:
+ 1001 0000 69050000 		.4byte	0x569
+ 1002 0004 0200     		.2byte	0x2
+ 1003 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1004 000a 04       		.byte	0x4
+ 1005 000b 01       		.uleb128 0x1
+ 1006 000c 14040000 		.4byte	.LASF67
+ 1007 0010 0C       		.byte	0xc
+ 1008 0011 41000000 		.4byte	.LASF68
+ 1009 0015 7C020000 		.4byte	.LASF69
+ 1010 0019 00000000 		.4byte	.Ldebug_line0
+ 1011 001d 02       		.uleb128 0x2
+ 1012 001e 04       		.byte	0x4
+ 1013 001f 05       		.byte	0x5
+ 1014 0020 696E7400 		.ascii	"int\000"
+ 1015 0024 03       		.uleb128 0x3
+ 1016 0025 04       		.byte	0x4
+ 1017 0026 07       		.byte	0x7
+ 1018 0027 B2020000 		.4byte	.LASF0
+ 1019 002b 03       		.uleb128 0x3
+ 1020 002c 01       		.byte	0x1
+ 1021 002d 06       		.byte	0x6
+ 1022 002e 47020000 		.4byte	.LASF1
+ 1023 0032 03       		.uleb128 0x3
+ 1024 0033 01       		.byte	0x1
+ 1025 0034 08       		.byte	0x8
+ 1026 0035 39020000 		.4byte	.LASF2
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 19
+
+
+ 1027 0039 03       		.uleb128 0x3
+ 1028 003a 02       		.byte	0x2
+ 1029 003b 05       		.byte	0x5
+ 1030 003c 59010000 		.4byte	.LASF3
+ 1031 0040 03       		.uleb128 0x3
+ 1032 0041 02       		.byte	0x2
+ 1033 0042 07       		.byte	0x7
+ 1034 0043 1B030000 		.4byte	.LASF4
+ 1035 0047 03       		.uleb128 0x3
+ 1036 0048 04       		.byte	0x4
+ 1037 0049 05       		.byte	0x5
+ 1038 004a F9010000 		.4byte	.LASF5
+ 1039 004e 03       		.uleb128 0x3
+ 1040 004f 04       		.byte	0x4
+ 1041 0050 07       		.byte	0x7
+ 1042 0051 B1030000 		.4byte	.LASF6
+ 1043 0055 03       		.uleb128 0x3
+ 1044 0056 08       		.byte	0x8
+ 1045 0057 05       		.byte	0x5
+ 1046 0058 B2000000 		.4byte	.LASF7
+ 1047 005c 03       		.uleb128 0x3
+ 1048 005d 08       		.byte	0x8
+ 1049 005e 07       		.byte	0x7
+ 1050 005f 53020000 		.4byte	.LASF8
+ 1051 0063 04       		.uleb128 0x4
+ 1052 0064 31020000 		.4byte	.LASF14
+ 1053 0068 01       		.byte	0x1
+ 1054 0069 43       		.byte	0x43
+ 1055 006a 1D       		.byte	0x1d
+ 1056 006b 4E000000 		.4byte	0x4e
+ 1057 006f 03       		.uleb128 0x3
+ 1058 0070 04       		.byte	0x4
+ 1059 0071 04       		.byte	0x4
+ 1060 0072 75010000 		.4byte	.LASF9
+ 1061 0076 03       		.uleb128 0x3
+ 1062 0077 08       		.byte	0x8
+ 1063 0078 04       		.byte	0x4
+ 1064 0079 E8030000 		.4byte	.LASF10
+ 1065 007d 03       		.uleb128 0x3
+ 1066 007e 01       		.byte	0x1
+ 1067 007f 08       		.byte	0x8
+ 1068 0080 41030000 		.4byte	.LASF11
+ 1069 0084 05       		.uleb128 0x5
+ 1070 0085 07       		.byte	0x7
+ 1071 0086 01       		.byte	0x1
+ 1072 0087 32000000 		.4byte	0x32
+ 1073 008b 02       		.byte	0x2
+ 1074 008c 4F02     		.2byte	0x24f
+ 1075 008e 01       		.byte	0x1
+ 1076 008f A0000000 		.4byte	0xa0
+ 1077 0093 06       		.uleb128 0x6
+ 1078 0094 22020000 		.4byte	.LASF12
+ 1079 0098 00       		.byte	0
+ 1080 0099 06       		.uleb128 0x6
+ 1081 009a 12020000 		.4byte	.LASF13
+ 1082 009e 01       		.byte	0x1
+ 1083 009f 00       		.byte	0
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 20
+
+
+ 1084 00a0 07       		.uleb128 0x7
+ 1085 00a1 4B010000 		.4byte	.LASF15
+ 1086 00a5 02       		.byte	0x2
+ 1087 00a6 5202     		.2byte	0x252
+ 1088 00a8 02       		.byte	0x2
+ 1089 00a9 84000000 		.4byte	0x84
+ 1090 00ad 05       		.uleb128 0x5
+ 1091 00ae 07       		.byte	0x7
+ 1092 00af 01       		.byte	0x1
+ 1093 00b0 32000000 		.4byte	0x32
+ 1094 00b4 02       		.byte	0x2
+ 1095 00b5 5602     		.2byte	0x256
+ 1096 00b7 01       		.byte	0x1
+ 1097 00b8 D5000000 		.4byte	0xd5
+ 1098 00bc 06       		.uleb128 0x6
+ 1099 00bd EF030000 		.4byte	.LASF16
+ 1100 00c1 00       		.byte	0
+ 1101 00c2 06       		.uleb128 0x6
+ 1102 00c3 86010000 		.4byte	.LASF17
+ 1103 00c7 01       		.byte	0x1
+ 1104 00c8 06       		.uleb128 0x6
+ 1105 00c9 78000000 		.4byte	.LASF18
+ 1106 00cd 02       		.byte	0x2
+ 1107 00ce 06       		.uleb128 0x6
+ 1108 00cf 92000000 		.4byte	.LASF19
+ 1109 00d3 03       		.byte	0x3
+ 1110 00d4 00       		.byte	0
+ 1111 00d5 07       		.uleb128 0x7
+ 1112 00d6 DC000000 		.4byte	.LASF20
+ 1113 00da 02       		.byte	0x2
+ 1114 00db 5B02     		.2byte	0x25b
+ 1115 00dd 02       		.byte	0x2
+ 1116 00de AD000000 		.4byte	0xad
+ 1117 00e2 05       		.uleb128 0x5
+ 1118 00e3 07       		.byte	0x7
+ 1119 00e4 01       		.byte	0x1
+ 1120 00e5 32000000 		.4byte	0x32
+ 1121 00e9 02       		.byte	0x2
+ 1122 00ea 5F02     		.2byte	0x25f
+ 1123 00ec 01       		.byte	0x1
+ 1124 00ed FE000000 		.4byte	0xfe
+ 1125 00f1 06       		.uleb128 0x6
+ 1126 00f2 12000000 		.4byte	.LASF21
+ 1127 00f6 00       		.byte	0
+ 1128 00f7 06       		.uleb128 0x6
+ 1129 00f8 9C040000 		.4byte	.LASF22
+ 1130 00fc 01       		.byte	0x1
+ 1131 00fd 00       		.byte	0
+ 1132 00fe 07       		.uleb128 0x7
+ 1133 00ff C8040000 		.4byte	.LASF23
+ 1134 0103 02       		.byte	0x2
+ 1135 0104 6202     		.2byte	0x262
+ 1136 0106 02       		.byte	0x2
+ 1137 0107 E2000000 		.4byte	0xe2
+ 1138 010b 05       		.uleb128 0x5
+ 1139 010c 07       		.byte	0x7
+ 1140 010d 01       		.byte	0x1
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 21
+
+
+ 1141 010e 32000000 		.4byte	0x32
+ 1142 0112 02       		.byte	0x2
+ 1143 0113 6602     		.2byte	0x266
+ 1144 0115 01       		.byte	0x1
+ 1145 0116 33010000 		.4byte	0x133
+ 1146 011a 06       		.uleb128 0x6
+ 1147 011b C3030000 		.4byte	.LASF24
+ 1148 011f 00       		.byte	0
+ 1149 0120 06       		.uleb128 0x6
+ 1150 0121 C0010000 		.4byte	.LASF25
+ 1151 0125 01       		.byte	0x1
+ 1152 0126 06       		.uleb128 0x6
+ 1153 0127 D3010000 		.4byte	.LASF26
+ 1154 012b 02       		.byte	0x2
+ 1155 012c 06       		.uleb128 0x6
+ 1156 012d E6010000 		.4byte	.LASF27
+ 1157 0131 03       		.byte	0x3
+ 1158 0132 00       		.byte	0
+ 1159 0133 07       		.uleb128 0x7
+ 1160 0134 02020000 		.4byte	.LASF28
+ 1161 0138 02       		.byte	0x2
+ 1162 0139 6B02     		.2byte	0x26b
+ 1163 013b 02       		.byte	0x2
+ 1164 013c 0B010000 		.4byte	0x10b
+ 1165 0140 08       		.uleb128 0x8
+ 1166 0141 0C       		.byte	0xc
+ 1167 0142 02       		.byte	0x2
+ 1168 0143 7802     		.2byte	0x278
+ 1169 0145 09       		.byte	0x9
+ 1170 0146 AB010000 		.4byte	0x1ab
+ 1171 014a 09       		.uleb128 0x9
+ 1172 014b AC030000 		.4byte	.LASF29
+ 1173 014f 02       		.byte	0x2
+ 1174 0150 7A02     		.2byte	0x27a
+ 1175 0152 0D       		.byte	0xd
+ 1176 0153 63000000 		.4byte	0x63
+ 1177 0157 02       		.byte	0x2
+ 1178 0158 23       		.byte	0x23
+ 1179 0159 00       		.uleb128 0
+ 1180 015a 09       		.uleb128 0x9
+ 1181 015b 62000000 		.4byte	.LASF30
+ 1182 015f 02       		.byte	0x2
+ 1183 0160 7B02     		.2byte	0x27b
+ 1184 0162 0D       		.byte	0xd
+ 1185 0163 63000000 		.4byte	0x63
+ 1186 0167 02       		.byte	0x2
+ 1187 0168 23       		.byte	0x23
+ 1188 0169 04       		.uleb128 0x4
+ 1189 016a 09       		.uleb128 0x9
+ 1190 016b A8000000 		.4byte	.LASF31
+ 1191 016f 02       		.byte	0x2
+ 1192 0170 7C02     		.2byte	0x27c
+ 1193 0172 12       		.byte	0x12
+ 1194 0173 A0000000 		.4byte	0xa0
+ 1195 0177 02       		.byte	0x2
+ 1196 0178 23       		.byte	0x23
+ 1197 0179 08       		.uleb128 0x8
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 22
+
+
+ 1198 017a 09       		.uleb128 0x9
+ 1199 017b D7000000 		.4byte	.LASF32
+ 1200 017f 02       		.byte	0x2
+ 1201 0180 7D02     		.2byte	0x27d
+ 1202 0182 13       		.byte	0x13
+ 1203 0183 D5000000 		.4byte	0xd5
+ 1204 0187 02       		.byte	0x2
+ 1205 0188 23       		.byte	0x23
+ 1206 0189 09       		.uleb128 0x9
+ 1207 018a 09       		.uleb128 0x9
+ 1208 018b 2E010000 		.4byte	.LASF33
+ 1209 018f 02       		.byte	0x2
+ 1210 0190 7E02     		.2byte	0x27e
+ 1211 0192 11       		.byte	0x11
+ 1212 0193 FE000000 		.4byte	0xfe
+ 1213 0197 02       		.byte	0x2
+ 1214 0198 23       		.byte	0x23
+ 1215 0199 0A       		.uleb128 0xa
+ 1216 019a 09       		.uleb128 0x9
+ 1217 019b 7B010000 		.4byte	.LASF34
+ 1218 019f 02       		.byte	0x2
+ 1219 01a0 7F02     		.2byte	0x27f
+ 1220 01a2 13       		.byte	0x13
+ 1221 01a3 33010000 		.4byte	0x133
+ 1222 01a7 02       		.byte	0x2
+ 1223 01a8 23       		.byte	0x23
+ 1224 01a9 0B       		.uleb128 0xb
+ 1225 01aa 00       		.byte	0
+ 1226 01ab 07       		.uleb128 0x7
+ 1227 01ac 12010000 		.4byte	.LASF35
+ 1228 01b0 02       		.byte	0x2
+ 1229 01b1 8002     		.2byte	0x280
+ 1230 01b3 02       		.byte	0x2
+ 1231 01b4 40010000 		.4byte	0x140
+ 1232 01b8 0A       		.uleb128 0xa
+ 1233 01b9 AB010000 		.4byte	0x1ab
+ 1234 01bd C8010000 		.4byte	0x1c8
+ 1235 01c1 0B       		.uleb128 0xb
+ 1236 01c2 24000000 		.4byte	0x24
+ 1237 01c6 02       		.byte	0x2
+ 1238 01c7 00       		.byte	0
+ 1239 01c8 0C       		.uleb128 0xc
+ 1240 01c9 58030000 		.4byte	.LASF36
+ 1241 01cd 03       		.byte	0x3
+ 1242 01ce 0A       		.byte	0xa
+ 1243 01cf 12       		.byte	0x12
+ 1244 01d0 B8010000 		.4byte	0x1b8
+ 1245 01d4 01       		.byte	0x1
+ 1246 01d5 01       		.byte	0x1
+ 1247 01d6 0A       		.uleb128 0xa
+ 1248 01d7 AB010000 		.4byte	0x1ab
+ 1249 01db E6010000 		.4byte	0x1e6
+ 1250 01df 0B       		.uleb128 0xb
+ 1251 01e0 24000000 		.4byte	0x24
+ 1252 01e4 04       		.byte	0x4
+ 1253 01e5 00       		.byte	0
+ 1254 01e6 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 23
+
+
+ 1255 01e7 29000000 		.4byte	.LASF37
+ 1256 01eb 03       		.byte	0x3
+ 1257 01ec 0B       		.byte	0xb
+ 1258 01ed 12       		.byte	0x12
+ 1259 01ee D6010000 		.4byte	0x1d6
+ 1260 01f2 01       		.byte	0x1
+ 1261 01f3 01       		.byte	0x1
+ 1262 01f4 0A       		.uleb128 0xa
+ 1263 01f5 AB010000 		.4byte	0x1ab
+ 1264 01f9 04020000 		.4byte	0x204
+ 1265 01fd 0B       		.uleb128 0xb
+ 1266 01fe 24000000 		.4byte	0x24
+ 1267 0202 01       		.byte	0x1
+ 1268 0203 00       		.byte	0
+ 1269 0204 0C       		.uleb128 0xc
+ 1270 0205 F6020000 		.4byte	.LASF38
+ 1271 0209 03       		.byte	0x3
+ 1272 020a 0D       		.byte	0xd
+ 1273 020b 12       		.byte	0x12
+ 1274 020c F4010000 		.4byte	0x1f4
+ 1275 0210 01       		.byte	0x1
+ 1276 0211 01       		.byte	0x1
+ 1277 0212 0C       		.uleb128 0xc
+ 1278 0213 38010000 		.4byte	.LASF39
+ 1279 0217 03       		.byte	0x3
+ 1280 0218 0E       		.byte	0xe
+ 1281 0219 12       		.byte	0x12
+ 1282 021a F4010000 		.4byte	0x1f4
+ 1283 021e 01       		.byte	0x1
+ 1284 021f 01       		.byte	0x1
+ 1285 0220 0C       		.uleb128 0xc
+ 1286 0221 2E030000 		.4byte	.LASF40
+ 1287 0225 03       		.byte	0x3
+ 1288 0226 0F       		.byte	0xf
+ 1289 0227 12       		.byte	0x12
+ 1290 0228 F4010000 		.4byte	0x1f4
+ 1291 022c 01       		.byte	0x1
+ 1292 022d 01       		.byte	0x1
+ 1293 022e 0C       		.uleb128 0xc
+ 1294 022f 81030000 		.4byte	.LASF41
+ 1295 0233 03       		.byte	0x3
+ 1296 0234 11       		.byte	0x11
+ 1297 0235 12       		.byte	0x12
+ 1298 0236 AB010000 		.4byte	0x1ab
+ 1299 023a 01       		.byte	0x1
+ 1300 023b 01       		.byte	0x1
+ 1301 023c 0C       		.uleb128 0xc
+ 1302 023d 94030000 		.4byte	.LASF42
+ 1303 0241 03       		.byte	0x3
+ 1304 0242 12       		.byte	0x12
+ 1305 0243 12       		.byte	0x12
+ 1306 0244 AB010000 		.4byte	0x1ab
+ 1307 0248 01       		.byte	0x1
+ 1308 0249 01       		.byte	0x1
+ 1309 024a 0C       		.uleb128 0xc
+ 1310 024b B2040000 		.4byte	.LASF43
+ 1311 024f 03       		.byte	0x3
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 24
+
+
+ 1312 0250 13       		.byte	0x13
+ 1313 0251 12       		.byte	0x12
+ 1314 0252 AB010000 		.4byte	0x1ab
+ 1315 0256 01       		.byte	0x1
+ 1316 0257 01       		.byte	0x1
+ 1317 0258 0C       		.uleb128 0xc
+ 1318 0259 E4020000 		.4byte	.LASF44
+ 1319 025d 03       		.byte	0x3
+ 1320 025e 15       		.byte	0x15
+ 1321 025f 12       		.byte	0x12
+ 1322 0260 AB010000 		.4byte	0x1ab
+ 1323 0264 01       		.byte	0x1
+ 1324 0265 01       		.byte	0x1
+ 1325 0266 0C       		.uleb128 0xc
+ 1326 0267 D6040000 		.4byte	.LASF45
+ 1327 026b 03       		.byte	0x3
+ 1328 026c 16       		.byte	0x16
+ 1329 026d 12       		.byte	0x12
+ 1330 026e AB010000 		.4byte	0x1ab
+ 1331 0272 01       		.byte	0x1
+ 1332 0273 01       		.byte	0x1
+ 1333 0274 0C       		.uleb128 0xc
+ 1334 0275 1C010000 		.4byte	.LASF46
+ 1335 0279 03       		.byte	0x3
+ 1336 027a 17       		.byte	0x17
+ 1337 027b 12       		.byte	0x12
+ 1338 027c AB010000 		.4byte	0x1ab
+ 1339 0280 01       		.byte	0x1
+ 1340 0281 01       		.byte	0x1
+ 1341 0282 0C       		.uleb128 0xc
+ 1342 0283 09030000 		.4byte	.LASF47
+ 1343 0287 03       		.byte	0x3
+ 1344 0288 18       		.byte	0x18
+ 1345 0289 12       		.byte	0x12
+ 1346 028a AB010000 		.4byte	0x1ab
+ 1347 028e 01       		.byte	0x1
+ 1348 028f 01       		.byte	0x1
+ 1349 0290 0C       		.uleb128 0xc
+ 1350 0291 00050000 		.4byte	.LASF48
+ 1351 0295 03       		.byte	0x3
+ 1352 0296 19       		.byte	0x19
+ 1353 0297 12       		.byte	0x12
+ 1354 0298 AB010000 		.4byte	0x1ab
+ 1355 029c 01       		.byte	0x1
+ 1356 029d 01       		.byte	0x1
+ 1357 029e 0C       		.uleb128 0xc
+ 1358 029f 6A020000 		.4byte	.LASF49
+ 1359 02a3 03       		.byte	0x3
+ 1360 02a4 1A       		.byte	0x1a
+ 1361 02a5 12       		.byte	0x12
+ 1362 02a6 AB010000 		.4byte	0x1ab
+ 1363 02aa 01       		.byte	0x1
+ 1364 02ab 01       		.byte	0x1
+ 1365 02ac 0C       		.uleb128 0xc
+ 1366 02ad D2020000 		.4byte	.LASF50
+ 1367 02b1 03       		.byte	0x3
+ 1368 02b2 1C       		.byte	0x1c
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 25
+
+
+ 1369 02b3 12       		.byte	0x12
+ 1370 02b4 F4010000 		.4byte	0x1f4
+ 1371 02b8 01       		.byte	0x1
+ 1372 02b9 01       		.byte	0x1
+ 1373 02ba 0C       		.uleb128 0xc
+ 1374 02bb 00000000 		.4byte	.LASF51
+ 1375 02bf 03       		.byte	0x3
+ 1376 02c0 1D       		.byte	0x1d
+ 1377 02c1 12       		.byte	0x12
+ 1378 02c2 F4010000 		.4byte	0x1f4
+ 1379 02c6 01       		.byte	0x1
+ 1380 02c7 01       		.byte	0x1
+ 1381 02c8 0A       		.uleb128 0xa
+ 1382 02c9 AB010000 		.4byte	0x1ab
+ 1383 02cd D8020000 		.4byte	0x2d8
+ 1384 02d1 0B       		.uleb128 0xb
+ 1385 02d2 24000000 		.4byte	0x24
+ 1386 02d6 03       		.byte	0x3
+ 1387 02d7 00       		.byte	0
+ 1388 02d8 0C       		.uleb128 0xc
+ 1389 02d9 9C010000 		.4byte	.LASF52
+ 1390 02dd 03       		.byte	0x3
+ 1391 02de 20       		.byte	0x20
+ 1392 02df 12       		.byte	0x12
+ 1393 02e0 C8020000 		.4byte	0x2c8
+ 1394 02e4 01       		.byte	0x1
+ 1395 02e5 01       		.byte	0x1
+ 1396 02e6 0A       		.uleb128 0xa
+ 1397 02e7 AB010000 		.4byte	0x1ab
+ 1398 02eb F6020000 		.4byte	0x2f6
+ 1399 02ef 0B       		.uleb128 0xb
+ 1400 02f0 24000000 		.4byte	0x24
+ 1401 02f4 05       		.byte	0x5
+ 1402 02f5 00       		.byte	0
+ 1403 02f6 0C       		.uleb128 0xc
+ 1404 02f7 BF020000 		.4byte	.LASF53
+ 1405 02fb 03       		.byte	0x3
+ 1406 02fc 21       		.byte	0x21
+ 1407 02fd 12       		.byte	0x12
+ 1408 02fe E6020000 		.4byte	0x2e6
+ 1409 0302 01       		.byte	0x1
+ 1410 0303 01       		.byte	0x1
+ 1411 0304 0C       		.uleb128 0xc
+ 1412 0305 EC000000 		.4byte	.LASF54
+ 1413 0309 03       		.byte	0x3
+ 1414 030a 22       		.byte	0x22
+ 1415 030b 12       		.byte	0x12
+ 1416 030c C8020000 		.4byte	0x2c8
+ 1417 0310 01       		.byte	0x1
+ 1418 0311 01       		.byte	0x1
+ 1419 0312 0C       		.uleb128 0xc
+ 1420 0313 03040000 		.4byte	.LASF55
+ 1421 0317 03       		.byte	0x3
+ 1422 0318 23       		.byte	0x23
+ 1423 0319 12       		.byte	0x12
+ 1424 031a E6020000 		.4byte	0x2e6
+ 1425 031e 01       		.byte	0x1
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 26
+
+
+ 1426 031f 01       		.byte	0x1
+ 1427 0320 0C       		.uleb128 0xc
+ 1428 0321 00010000 		.4byte	.LASF56
+ 1429 0325 03       		.byte	0x3
+ 1430 0326 25       		.byte	0x25
+ 1431 0327 12       		.byte	0x12
+ 1432 0328 F4010000 		.4byte	0x1f4
+ 1433 032c 01       		.byte	0x1
+ 1434 032d 01       		.byte	0x1
+ 1435 032e 0C       		.uleb128 0xc
+ 1436 032f D6030000 		.4byte	.LASF57
+ 1437 0333 03       		.byte	0x3
+ 1438 0334 26       		.byte	0x26
+ 1439 0335 12       		.byte	0x12
+ 1440 0336 F4010000 		.4byte	0x1f4
+ 1441 033a 01       		.byte	0x1
+ 1442 033b 01       		.byte	0x1
+ 1443 033c 0C       		.uleb128 0xc
+ 1444 033d 12050000 		.4byte	.LASF58
+ 1445 0341 03       		.byte	0x3
+ 1446 0342 29       		.byte	0x29
+ 1447 0343 12       		.byte	0x12
+ 1448 0344 AB010000 		.4byte	0x1ab
+ 1449 0348 01       		.byte	0x1
+ 1450 0349 01       		.byte	0x1
+ 1451 034a 0C       		.uleb128 0xc
+ 1452 034b 63010000 		.4byte	.LASF59
+ 1453 034f 03       		.byte	0x3
+ 1454 0350 2A       		.byte	0x2a
+ 1455 0351 12       		.byte	0x12
+ 1456 0352 AB010000 		.4byte	0x1ab
+ 1457 0356 01       		.byte	0x1
+ 1458 0357 01       		.byte	0x1
+ 1459 0358 0C       		.uleb128 0xc
+ 1460 0359 46030000 		.4byte	.LASF60
+ 1461 035d 03       		.byte	0x3
+ 1462 035e 2B       		.byte	0x2b
+ 1463 035f 12       		.byte	0x12
+ 1464 0360 AB010000 		.4byte	0x1ab
+ 1465 0364 01       		.byte	0x1
+ 1466 0365 01       		.byte	0x1
+ 1467 0366 0C       		.uleb128 0xc
+ 1468 0367 24050000 		.4byte	.LASF61
+ 1469 036b 03       		.byte	0x3
+ 1470 036c 2C       		.byte	0x2c
+ 1471 036d 12       		.byte	0x12
+ 1472 036e AB010000 		.4byte	0x1ab
+ 1473 0372 01       		.byte	0x1
+ 1474 0373 01       		.byte	0x1
+ 1475 0374 0C       		.uleb128 0xc
+ 1476 0375 AE010000 		.4byte	.LASF62
+ 1477 0379 03       		.byte	0x3
+ 1478 037a 2D       		.byte	0x2d
+ 1479 037b 12       		.byte	0x12
+ 1480 037c AB010000 		.4byte	0x1ab
+ 1481 0380 01       		.byte	0x1
+ 1482 0381 01       		.byte	0x1
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 27
+
+
+ 1483 0382 0C       		.uleb128 0xc
+ 1484 0383 69030000 		.4byte	.LASF63
+ 1485 0387 03       		.byte	0x3
+ 1486 0388 2F       		.byte	0x2f
+ 1487 0389 12       		.byte	0x12
+ 1488 038a AB010000 		.4byte	0x1ab
+ 1489 038e 01       		.byte	0x1
+ 1490 038f 01       		.byte	0x1
+ 1491 0390 0C       		.uleb128 0xc
+ 1492 0391 E8040000 		.4byte	.LASF64
+ 1493 0395 03       		.byte	0x3
+ 1494 0396 30       		.byte	0x30
+ 1495 0397 12       		.byte	0x12
+ 1496 0398 AB010000 		.4byte	0x1ab
+ 1497 039c 01       		.byte	0x1
+ 1498 039d 01       		.byte	0x1
+ 1499 039e 0C       		.uleb128 0xc
+ 1500 039f C0000000 		.4byte	.LASF65
+ 1501 03a3 03       		.byte	0x3
+ 1502 03a4 32       		.byte	0x32
+ 1503 03a5 12       		.byte	0x12
+ 1504 03a6 F4010000 		.4byte	0x1f4
+ 1505 03aa 01       		.byte	0x1
+ 1506 03ab 01       		.byte	0x1
+ 1507 03ac 0C       		.uleb128 0xc
+ 1508 03ad 67000000 		.4byte	.LASF66
+ 1509 03b1 03       		.byte	0x3
+ 1510 03b2 34       		.byte	0x34
+ 1511 03b3 12       		.byte	0x12
+ 1512 03b4 D6010000 		.4byte	0x1d6
+ 1513 03b8 01       		.byte	0x1
+ 1514 03b9 01       		.byte	0x1
+ 1515 03ba 0D       		.uleb128 0xd
+ 1516 03bb C8010000 		.4byte	0x1c8
+ 1517 03bf 04       		.byte	0x4
+ 1518 03c0 0F       		.byte	0xf
+ 1519 03c1 0B       		.byte	0xb
+ 1520 03c2 05       		.byte	0x5
+ 1521 03c3 03       		.byte	0x3
+ 1522 03c4 00000000 		.4byte	eduarmLedGpioCfg
+ 1523 03c8 0D       		.uleb128 0xd
+ 1524 03c9 E6010000 		.4byte	0x1e6
+ 1525 03cd 04       		.byte	0x4
+ 1526 03ce 19       		.byte	0x19
+ 1527 03cf 0B       		.byte	0xb
+ 1528 03d0 05       		.byte	0x5
+ 1529 03d1 03       		.byte	0x3
+ 1530 03d2 00000000 		.4byte	eduarmPushButtonGpioCfg
+ 1531 03d6 0D       		.uleb128 0xd
+ 1532 03d7 04020000 		.4byte	0x204
+ 1533 03db 04       		.byte	0x4
+ 1534 03dc 27       		.byte	0x27
+ 1535 03dd 0B       		.byte	0xb
+ 1536 03de 05       		.byte	0x5
+ 1537 03df 03       		.byte	0x3
+ 1538 03e0 00000000 		.4byte	eduarmUart0GpioCfg
+ 1539 03e4 0D       		.uleb128 0xd
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 28
+
+
+ 1540 03e5 12020000 		.4byte	0x212
+ 1541 03e9 04       		.byte	0x4
+ 1542 03ea 2F       		.byte	0x2f
+ 1543 03eb 0B       		.byte	0xb
+ 1544 03ec 05       		.byte	0x5
+ 1545 03ed 03       		.byte	0x3
+ 1546 03ee 00000000 		.4byte	eduarmUart2GpioCfg
+ 1547 03f2 0D       		.uleb128 0xd
+ 1548 03f3 20020000 		.4byte	0x220
+ 1549 03f7 04       		.byte	0x4
+ 1550 03f8 37       		.byte	0x37
+ 1551 03f9 0B       		.byte	0xb
+ 1552 03fa 05       		.byte	0x5
+ 1553 03fb 03       		.byte	0x3
+ 1554 03fc 00000000 		.4byte	eduarmUart3GpioCfg
+ 1555 0400 0D       		.uleb128 0xd
+ 1556 0401 2E020000 		.4byte	0x22e
+ 1557 0405 04       		.byte	0x4
+ 1558 0406 3F       		.byte	0x3f
+ 1559 0407 0B       		.byte	0xb
+ 1560 0408 05       		.byte	0x5
+ 1561 0409 03       		.byte	0x3
+ 1562 040a 00000000 		.4byte	eduarmEint3GpioCfg
+ 1563 040e 0D       		.uleb128 0xd
+ 1564 040f 3C020000 		.4byte	0x23c
+ 1565 0413 04       		.byte	0x4
+ 1566 0414 40       		.byte	0x40
+ 1567 0415 0B       		.byte	0xb
+ 1568 0416 05       		.byte	0x5
+ 1569 0417 03       		.byte	0x3
+ 1570 0418 00000000 		.4byte	eduarmMma7660IntGpioCfg
+ 1571 041c 0D       		.uleb128 0xd
+ 1572 041d 4A020000 		.4byte	0x24a
+ 1573 0421 04       		.byte	0x4
+ 1574 0422 41       		.byte	0x41
+ 1575 0423 0B       		.byte	0xb
+ 1576 0424 05       		.byte	0x5
+ 1577 0425 03       		.byte	0x3
+ 1578 0426 00000000 		.4byte	eduarmTouchIntGpioCfg
+ 1579 042a 0D       		.uleb128 0xd
+ 1580 042b 58020000 		.4byte	0x258
+ 1581 042f 04       		.byte	0x4
+ 1582 0430 43       		.byte	0x43
+ 1583 0431 0B       		.byte	0xb
+ 1584 0432 05       		.byte	0x5
+ 1585 0433 03       		.byte	0x3
+ 1586 0434 00000000 		.4byte	eduarmAdc0GpioCfg
+ 1587 0438 0D       		.uleb128 0xd
+ 1588 0439 66020000 		.4byte	0x266
+ 1589 043d 04       		.byte	0x4
+ 1590 043e 44       		.byte	0x44
+ 1591 043f 0B       		.byte	0xb
+ 1592 0440 05       		.byte	0x5
+ 1593 0441 03       		.byte	0x3
+ 1594 0442 00000000 		.4byte	eduarmAdc1GpioCfg
+ 1595 0446 0D       		.uleb128 0xd
+ 1596 0447 74020000 		.4byte	0x274
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 29
+
+
+ 1597 044b 04       		.byte	0x4
+ 1598 044c 45       		.byte	0x45
+ 1599 044d 0B       		.byte	0xb
+ 1600 044e 05       		.byte	0x5
+ 1601 044f 03       		.byte	0x3
+ 1602 0450 00000000 		.4byte	eduarmAdc2GpioCfg
+ 1603 0454 0D       		.uleb128 0xd
+ 1604 0455 82020000 		.4byte	0x282
+ 1605 0459 04       		.byte	0x4
+ 1606 045a 46       		.byte	0x46
+ 1607 045b 0B       		.byte	0xb
+ 1608 045c 05       		.byte	0x5
+ 1609 045d 03       		.byte	0x3
+ 1610 045e 00000000 		.4byte	eduarmAdc3GpioCfg
+ 1611 0462 0D       		.uleb128 0xd
+ 1612 0463 90020000 		.4byte	0x290
+ 1613 0467 04       		.byte	0x4
+ 1614 0468 47       		.byte	0x47
+ 1615 0469 0B       		.byte	0xb
+ 1616 046a 05       		.byte	0x5
+ 1617 046b 03       		.byte	0x3
+ 1618 046c 00000000 		.4byte	eduarmAdc4GpioCfg
+ 1619 0470 0D       		.uleb128 0xd
+ 1620 0471 9E020000 		.4byte	0x29e
+ 1621 0475 04       		.byte	0x4
+ 1622 0476 48       		.byte	0x48
+ 1623 0477 0B       		.byte	0xb
+ 1624 0478 05       		.byte	0x5
+ 1625 0479 03       		.byte	0x3
+ 1626 047a 00000000 		.4byte	eduarmAdc5GpioCfg
+ 1627 047e 0D       		.uleb128 0xd
+ 1628 047f AC020000 		.4byte	0x2ac
+ 1629 0483 04       		.byte	0x4
+ 1630 0484 4B       		.byte	0x4b
+ 1631 0485 0B       		.byte	0xb
+ 1632 0486 05       		.byte	0x5
+ 1633 0487 03       		.byte	0x3
+ 1634 0488 00000000 		.4byte	eduarmI2c1GpioCfg
+ 1635 048c 0D       		.uleb128 0xd
+ 1636 048d BA020000 		.4byte	0x2ba
+ 1637 0491 04       		.byte	0x4
+ 1638 0492 53       		.byte	0x53
+ 1639 0493 0B       		.byte	0xb
+ 1640 0494 05       		.byte	0x5
+ 1641 0495 03       		.byte	0x3
+ 1642 0496 00000000 		.4byte	eduarmI2c2GpioCfg
+ 1643 049a 0D       		.uleb128 0xd
+ 1644 049b D8020000 		.4byte	0x2d8
+ 1645 049f 04       		.byte	0x4
+ 1646 04a0 5B       		.byte	0x5b
+ 1647 04a1 0B       		.byte	0xb
+ 1648 04a2 05       		.byte	0x5
+ 1649 04a3 03       		.byte	0x3
+ 1650 04a4 00000000 		.4byte	eduarmSsp0GpioCfg
+ 1651 04a8 0D       		.uleb128 0xd
+ 1652 04a9 F6020000 		.4byte	0x2f6
+ 1653 04ad 04       		.byte	0x4
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 30
+
+
+ 1654 04ae 67       		.byte	0x67
+ 1655 04af 0C       		.byte	0xc
+ 1656 04b0 05       		.byte	0x5
+ 1657 04b1 03       		.byte	0x3
+ 1658 04b2 00000000 		.4byte	eduarmTouchGpioCfg
+ 1659 04b6 0D       		.uleb128 0xd
+ 1660 04b7 04030000 		.4byte	0x304
+ 1661 04bb 04       		.byte	0x4
+ 1662 04bc 78       		.byte	0x78
+ 1663 04bd 0C       		.byte	0xc
+ 1664 04be 05       		.byte	0x5
+ 1665 04bf 03       		.byte	0x3
+ 1666 04c0 00000000 		.4byte	eduarmSdcardGpioCfg
+ 1667 04c4 0D       		.uleb128 0xd
+ 1668 04c5 12030000 		.4byte	0x312
+ 1669 04c9 04       		.byte	0x4
+ 1670 04ca 84       		.byte	0x84
+ 1671 04cb 0B       		.byte	0xb
+ 1672 04cc 05       		.byte	0x5
+ 1673 04cd 03       		.byte	0x3
+ 1674 04ce 00000000 		.4byte	eduarmLcdGpioCfg
+ 1675 04d2 0D       		.uleb128 0xd
+ 1676 04d3 20030000 		.4byte	0x320
+ 1677 04d7 04       		.byte	0x4
+ 1678 04d8 99       		.byte	0x99
+ 1679 04d9 0B       		.byte	0xb
+ 1680 04da 05       		.byte	0x5
+ 1681 04db 03       		.byte	0x3
+ 1682 04dc 00000000 		.4byte	eduarmCan1GpioCfg
+ 1683 04e0 0D       		.uleb128 0xd
+ 1684 04e1 2E030000 		.4byte	0x32e
+ 1685 04e5 04       		.byte	0x4
+ 1686 04e6 A1       		.byte	0xa1
+ 1687 04e7 0B       		.byte	0xb
+ 1688 04e8 05       		.byte	0x5
+ 1689 04e9 03       		.byte	0x3
+ 1690 04ea 00000000 		.4byte	eduarmCan2GpioCfg
+ 1691 04ee 0D       		.uleb128 0xd
+ 1692 04ef 3C030000 		.4byte	0x33c
+ 1693 04f3 04       		.byte	0x4
+ 1694 04f4 AA       		.byte	0xaa
+ 1695 04f5 0B       		.byte	0xb
+ 1696 04f6 05       		.byte	0x5
+ 1697 04f7 03       		.byte	0x3
+ 1698 04f8 00000000 		.4byte	eduarmPwm1GpioCfg
+ 1699 04fc 0D       		.uleb128 0xd
+ 1700 04fd 4A030000 		.4byte	0x34a
+ 1701 0501 04       		.byte	0x4
+ 1702 0502 AB       		.byte	0xab
+ 1703 0503 0B       		.byte	0xb
+ 1704 0504 05       		.byte	0x5
+ 1705 0505 03       		.byte	0x3
+ 1706 0506 00000000 		.4byte	eduarmPwm2GpioCfg
+ 1707 050a 0D       		.uleb128 0xd
+ 1708 050b 58030000 		.4byte	0x358
+ 1709 050f 04       		.byte	0x4
+ 1710 0510 AC       		.byte	0xac
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 31
+
+
+ 1711 0511 0B       		.byte	0xb
+ 1712 0512 05       		.byte	0x5
+ 1713 0513 03       		.byte	0x3
+ 1714 0514 00000000 		.4byte	eduarmPwm3GpioCfg
+ 1715 0518 0D       		.uleb128 0xd
+ 1716 0519 66030000 		.4byte	0x366
+ 1717 051d 04       		.byte	0x4
+ 1718 051e AD       		.byte	0xad
+ 1719 051f 0B       		.byte	0xb
+ 1720 0520 05       		.byte	0x5
+ 1721 0521 03       		.byte	0x3
+ 1722 0522 00000000 		.4byte	eduarmPwm4GpioCfg
+ 1723 0526 0D       		.uleb128 0xd
+ 1724 0527 74030000 		.4byte	0x374
+ 1725 052b 04       		.byte	0x4
+ 1726 052c AE       		.byte	0xae
+ 1727 052d 0B       		.byte	0xb
+ 1728 052e 05       		.byte	0x5
+ 1729 052f 03       		.byte	0x3
+ 1730 0530 00000000 		.4byte	eduarmPwm5GpioCfg
+ 1731 0534 0D       		.uleb128 0xd
+ 1732 0535 82030000 		.4byte	0x382
+ 1733 0539 04       		.byte	0x4
+ 1734 053a B0       		.byte	0xb0
+ 1735 053b 0B       		.byte	0xb
+ 1736 053c 05       		.byte	0x5
+ 1737 053d 03       		.byte	0x3
+ 1738 053e 00000000 		.4byte	eduarmTimer0Cap1GpioCfg
+ 1739 0542 0D       		.uleb128 0xd
+ 1740 0543 90030000 		.4byte	0x390
+ 1741 0547 04       		.byte	0x4
+ 1742 0548 B1       		.byte	0xb1
+ 1743 0549 0B       		.byte	0xb
+ 1744 054a 05       		.byte	0x5
+ 1745 054b 03       		.byte	0x3
+ 1746 054c 00000000 		.4byte	eduarmTimer3Cap0GpioCfg
+ 1747 0550 0D       		.uleb128 0xd
+ 1748 0551 9E030000 		.4byte	0x39e
+ 1749 0555 04       		.byte	0x4
+ 1750 0556 B3       		.byte	0xb3
+ 1751 0557 0B       		.byte	0xb
+ 1752 0558 05       		.byte	0x5
+ 1753 0559 03       		.byte	0x3
+ 1754 055a 00000000 		.4byte	eduarmTimer1MatGpioCfg
+ 1755 055e 0D       		.uleb128 0xd
+ 1756 055f AC030000 		.4byte	0x3ac
+ 1757 0563 04       		.byte	0x4
+ 1758 0564 B9       		.byte	0xb9
+ 1759 0565 0B       		.byte	0xb
+ 1760 0566 05       		.byte	0x5
+ 1761 0567 03       		.byte	0x3
+ 1762 0568 00000000 		.4byte	eduarmI2sGpioCfg
+ 1763 056c 00       		.byte	0
+ 1764              		.section	.debug_abbrev,"",%progbits
+ 1765              	.Ldebug_abbrev0:
+ 1766 0000 01       		.uleb128 0x1
+ 1767 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 32
+
+
+ 1768 0002 01       		.byte	0x1
+ 1769 0003 25       		.uleb128 0x25
+ 1770 0004 0E       		.uleb128 0xe
+ 1771 0005 13       		.uleb128 0x13
+ 1772 0006 0B       		.uleb128 0xb
+ 1773 0007 03       		.uleb128 0x3
+ 1774 0008 0E       		.uleb128 0xe
+ 1775 0009 1B       		.uleb128 0x1b
+ 1776 000a 0E       		.uleb128 0xe
+ 1777 000b 10       		.uleb128 0x10
+ 1778 000c 06       		.uleb128 0x6
+ 1779 000d 00       		.byte	0
+ 1780 000e 00       		.byte	0
+ 1781 000f 02       		.uleb128 0x2
+ 1782 0010 24       		.uleb128 0x24
+ 1783 0011 00       		.byte	0
+ 1784 0012 0B       		.uleb128 0xb
+ 1785 0013 0B       		.uleb128 0xb
+ 1786 0014 3E       		.uleb128 0x3e
+ 1787 0015 0B       		.uleb128 0xb
+ 1788 0016 03       		.uleb128 0x3
+ 1789 0017 08       		.uleb128 0x8
+ 1790 0018 00       		.byte	0
+ 1791 0019 00       		.byte	0
+ 1792 001a 03       		.uleb128 0x3
+ 1793 001b 24       		.uleb128 0x24
+ 1794 001c 00       		.byte	0
+ 1795 001d 0B       		.uleb128 0xb
+ 1796 001e 0B       		.uleb128 0xb
+ 1797 001f 3E       		.uleb128 0x3e
+ 1798 0020 0B       		.uleb128 0xb
+ 1799 0021 03       		.uleb128 0x3
+ 1800 0022 0E       		.uleb128 0xe
+ 1801 0023 00       		.byte	0
+ 1802 0024 00       		.byte	0
+ 1803 0025 04       		.uleb128 0x4
+ 1804 0026 16       		.uleb128 0x16
+ 1805 0027 00       		.byte	0
+ 1806 0028 03       		.uleb128 0x3
+ 1807 0029 0E       		.uleb128 0xe
+ 1808 002a 3A       		.uleb128 0x3a
+ 1809 002b 0B       		.uleb128 0xb
+ 1810 002c 3B       		.uleb128 0x3b
+ 1811 002d 0B       		.uleb128 0xb
+ 1812 002e 39       		.uleb128 0x39
+ 1813 002f 0B       		.uleb128 0xb
+ 1814 0030 49       		.uleb128 0x49
+ 1815 0031 13       		.uleb128 0x13
+ 1816 0032 00       		.byte	0
+ 1817 0033 00       		.byte	0
+ 1818 0034 05       		.uleb128 0x5
+ 1819 0035 04       		.uleb128 0x4
+ 1820 0036 01       		.byte	0x1
+ 1821 0037 3E       		.uleb128 0x3e
+ 1822 0038 0B       		.uleb128 0xb
+ 1823 0039 0B       		.uleb128 0xb
+ 1824 003a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 33
+
+
+ 1825 003b 49       		.uleb128 0x49
+ 1826 003c 13       		.uleb128 0x13
+ 1827 003d 3A       		.uleb128 0x3a
+ 1828 003e 0B       		.uleb128 0xb
+ 1829 003f 3B       		.uleb128 0x3b
+ 1830 0040 05       		.uleb128 0x5
+ 1831 0041 39       		.uleb128 0x39
+ 1832 0042 0B       		.uleb128 0xb
+ 1833 0043 01       		.uleb128 0x1
+ 1834 0044 13       		.uleb128 0x13
+ 1835 0045 00       		.byte	0
+ 1836 0046 00       		.byte	0
+ 1837 0047 06       		.uleb128 0x6
+ 1838 0048 28       		.uleb128 0x28
+ 1839 0049 00       		.byte	0
+ 1840 004a 03       		.uleb128 0x3
+ 1841 004b 0E       		.uleb128 0xe
+ 1842 004c 1C       		.uleb128 0x1c
+ 1843 004d 0B       		.uleb128 0xb
+ 1844 004e 00       		.byte	0
+ 1845 004f 00       		.byte	0
+ 1846 0050 07       		.uleb128 0x7
+ 1847 0051 16       		.uleb128 0x16
+ 1848 0052 00       		.byte	0
+ 1849 0053 03       		.uleb128 0x3
+ 1850 0054 0E       		.uleb128 0xe
+ 1851 0055 3A       		.uleb128 0x3a
+ 1852 0056 0B       		.uleb128 0xb
+ 1853 0057 3B       		.uleb128 0x3b
+ 1854 0058 05       		.uleb128 0x5
+ 1855 0059 39       		.uleb128 0x39
+ 1856 005a 0B       		.uleb128 0xb
+ 1857 005b 49       		.uleb128 0x49
+ 1858 005c 13       		.uleb128 0x13
+ 1859 005d 00       		.byte	0
+ 1860 005e 00       		.byte	0
+ 1861 005f 08       		.uleb128 0x8
+ 1862 0060 13       		.uleb128 0x13
+ 1863 0061 01       		.byte	0x1
+ 1864 0062 0B       		.uleb128 0xb
+ 1865 0063 0B       		.uleb128 0xb
+ 1866 0064 3A       		.uleb128 0x3a
+ 1867 0065 0B       		.uleb128 0xb
+ 1868 0066 3B       		.uleb128 0x3b
+ 1869 0067 05       		.uleb128 0x5
+ 1870 0068 39       		.uleb128 0x39
+ 1871 0069 0B       		.uleb128 0xb
+ 1872 006a 01       		.uleb128 0x1
+ 1873 006b 13       		.uleb128 0x13
+ 1874 006c 00       		.byte	0
+ 1875 006d 00       		.byte	0
+ 1876 006e 09       		.uleb128 0x9
+ 1877 006f 0D       		.uleb128 0xd
+ 1878 0070 00       		.byte	0
+ 1879 0071 03       		.uleb128 0x3
+ 1880 0072 0E       		.uleb128 0xe
+ 1881 0073 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 34
+
+
+ 1882 0074 0B       		.uleb128 0xb
+ 1883 0075 3B       		.uleb128 0x3b
+ 1884 0076 05       		.uleb128 0x5
+ 1885 0077 39       		.uleb128 0x39
+ 1886 0078 0B       		.uleb128 0xb
+ 1887 0079 49       		.uleb128 0x49
+ 1888 007a 13       		.uleb128 0x13
+ 1889 007b 38       		.uleb128 0x38
+ 1890 007c 0A       		.uleb128 0xa
+ 1891 007d 00       		.byte	0
+ 1892 007e 00       		.byte	0
+ 1893 007f 0A       		.uleb128 0xa
+ 1894 0080 01       		.uleb128 0x1
+ 1895 0081 01       		.byte	0x1
+ 1896 0082 49       		.uleb128 0x49
+ 1897 0083 13       		.uleb128 0x13
+ 1898 0084 01       		.uleb128 0x1
+ 1899 0085 13       		.uleb128 0x13
+ 1900 0086 00       		.byte	0
+ 1901 0087 00       		.byte	0
+ 1902 0088 0B       		.uleb128 0xb
+ 1903 0089 21       		.uleb128 0x21
+ 1904 008a 00       		.byte	0
+ 1905 008b 49       		.uleb128 0x49
+ 1906 008c 13       		.uleb128 0x13
+ 1907 008d 2F       		.uleb128 0x2f
+ 1908 008e 0B       		.uleb128 0xb
+ 1909 008f 00       		.byte	0
+ 1910 0090 00       		.byte	0
+ 1911 0091 0C       		.uleb128 0xc
+ 1912 0092 34       		.uleb128 0x34
+ 1913 0093 00       		.byte	0
+ 1914 0094 03       		.uleb128 0x3
+ 1915 0095 0E       		.uleb128 0xe
+ 1916 0096 3A       		.uleb128 0x3a
+ 1917 0097 0B       		.uleb128 0xb
+ 1918 0098 3B       		.uleb128 0x3b
+ 1919 0099 0B       		.uleb128 0xb
+ 1920 009a 39       		.uleb128 0x39
+ 1921 009b 0B       		.uleb128 0xb
+ 1922 009c 49       		.uleb128 0x49
+ 1923 009d 13       		.uleb128 0x13
+ 1924 009e 3F       		.uleb128 0x3f
+ 1925 009f 0C       		.uleb128 0xc
+ 1926 00a0 3C       		.uleb128 0x3c
+ 1927 00a1 0C       		.uleb128 0xc
+ 1928 00a2 00       		.byte	0
+ 1929 00a3 00       		.byte	0
+ 1930 00a4 0D       		.uleb128 0xd
+ 1931 00a5 34       		.uleb128 0x34
+ 1932 00a6 00       		.byte	0
+ 1933 00a7 47       		.uleb128 0x47
+ 1934 00a8 13       		.uleb128 0x13
+ 1935 00a9 3A       		.uleb128 0x3a
+ 1936 00aa 0B       		.uleb128 0xb
+ 1937 00ab 3B       		.uleb128 0x3b
+ 1938 00ac 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 35
+
+
+ 1939 00ad 39       		.uleb128 0x39
+ 1940 00ae 0B       		.uleb128 0xb
+ 1941 00af 02       		.uleb128 0x2
+ 1942 00b0 0A       		.uleb128 0xa
+ 1943 00b1 00       		.byte	0
+ 1944 00b2 00       		.byte	0
+ 1945 00b3 00       		.byte	0
+ 1946              		.section	.debug_aranges,"",%progbits
+ 1947 0000 14000000 		.4byte	0x14
+ 1948 0004 0200     		.2byte	0x2
+ 1949 0006 00000000 		.4byte	.Ldebug_info0
+ 1950 000a 04       		.byte	0x4
+ 1951 000b 00       		.byte	0
+ 1952 000c 0000     		.2byte	0
+ 1953 000e 0000     		.2byte	0
+ 1954 0010 00000000 		.4byte	0
+ 1955 0014 00000000 		.4byte	0
+ 1956              		.section	.debug_line,"",%progbits
+ 1957              	.Ldebug_line0:
+ 1958 0000 A0000000 		.section	.debug_str,"MS",%progbits,1
+ 1958      03009A00 
+ 1958      00000201 
+ 1958      FB0E0D00 
+ 1958      01010101 
+ 1959              	.LASF51:
+ 1960 0000 65647561 		.ascii	"eduarmI2c2GpioCfg\000"
+ 1960      726D4932 
+ 1960      63324770 
+ 1960      696F4366 
+ 1960      6700
+ 1961              	.LASF21:
+ 1962 0012 656E4770 		.ascii	"enGpioOpenDrainDisable\000"
+ 1962      696F4F70 
+ 1962      656E4472 
+ 1962      61696E44 
+ 1962      69736162 
+ 1963              	.LASF37:
+ 1964 0029 65647561 		.ascii	"eduarmPushButtonGpioCfg\000"
+ 1964      726D5075 
+ 1964      73684275 
+ 1964      74746F6E 
+ 1964      4770696F 
+ 1965              	.LASF68:
+ 1966 0041 2E2E2F2E 		.ascii	"../../Source/eduarmBoardConfig.c\000"
+ 1966      2E2F536F 
+ 1966      75726365 
+ 1966      2F656475 
+ 1966      61726D42 
+ 1967              	.LASF30:
+ 1968 0062 70696E73 		.ascii	"pins\000"
+ 1968      00
+ 1969              	.LASF66:
+ 1970 0067 65647561 		.ascii	"eduarmI2sGpioCfg\000"
+ 1970      726D4932 
+ 1970      73477069 
+ 1970      6F436667 
+ 1970      00
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 36
+
+
+ 1971              	.LASF18:
+ 1972 0078 656E4770 		.ascii	"enGpioPinModeNoPullUpDown\000"
+ 1972      696F5069 
+ 1972      6E4D6F64 
+ 1972      654E6F50 
+ 1972      756C6C55 
+ 1973              	.LASF19:
+ 1974 0092 656E4770 		.ascii	"enGpioPinModePullDown\000"
+ 1974      696F5069 
+ 1974      6E4D6F64 
+ 1974      6550756C 
+ 1974      6C446F77 
+ 1975              	.LASF31:
+ 1976 00a8 64697265 		.ascii	"direction\000"
+ 1976      6374696F 
+ 1976      6E00
+ 1977              	.LASF7:
+ 1978 00b2 6C6F6E67 		.ascii	"long long int\000"
+ 1978      206C6F6E 
+ 1978      6720696E 
+ 1978      7400
+ 1979              	.LASF65:
+ 1980 00c0 65647561 		.ascii	"eduarmTimer1MatGpioCfg\000"
+ 1980      726D5469 
+ 1980      6D657231 
+ 1980      4D617447 
+ 1980      70696F43 
+ 1981              	.LASF32:
+ 1982 00d7 6D6F6465 		.ascii	"mode\000"
+ 1982      00
+ 1983              	.LASF20:
+ 1984 00dc 5046456E 		.ascii	"PFEnGpioPinMode\000"
+ 1984      4770696F 
+ 1984      50696E4D 
+ 1984      6F646500 
+ 1985              	.LASF54:
+ 1986 00ec 65647561 		.ascii	"eduarmSdcardGpioCfg\000"
+ 1986      726D5364 
+ 1986      63617264 
+ 1986      4770696F 
+ 1986      43666700 
+ 1987              	.LASF56:
+ 1988 0100 65647561 		.ascii	"eduarmCan1GpioCfg\000"
+ 1988      726D4361 
+ 1988      6E314770 
+ 1988      696F4366 
+ 1988      6700
+ 1989              	.LASF35:
+ 1990 0112 50464366 		.ascii	"PFCfgGpio\000"
+ 1990      67477069 
+ 1990      6F00
+ 1991              	.LASF46:
+ 1992 011c 65647561 		.ascii	"eduarmAdc2GpioCfg\000"
+ 1992      726D4164 
+ 1992      63324770 
+ 1992      696F4366 
+ 1992      6700
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 37
+
+
+ 1993              	.LASF33:
+ 1994 012e 6F70656E 		.ascii	"openDrain\000"
+ 1994      44726169 
+ 1994      6E00
+ 1995              	.LASF39:
+ 1996 0138 65647561 		.ascii	"eduarmUart2GpioCfg\000"
+ 1996      726D5561 
+ 1996      72743247 
+ 1996      70696F43 
+ 1996      666700
+ 1997              	.LASF15:
+ 1998 014b 5046456E 		.ascii	"PFEnDirection\000"
+ 1998      44697265 
+ 1998      6374696F 
+ 1998      6E00
+ 1999              	.LASF3:
+ 2000 0159 73686F72 		.ascii	"short int\000"
+ 2000      7420696E 
+ 2000      7400
+ 2001              	.LASF59:
+ 2002 0163 65647561 		.ascii	"eduarmPwm2GpioCfg\000"
+ 2002      726D5077 
+ 2002      6D324770 
+ 2002      696F4366 
+ 2002      6700
+ 2003              	.LASF9:
+ 2004 0175 666C6F61 		.ascii	"float\000"
+ 2004      7400
+ 2005              	.LASF34:
+ 2006 017b 616C7446 		.ascii	"altFuction\000"
+ 2006      75637469 
+ 2006      6F6E00
+ 2007              	.LASF17:
+ 2008 0186 656E4770 		.ascii	"enGpioPinModeRepeater\000"
+ 2008      696F5069 
+ 2008      6E4D6F64 
+ 2008      65526570 
+ 2008      65617465 
+ 2009              	.LASF52:
+ 2010 019c 65647561 		.ascii	"eduarmSsp0GpioCfg\000"
+ 2010      726D5373 
+ 2010      70304770 
+ 2010      696F4366 
+ 2010      6700
+ 2011              	.LASF62:
+ 2012 01ae 65647561 		.ascii	"eduarmPwm5GpioCfg\000"
+ 2012      726D5077 
+ 2012      6D354770 
+ 2012      696F4366 
+ 2012      6700
+ 2013              	.LASF25:
+ 2014 01c0 656E4770 		.ascii	"enGpioFunctionAlt1\000"
+ 2014      696F4675 
+ 2014      6E637469 
+ 2014      6F6E416C 
+ 2014      743100
+ 2015              	.LASF26:
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 38
+
+
+ 2016 01d3 656E4770 		.ascii	"enGpioFunctionAlt2\000"
+ 2016      696F4675 
+ 2016      6E637469 
+ 2016      6F6E416C 
+ 2016      743200
+ 2017              	.LASF27:
+ 2018 01e6 656E4770 		.ascii	"enGpioFunctionAlt3\000"
+ 2018      696F4675 
+ 2018      6E637469 
+ 2018      6F6E416C 
+ 2018      743300
+ 2019              	.LASF5:
+ 2020 01f9 6C6F6E67 		.ascii	"long int\000"
+ 2020      20696E74 
+ 2020      00
+ 2021              	.LASF28:
+ 2022 0202 5046456E 		.ascii	"PFEnAltFunction\000"
+ 2022      416C7446 
+ 2022      756E6374 
+ 2022      696F6E00 
+ 2023              	.LASF13:
+ 2024 0212 656E4770 		.ascii	"enGpioDirOutput\000"
+ 2024      696F4469 
+ 2024      724F7574 
+ 2024      70757400 
+ 2025              	.LASF12:
+ 2026 0222 656E4770 		.ascii	"enGpioDirInput\000"
+ 2026      696F4469 
+ 2026      72496E70 
+ 2026      757400
+ 2027              	.LASF14:
+ 2028 0231 50466477 		.ascii	"PFdword\000"
+ 2028      6F726400 
+ 2029              	.LASF2:
+ 2030 0239 756E7369 		.ascii	"unsigned char\000"
+ 2030      676E6564 
+ 2030      20636861 
+ 2030      7200
+ 2031              	.LASF1:
+ 2032 0247 7369676E 		.ascii	"signed char\000"
+ 2032      65642063 
+ 2032      68617200 
+ 2033              	.LASF8:
+ 2034 0253 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2034      206C6F6E 
+ 2034      6720756E 
+ 2034      7369676E 
+ 2034      65642069 
+ 2035              	.LASF49:
+ 2036 026a 65647561 		.ascii	"eduarmAdc5GpioCfg\000"
+ 2036      726D4164 
+ 2036      63354770 
+ 2036      696F4366 
+ 2036      6700
+ 2037              	.LASF69:
+ 2038 027c 443A5C46 		.ascii	"D:\\Final year project\\Paint Application\\UserInte"
+ 2038      696E616C 
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 39
+
+
+ 2038      20796561 
+ 2038      72207072 
+ 2038      6F6A6563 
+ 2039 02ac 72666163 		.ascii	"rface\000"
+ 2039      6500
+ 2040              	.LASF0:
+ 2041 02b2 756E7369 		.ascii	"unsigned int\000"
+ 2041      676E6564 
+ 2041      20696E74 
+ 2041      00
+ 2042              	.LASF53:
+ 2043 02bf 65647561 		.ascii	"eduarmTouchGpioCfg\000"
+ 2043      726D546F 
+ 2043      75636847 
+ 2043      70696F43 
+ 2043      666700
+ 2044              	.LASF50:
+ 2045 02d2 65647561 		.ascii	"eduarmI2c1GpioCfg\000"
+ 2045      726D4932 
+ 2045      63314770 
+ 2045      696F4366 
+ 2045      6700
+ 2046              	.LASF44:
+ 2047 02e4 65647561 		.ascii	"eduarmAdc0GpioCfg\000"
+ 2047      726D4164 
+ 2047      63304770 
+ 2047      696F4366 
+ 2047      6700
+ 2048              	.LASF38:
+ 2049 02f6 65647561 		.ascii	"eduarmUart0GpioCfg\000"
+ 2049      726D5561 
+ 2049      72743047 
+ 2049      70696F43 
+ 2049      666700
+ 2050              	.LASF47:
+ 2051 0309 65647561 		.ascii	"eduarmAdc3GpioCfg\000"
+ 2051      726D4164 
+ 2051      63334770 
+ 2051      696F4366 
+ 2051      6700
+ 2052              	.LASF4:
+ 2053 031b 73686F72 		.ascii	"short unsigned int\000"
+ 2053      7420756E 
+ 2053      7369676E 
+ 2053      65642069 
+ 2053      6E7400
+ 2054              	.LASF40:
+ 2055 032e 65647561 		.ascii	"eduarmUart3GpioCfg\000"
+ 2055      726D5561 
+ 2055      72743347 
+ 2055      70696F43 
+ 2055      666700
+ 2056              	.LASF11:
+ 2057 0341 63686172 		.ascii	"char\000"
+ 2057      00
+ 2058              	.LASF60:
+ 2059 0346 65647561 		.ascii	"eduarmPwm3GpioCfg\000"
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 40
+
+
+ 2059      726D5077 
+ 2059      6D334770 
+ 2059      696F4366 
+ 2059      6700
+ 2060              	.LASF36:
+ 2061 0358 65647561 		.ascii	"eduarmLedGpioCfg\000"
+ 2061      726D4C65 
+ 2061      64477069 
+ 2061      6F436667 
+ 2061      00
+ 2062              	.LASF63:
+ 2063 0369 65647561 		.ascii	"eduarmTimer0Cap1GpioCfg\000"
+ 2063      726D5469 
+ 2063      6D657230 
+ 2063      43617031 
+ 2063      4770696F 
+ 2064              	.LASF41:
+ 2065 0381 65647561 		.ascii	"eduarmEint3GpioCfg\000"
+ 2065      726D4569 
+ 2065      6E743347 
+ 2065      70696F43 
+ 2065      666700
+ 2066              	.LASF42:
+ 2067 0394 65647561 		.ascii	"eduarmMma7660IntGpioCfg\000"
+ 2067      726D4D6D 
+ 2067      61373636 
+ 2067      30496E74 
+ 2067      4770696F 
+ 2068              	.LASF29:
+ 2069 03ac 706F7274 		.ascii	"port\000"
+ 2069      00
+ 2070              	.LASF6:
+ 2071 03b1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2071      20756E73 
+ 2071      69676E65 
+ 2071      6420696E 
+ 2071      7400
+ 2072              	.LASF24:
+ 2073 03c3 656E4770 		.ascii	"enGpioFunctionGpio\000"
+ 2073      696F4675 
+ 2073      6E637469 
+ 2073      6F6E4770 
+ 2073      696F00
+ 2074              	.LASF57:
+ 2075 03d6 65647561 		.ascii	"eduarmCan2GpioCfg\000"
+ 2075      726D4361 
+ 2075      6E324770 
+ 2075      696F4366 
+ 2075      6700
+ 2076              	.LASF10:
+ 2077 03e8 646F7562 		.ascii	"double\000"
+ 2077      6C6500
+ 2078              	.LASF16:
+ 2079 03ef 656E4770 		.ascii	"enGpioPinModePullUp\000"
+ 2079      696F5069 
+ 2079      6E4D6F64 
+ 2079      6550756C 
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 41
+
+
+ 2079      6C557000 
+ 2080              	.LASF55:
+ 2081 0403 65647561 		.ascii	"eduarmLcdGpioCfg\000"
+ 2081      726D4C63 
+ 2081      64477069 
+ 2081      6F436667 
+ 2081      00
+ 2082              	.LASF67:
+ 2083 0414 474E5520 		.ascii	"GNU C99 10.3.1 20210824 (release) -mcpu=cortex-m3 -"
+ 2083      43393920 
+ 2083      31302E33 
+ 2083      2E312032 
+ 2083      30323130 
+ 2084 0447 6D746875 		.ascii	"mthumb -mfloat-abi=soft -march=armv7-m -gdwarf-2 -O"
+ 2084      6D62202D 
+ 2084      6D666C6F 
+ 2084      61742D61 
+ 2084      62693D73 
+ 2085 047a 30202D73 		.ascii	"0 -std=gnu99 -fomit-frame-pointer\000"
+ 2085      74643D67 
+ 2085      6E753939 
+ 2085      202D666F 
+ 2085      6D69742D 
+ 2086              	.LASF22:
+ 2087 049c 656E4770 		.ascii	"enGpioOpenDrainEnable\000"
+ 2087      696F4F70 
+ 2087      656E4472 
+ 2087      61696E45 
+ 2087      6E61626C 
+ 2088              	.LASF43:
+ 2089 04b2 65647561 		.ascii	"eduarmTouchIntGpioCfg\000"
+ 2089      726D546F 
+ 2089      75636849 
+ 2089      6E744770 
+ 2089      696F4366 
+ 2090              	.LASF23:
+ 2091 04c8 5046456E 		.ascii	"PFEnOpenDrain\000"
+ 2091      4F70656E 
+ 2091      44726169 
+ 2091      6E00
+ 2092              	.LASF45:
+ 2093 04d6 65647561 		.ascii	"eduarmAdc1GpioCfg\000"
+ 2093      726D4164 
+ 2093      63314770 
+ 2093      696F4366 
+ 2093      6700
+ 2094              	.LASF64:
+ 2095 04e8 65647561 		.ascii	"eduarmTimer3Cap0GpioCfg\000"
+ 2095      726D5469 
+ 2095      6D657233 
+ 2095      43617030 
+ 2095      4770696F 
+ 2096              	.LASF48:
+ 2097 0500 65647561 		.ascii	"eduarmAdc4GpioCfg\000"
+ 2097      726D4164 
+ 2097      63344770 
+ 2097      696F4366 
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 42
+
+
+ 2097      6700
+ 2098              	.LASF58:
+ 2099 0512 65647561 		.ascii	"eduarmPwm1GpioCfg\000"
+ 2099      726D5077 
+ 2099      6D314770 
+ 2099      696F4366 
+ 2099      6700
+ 2100              	.LASF61:
+ 2101 0524 65647561 		.ascii	"eduarmPwm4GpioCfg\000"
+ 2101      726D5077 
+ 2101      6D344770 
+ 2101      696F4366 
+ 2101      6700
+ 2102              		.ident	"GCC: (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)"
+ARM GAS  C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s 			page 43
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 eduarmBoardConfig.c
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:62     .data:00000000 eduarmLedGpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:59     .data:00000000 $d
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:103    .data:00000024 eduarmPushButtonGpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:168    .data:00000060 eduarmUart0GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:197    .data:00000078 eduarmUart2GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:226    .data:00000090 eduarmUart3GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:255    .data:000000a8 eduarmEint3GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:272    .data:000000b4 eduarmMma7660IntGpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:289    .data:000000c0 eduarmTouchIntGpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:306    .data:000000cc eduarmAdc0GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:323    .data:000000d8 eduarmAdc1GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:340    .data:000000e4 eduarmAdc2GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:357    .data:000000f0 eduarmAdc3GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:374    .data:000000fc eduarmAdc4GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:391    .data:00000108 eduarmAdc5GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:408    .data:00000114 eduarmI2c1GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:437    .data:0000012c eduarmI2c2GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:466    .data:00000144 eduarmSsp0GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:519    .data:00000174 eduarmTouchGpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:596    .data:000001bc eduarmSdcardGpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:649    .data:000001ec eduarmLcdGpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:726    .data:00000234 eduarmCan1GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:755    .data:0000024c eduarmCan2GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:784    .data:00000264 eduarmPwm1GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:801    .data:00000270 eduarmPwm2GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:818    .data:0000027c eduarmPwm3GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:835    .data:00000288 eduarmPwm4GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:852    .data:00000294 eduarmPwm5GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:869    .data:000002a0 eduarmTimer0Cap1GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:886    .data:000002ac eduarmTimer3Cap0GpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:903    .data:000002b8 eduarmTimer1MatGpioCfg
+C:\Users\Aayush\AppData\Local\Temp\ccFXnWvU.s:932    .data:000002d0 eduarmI2sGpioCfg
+
+NO UNDEFINED SYMBOLS

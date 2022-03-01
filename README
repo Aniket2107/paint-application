@@ -1,0 +1,33 @@
+To build your project do the following changes in your makefile:
+1) Set PRIME_DEBUG = 1, to build your project in Debug mode.
+   In this mode you will be able to debug your project. Use this mode when your
+   project is in the development phase.
+2) Set PRIME_DEBUG = 0, to build your project in Release mode.
+   Use this mode after you have finished the development of your project.
+
+You can also set this value while running make using the following command:
+    > make all PRIME_DEBUG=1
+
+Using Command Line Interface to build your project:
+
+Windows User
+Steps to build the project using MinGW and GNU Tools for ARM embedded system:
+1) Double click on msys.bat file located in "C:\MinGW\msys\1.0" folder.
+2) msys.bat file will open the bash shell provided by the MinGW suite.
+3) Change your present working directory to your project's directory using cd command.
+   For example: (cd "E:\Workspace\SeedProject").
+3) Now you can use make all, make clean to build and clean the project respectively.
+
+Linux User
+Steps to build the project using GNU Tools for ARM embedded system:
+1) Open Terminal (For Ubuntu you can use the shortcut ALT+CTRL+T).
+2) Change your present working directory to your project's directory using cd command.
+   For example: (cd /home/Workspace/SeedProject).
+3) Now you can use make all, make clean to build and clean the project respectively.
+
+
+Additional information
+1. While building your project if you are receiving the following error:
+   "arm-none-eabi-gcc: No such file or directory"
+   Then, ensure you have installed the GNU ARM Toolchain correctly and follow the instructions in Setting up the Environment section.
+   
